@@ -1,0 +1,72 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-OutputQuantities 1
+
+DStore.Format = erg
+DStore.Compression = none
+DStore.dt.fast = 0.001
+DStore.dt.normal = 0.02
+DStore.dt.slow = 0.1
+
+DStore.Quantities.fast:
+DStore.Quantities.normal:
+	Traffic.*.DetectLevel
+	Traffic.*.a_1.x
+	Traffic.*.a_1.y
+	Traffic.*.a_1.z
+	Traffic.*.DetectLevel
+	Traffic.*.Lane.Act.LaneId
+	Traffic.*.sRoad
+	Traffic.*.t2Ref
+	Car.ax
+	Car.Road.Lane.Act.LaneId
+	Car.Road.Lane.Act.Width
+	Car.Road.Lane.OnLeft.Width
+	Car.Road.Lane.OnRight.Width
+	Car.Road.Path.DevDist
+	Car.Road.sRoad
+	Car.v
+	Traffic.T00.a_0.x
+	Traffic.T00.a_0.y
+	Traffic.T00.a_0.z
+	Traffic.T00.a_1.x
+	Traffic.T00.a_1.y
+	Traffic.T00.a_1.z
+	Traffic.T00.AutoDrv.AxTgt
+	Traffic.T00.AutoDrv.DesrSpd
+	Traffic.T00.DetectLevel
+	Traffic.T00.Distance
+	Traffic.T00.JuncObjId
+	Traffic.T00.Lane.Act.isRight
+	Traffic.T00.Lane.Act.LaneId
+	Traffic.T00.LatVel
+	Traffic.T00.LinkObjId
+	Traffic.T00.LongAcc
+	Traffic.T00.LongVel
+	Traffic.T00.ManNo
+	Traffic.T00.nextJuncObjId
+	Traffic.T00.onJunction
+	Traffic.T00.Pitch_X
+	Traffic.T00.Roll_X
+	Traffic.T00.rx
+	Traffic.T00.rxv
+	Traffic.T00.ry
+	Traffic.T00.ryv
+	Traffic.T00.rz
+	Traffic.T00.rzv
+	Traffic.T00.s2lastJunc
+	Traffic.T00.s2nextJunc
+	Traffic.T00.sRoad
+	Traffic.T00.State
+	Traffic.T00.SteerAng
+	Traffic.T00.t2Ref
+	Traffic.T00.tRoad
+	Traffic.T00.tx
+	Traffic.T00.ty
+	Traffic.T00.tz
+	Traffic.T00.v_0.x
+	Traffic.T00.v_0.y
+	Traffic.T00.v_0.z
+	Traffic.T00.v_1.x
+	Traffic.T00.v_1.y
+	Traffic.T00.v_1.z
+DStore.Quantities.slow:

@@ -1,0 +1,63 @@
+### BEGIN IPG-MOVIE-INFO
+# Subscribe Vhcl.v Sensor.Object.OB01.relvTgt.NearPnt.ds.x IFF.User1 IFF.User2 IFF.User3 IFF.User4
+### END IPG-MOVIE-INFO
+
+proc DrawVehicle {} {
+	
+	global Qu
+	# Add your code here
+	glDisableLighting
+	glEnableTexture2DModulate
+	gl color 1 0 0 1; # red
+	set velocity [format %.2f $Qu(Vhcl.v)]  
+	set nearPnt_ds [format %.2f $Qu(Sensor.Object.OB01.relvTgt.NearPnt.ds.x)]  
+	
+	set label_ego_long [format %.2f $Qu(IFF.User1)]  
+    set label_ego_lat [format %.2f $Qu(IFF.User2)] 
+	set label_T00_long [format %.2f $Qu(IFF.User3)]  
+    set label_T00_lat [format %.2f $Qu(IFF.User4)] 
+	
+	
+	if {$label_ego_long == 0} {
+		OGL drawtext sans-bold "-" -center -pos 2.0 0.0 2.0 -dir 0 -.25 0 -up 0 0 .25
+	} elseif {$label_ego_long == 1} {
+		OGL drawtext sans-bold "Long: acc" -center -pos 2.0 0.0 2.0 -dir 0 -.25 0 -up 0 0 .25
+	} else {
+		OGL drawtext sans-bold "Long: decc" -center -pos 2.0 0.0 2.0 -dir 0 -.25 0 -up 0 0 .25	
+	}
+	
+	
+	if {$label_ego_lat == 0} {
+		OGL drawtext sans-bold "-" -center -pos 2.0 0.0 2.2 -dir 0 -.25 0 -up 0 0 .25
+	} elseif {$label_ego_lat == -1} {
+		OGL drawtext sans-bold "Lat: LC left" -center -pos 2.0 0.0 2.2 -dir 0 -.25 0 -up 0 0 .25
+	} else {
+		OGL drawtext sans-bold "Lat: LC right" -center -pos 2.0 0.0 2.2 -dir 0 -.25 0 -up 0 0 .25	
+	}
+	
+	if {$label_T00_long == 0} {
+		OGL drawtext sans-bold "T00: -" -center -pos 2.0 2.0 2.0 -dir 0 -.25 0 -up 0 0 .25
+	} elseif {$label_T00_long == 1} {
+		OGL drawtext sans-bold "T00: Long: acc" -center -pos 2.0 2.0 2.0 -dir 0 -.25 0 -up 0 0 .25
+	} elseif {$label_T00_long == -1} {
+		OGL drawtext sans-bold "T00: Long: decc" -center -pos 2.0 2.0 2.0 -dir 0 -.25 0 -up 0 0 .25	
+	} else {
+		OGL drawtext sans-bold "T00: Long: unknown" -center -pos 2.0 2.0 2.0 -dir 0 -.25 0 -up 0 0 .25			
+	}
+	
+	
+	if {$label_T00_lat == 0} {
+		OGL drawtext sans-bold "T00: -" -center -pos 2.0 2.0 2.2 -dir 0 -.25 0 -up 0 0 .25
+	} elseif {$label_T00_lat == -1} {
+		OGL drawtext sans-bold "T00: Lat: LC left" -center -pos 2.0 2.0 2.2 -dir 0 -.25 0 -up 0 0 .25
+	} elseif {$label_T00_lat == -1} {
+		OGL drawtext sans-bold "T00: Lat: LC right" -center -pos 2.0 2.0 2.2 -dir 0 -.25 0 -up 0 0 .25	
+	} else {
+		OGL drawtext sans-bold "T00: Lat: unknown" -center -pos 2.0 2.0 2.2 -dir 0 -.25 0 -up 0 0 .25			
+	}
+	
+	glDisableTexture
+	glEnableLighting
+}
+
+return -1
