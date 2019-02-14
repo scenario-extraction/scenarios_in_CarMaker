@@ -1,6 +1,6 @@
 # scenarios_in_CarMaker
 
-#2019/02/14: First version of post processing scripts for maneuver and states extraction in Matlab running on CarMaker 7.1
+#2019/02/14: First version of post processing scripts for maneuver and states extraction in Matlab running on a native CarMaker 7.1 project
 containing:
 - [File Type] [File Name] [path in CM Project]
 - Example Vehicle Info File: DemoCar_withGroundTruthSensor (/Data/Vehicle) 
