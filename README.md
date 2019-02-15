@@ -11,3 +11,7 @@ containing:
 - Output qunatities config file: Output_scenario_data (/Data/Config)
 - Matlab run script: run_ground_truth_labeling.m (/src)
 - Matlab functions folder: Matlab_functions (/src)
+
+- Updata 15.02.2019：
+- [Test Run] [Ground_Truth_label_Highwat_01][/Data/TestTun]
+- [Test Run] [High_Way_TestRun_Sequential][/Data/TestTun]
