@@ -11,7 +11,7 @@ while ind<size(M,2)  %&& ~check_time_thr_all(M(4,:),time_thr)
     
     
     ind=ind+1;
-    %     if ind==1
+    
     if check_time_thr(M(:,ind), time_thr)
         k=ind+1;
         while k< size(M,2) && check_time_thr(M(:,k), time_thr)
@@ -139,17 +139,4 @@ end
 end
  
  
- 
-% function b=check_time_thr_all(vec,time_thr)
-%  
-% b=false;
-% I=find(vec<time_thr, 1);
-% %     if (vec(5)< T01  &&    vec(4)<T01)
-% if  ~isempty(I) % && abs(vec(3)-vec(2))<vel_thr)
-%     b=true;
-%     
-% end
-%  
-%  
-% end
  

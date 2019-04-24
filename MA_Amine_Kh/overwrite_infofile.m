@@ -1,31 +1,19 @@
 % function overwrite the CM TR infofile
-% input param: Tensor of the model
+% input param: S of the model
 
-function overwrite_infofile(S)
+function overwrite_infofile(S,Filename)
 
 cd ('F:\Highway_scenarios_overwrite\Data\TestRun');
 
 handle=ifile_new();
 
-% Filename= 'ChangingLanes';
-Filename= 'Highway_with_data_export_ov';
-% Filename= 'ChangingLanes_ov';
 ifile_read(handle,Filename);
 
-% time
-% if isfield(S,'Time')
-%     Time = S.Time;
-%     
-% end
-
-% overwrite the man 
-% of ego
+% overwrite the man of ego
 if isfield(S,'Ego')
     
-    % prepare Data of Ego from the Tensor
-    
+    % prepare Data of Ego from the S
     vec_overwrite_ego=S.Ego;
-    
     
     % initial lat offset &  velocity + maneuver number
     ifile_setstr(handle,strcat('DrivMan.Init.Velocity'),num2str(vec_overwrite_ego(2,1)));
@@ -43,7 +31,6 @@ if isfield(S,'Ego')
         if ~strcmp(ifile_getstr(handle,strcat('DrivMan.',num2str(n-1),'.DistLimit')),'')
             
             ifile_setstr(handle,strcat('DrivMan.',num2str(n-1),'.DistLimit'),'');
-            
         end
         
     end
@@ -65,31 +52,35 @@ if isfield(S,'Ego')
     ifile_setstr(handle,strcat('Driver.DecShift.tSwitchGear'),strcat(num2str(1))); % to be changed
     
     % set Time limit
-%     ifile_setstr(handle,strcat('DrivMan.',num2str(nD_man-1),'.EndCondition'),strcat(num2str('Time>=50'))); % to be changed
+    %     ifile_setstr(handle,strcat('DrivMan.',num2str(nD_man-1),'.EndCondition'),strcat(num2str('Time>=50'))); % to be changed
     
 end
 
-
-
+% overwrite the maneuver of TObj
 for index=0:numel(S.TObj)-1
     
     if ~isempty(S.TObj(index+1).data)
-        
         index_str=num2str(index);
         vec_overwrite_TObj=S.TObj(index+1).data;
         
         ifile_setstr(handle,strcat('Traffic.',index_str,'.Man.N '),num2str(size(vec_overwrite_TObj,2)-1));
-        nD_man=eval(ifile_getstr(handle,strcat('Traffic.',index_str,'.Man.N')));
         
-        ifile_setstr(handle,strcat('Traffic.',index_str,'.Man.',num2str(nD_man-1),'.EndCondition'),strcat('Time>=',num2str(50)));
+        % add start condition especially for non detectable TObj at start
+        % set the new sRoad and tRoad init. pos as the pos. when first detectable
+        % set the init.v 
         
-        
+        if S.TObj(index+1).detect_at_start ==0
+            ifile_setstr(handle,strcat('Traffic.',index_str,'.Man.StartCondition'),strcat('Time>=',num2str(vec_overwrite_TObj(1,1))));
+            ifile_setstr(handle,strcat('Traffic.',index_str,'.Init.Road'),strcat(num2str(S.TObj(index+1).sRoad_init),32,num2str(S.TObj(index+1).tRoad_init)));              ifile_setstr(handle,strcat('Traffic.',index_str,'.Init.v'),num2str(vec_overwrite_TObj(2,1)));
+
+        end
+                
         for i =2:size(vec_overwrite_TObj,2) % consider abs. velocity or avg. acc
             
             
             ifile_setstr(handle,strcat('Traffic.',index_str,'.Man.',num2str(i-2),'.Limit'),strcat('t',32,num2str(vec_overwrite_TObj(1,i))));
-            %     ifile_setstr(handle,strcat('Traffic.1.Man.',num2str(i-2),'.LongDyn'), strcat('v',32, num2str(vec_overwrite_TObj(2,i))));
-            ifile_setstr(handle,strcat('Traffic.',index_str,'.Man.',num2str(i-2),'.LongDyn'), strcat('a',32, num2str(vec_overwrite_TObj(4,i))));
+            ifile_setstr(handle,strcat('Traffic.',index_str,'.Man.',num2str(i-2),'.LongDyn'), strcat('v',32, num2str(vec_overwrite_TObj(2,i))));
+            %             ifile_setstr(handle,strcat('Traffic.',index_str,'.Man.',num2str(i-2),'.LongDyn'), strcat('a',32, num2str(vec_overwrite_TObj(4,i))));
             
             ifile_setstr(handle,strcat('Traffic.',index_str,'.Man.',num2str(i-2),'.LatDyn'), strcat('y_abs',32, num2str(vec_overwrite_TObj(3,i))));
             
@@ -101,7 +92,6 @@ end
 %% apply the changes to the infofile and delete the handle instance
 ifile_write(handle,Filename);
 ifile_delete(handle);
-
 
 end
 

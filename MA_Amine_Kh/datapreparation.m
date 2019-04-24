@@ -15,13 +15,14 @@ Time = data.Time.data;
 %% Ground Truth Ego Maneuvers
 Ego.Car.ax = data.Car_ax.data;
 Ego.Car.vx = data.Car_vx.data;
-Ego.Car.sx = cumtrapz(Time, Ego.Car.vx); % displacement in x direction
+% Ego.Lane.Act_LaneId = data.Car_Road_Lane_Act_isRight.data; % just in case of changing lane template
 Ego.Lane.Act_LaneId = data.Car_Road_Lane_Act_LaneId.data;
 Ego.Lane.Act_width = data.Car_Road_Lane_Act_Width.data;
 Ego.Lane.Left_width = data.Car_Road_Lane_OnLeft_Width.data;
 Ego.Lane.Right_width = data.Car_Road_Lane_OnRight_Width.data;
 Ego.Lane.DevDist = data.Car_Road_Path_DevDist.data;
 Ego.Lane.vy = data.Car_Fr1_vy.data;
+
 
 %--------------------------------------------------------------------------
 %% Ground Truth Dynamic Objects Maneuvers & States
@@ -43,6 +44,14 @@ for k = 0:9
         TObj(n).Lane.vy = eval(['data.Traffic_T0' num2str(k) '_LatVel.data']);
         TObj(n).DetectLevel = eval(['data.Traffic_T0' num2str(k) '_DetectLevel.data']);
         totalObjects = n;
+         %% process velocity data before saving remove step from data
+        if TObj(n).Car.vx(1) ==0 &&  TObj(n).Car.vx(2)>1 
+            if TObj(n).Car.ax(1) ==0 && TObj(n).Car.ax(2)~=0
+                
+                TObj(n).Car.vx(1) =  TObj(n).Car.vx(2)-TObj(n).Car.ax(2)*0.02; % 0.02 s being the sampling time
+                              
+            end
+        end
     end
 end
 
@@ -62,8 +71,20 @@ for k = 10:256
         TObj(n).Lane.vy = eval(['data.Traffic_T' num2str(k) '_LatVel.data']); % add vy for Traffic obj
         TObj(n).DetectLevel = eval(['data.Traffic_T' num2str(k) '_DetectLevel.data']);
         totalObjects = n;
+        %% process velocity data before saving remove step from data
+        if TObj(n).Car.vx(1) ==0 &&  TObj(n).Car.vx(2)>1 
+            if TObj(n).Car.ax(1)<1 && TObj(n).Car.ax(2)~=0
+                
+                TObj(n).Car.vx(1) =  TObj(n).Car.vx(2)-TObj(n).Car.ax(2)*0.02; % 0.02 s being the sampling time
+                              
+            end
+        end
+%%
     end
 end
+
+%% process velocity data before saving
+
 
 
 %save selected Data in mat file

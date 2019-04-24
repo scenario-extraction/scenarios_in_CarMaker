@@ -14,14 +14,18 @@ for k=1:size(long_ego,2)
     if k==1
         t_arr=(0:0.02:t_a); % sampling rate of 50 Hz
     else
-        t_arr=(0.02:0.02:t_a); 
+        t_arr=(0.02:0.02:t_a);
     end
-   
+    
     
     v_average=x_a/t_a; % average vel
     thetha=(v_average-v_i)/(v_f-v_i); % calculate the parameter Theta from akcelik and al. model
-       
-    if (thetha>=0.48 && thetha<=0.52) ||  t_a<=1
+    
+    if abs(thetha)==inf
+        vel_pred=arrayfun(@(x) 0*x+v_i,t_arr);
+        
+        
+    elseif (thetha>=0.48 && thetha<=0.52) ||  t_a<=1
         
         % fit with a line a(x-b)+c
         b=v_i;
@@ -49,7 +53,7 @@ for k=1:size(long_ego,2)
         t=find_tau(flag,a,b,x_a, t_arr);
         vel_pred=arrayfun(@(x) a*(1-exp(-x/t))+b,t_arr);
         
-
+        
     elseif (thetha< 0.3  ||  thetha>0.7) && v_f<v_i % fit for decreasing func
         
         flag=-1;
@@ -58,12 +62,12 @@ for k=1:size(long_ego,2)
         t=find_tau(flag,a,b,x_a, t_arr);
         vel_pred=arrayfun(@(x) a*exp(-x/t)+b,t_arr);
         
+        %     if k~=1
+        %
+        %         vel_pred=vel_pred(2:end);
+        %
+        %     end
     end
-%     if k~=1
-%         
-%         vel_pred=vel_pred(2:end);
-%         
-%     end
     vel_pred_total=[vel_pred_total,vel_pred];  %concatenate the new predicted velocities values to the old vel_pred_total matrix
     
 end

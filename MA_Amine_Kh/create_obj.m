@@ -1,55 +1,61 @@
 % create the matrices describing both long. maneu and lat. maneuver for TObj
-function [long_TObj,lat_TObj, TObj_vx_pred, TObj_lat_pred, time_Obj]=create_obj(prepdata_filename,~, n)
+function [long_TObj,lat_TObj, TObj_vx_pred, TObj_lat_pred, label_TObj_long, time_Obj, det_ind]=create_obj(prepdata_filename,label_data, n)
 
 %% load and process CM data for TObj
 
 load(prepdata_filename,'TObj','Time');
-
-time= Time;
+det_ind = 1; % detection at start indicator
 
 % long Quantities
 TObj_accx=TObj(n).Car.ax;
 TObj_vx=TObj(n).Car.vx;
-TObj_vx(1)=TObj_vx(2);
-TObj_distx=TObj(n).sRoad;
+if n==2
+    figure(50);
+    plot(TObj_vx);
+end
+ 
+TObj_sRoad=TObj(n).sRoad;
 
 % lat Quantities
 TObj_vy=TObj(n).Lane.vy;
-TObj_lat= TObj(n).Lane.tRoad; % -TObj(n).Lane.tRoad(1); % remove lat. Offset from the lat displacement
+TObj_lat0 = TObj(n).Lane.tRoad(1);
+TObj_lat= TObj(n).Lane.tRoad; 
 TObj_LaneID=TObj(n).Lane.Act_LaneId;
 
 % remove redundant data based on detection level 
-ind_last = find(TObj(n).DetectLevel~=0,1,'last');
-time = time(1:ind_last);
+ind_first = find(TObj(n).DetectLevel~=0,1,'first');
+if ind_first> 51 % not detectable in the first sec after sim starts
+    det_ind = 0;
+else
+    ind_first =1; % detection timestamps below one sec are ignored
+end
 
-time=unique(time); % remove redundant time values
-time_offset=time(1);
-time=round(time-time(1),2); % round the time values to 2 decimals
-arr_length=length(time);
+ind_last= find(TObj(n).DetectLevel~=0,1,'last');
+time_Obj = Time(ind_first:ind_last);
 
-TObj_accx = TObj_accx(1:arr_length);
-TObj_vx = TObj_vx(1:arr_length);
+time_Obj=unique(time_Obj); % remove redundant time_Obj values
+time_Obj=round(time_Obj,2); % round the time_Obj values to 2 decimals
 
-figure;
-plot(TObj_vx);
-% TObj_vx(end) = TObj_vx(end-1);
-TObj_distx = TObj_distx(1:arr_length);
-TObj_lat = TObj_lat(1:arr_length);
-TObj_LaneID = TObj_LaneID(1:arr_length);
+% prepare quantites 
+TObj_accx = TObj_accx(ind_first:ind_last);
+TObj_vx = TObj_vx(ind_first:ind_last);
+TObj_sRoad = TObj_sRoad(ind_first:ind_last);
+TObj_lat = TObj_lat(ind_first:ind_last);
 
 %% build the long man matrix describing the long. maneuver of TObj
 
 long_TObj=[]; % matrix containing the vectors describing the long. maneuver
 
 TObj_accx_thr=0.55; % threshold of the acc in x direction
+label_TObj_long = []; % preallocate 
 
 % long_TObj: columnwise:
-%1. beginning time / 2. initial_vel in mps / 3. final_vel in mps/ 
+%1. beginning time_Obj / 2. initial_vel in mps / 3. final_vel in mps/ 
 %4. duration in s/ 5. Displacement / 6. Label
 
 j=0;
 m=0;
-while j<length(time)
+while j<length(time_Obj)
     
     j=j+1;
     if j==1
@@ -60,97 +66,76 @@ while j<length(time)
     
     if TObj_accx(j)>=TObj_accx_thr
         
-        while  j<length(time) && TObj_accx(j)>=TObj_accx_thr
+        while  j<length(time_Obj) && TObj_accx(j)>=TObj_accx_thr
             
             j=j+1;
             
         end
         
         m=m+1;
-        long_TObj(:,m)=[time(k);TObj_vx(k);TObj_vx(j);time(j)-time(k);TObj_distx(j)-TObj_distx(k);1];
+        long_TObj(:,m)=[time_Obj(k);TObj_vx(k);TObj_vx(j);time_Obj(j)-time_Obj(k);TObj_sRoad(j)-TObj_sRoad(k);1];
         
     elseif TObj_accx(j)<=-TObj_accx_thr
         
-        while  j<length(time) && TObj_accx(j)<=-TObj_accx_thr
+        while  j<length(time_Obj) && TObj_accx(j)<=-TObj_accx_thr
             
             j=j+1;
             
         end
         
         m=m+1;
-        long_TObj(:,m)=[time(k);TObj_vx(k);TObj_vx(j);time(j)-time(k);TObj_distx(j)-TObj_distx(k);-1];
+        long_TObj(:,m)=[time_Obj(k);TObj_vx(k);TObj_vx(j);time_Obj(j)-time_Obj(k);TObj_sRoad(j)-TObj_sRoad(k);-1];
         
     elseif abs(TObj_accx(j))<TObj_accx_thr
         
-        while j<length(time) && abs(TObj_accx(j))<TObj_accx_thr
+        while j<length(time_Obj) && abs(TObj_accx(j))<TObj_accx_thr
             
             j=j+1;
             
         end
         m=m+1;
-        long_TObj(:,m)=[time(k);TObj_vx(k);TObj_vx(j);time(j)-time(k);TObj_distx(j)-TObj_distx(k);0];
+        long_TObj(:,m)=[time_Obj(k);TObj_vx(k);TObj_vx(j);time_Obj(j)-time_Obj(k);TObj_sRoad(j)-TObj_sRoad(k);0];
         
     else
         
     end
 end
 
-% set thresholds for time
-time_thr=1.0;
+% set thresholds for time_Obj
+time_Obj_thr=1.5;
 
-long_TObj=create_long(long_TObj, time_thr); % create the matrix long_TObj
+long_TObj=create_long(long_TObj, time_Obj_thr); % create the matrix long_TObj
 TObj_vx_pred = velocity_pred(long_TObj);
 
-%% build the matrix describing the lateral maneuvers of the TObj according to the model
+%% correct the long. lableling for TObj
 
-j=0;
-m=0;
-TObj_vy_thr=0.05; % lat velocity threshold
-
-lat_TObj=[]; % preallocate the matrix containing the vectors describing the lateral maneuvers of the TObj
-
-
-% lat_TObj: columnwise: 1. time, 2.Duration, 3. Lateral Offset
-while j<length(time)
-    
-    j=j+1;
-    if j==1
-        k=j;
+for ind=1:size(long_TObj,2)
+    ind_start = find(time_Obj==long_TObj(1,ind));
+    if ind==size(long_TObj,2)
+        ind_end = length(time_Obj);
     else
-        k=j-1;
+        ind_end = find(time_Obj==long_TObj(1,ind+1))-1;
     end
-    if (TObj_vy(j))>=TObj_vy_thr
-        while j<length(time)  && (TObj_vy(j))>=TObj_vy_thr
-            j=j+1;
-        end
-        m=m+1;
-        
-        lat_TObj(:,m)=[time(k);time(j)-time(k);TObj_lat(k);TObj_lat(j);(max(TObj_vy(k:j)));k;j]; % add index k,j
-        
-        
-    elseif TObj_vy(j)<=-TObj_vy_thr
-        while j<length(time)  && TObj_vy(j)<=-TObj_vy_thr
-            
-            j=j+1;
-        end
-        m=m+1;
-        
-        lat_TObj(:,m)=[time(k);time(j)-time(k);TObj_lat(k);TObj_lat(j);(min(TObj_vy(k:j)));k;j];
-    else
-        while j<length(time)  && abs(TObj_vy(j))<TObj_vy_thr
-            
-            j=j+1;
-        end
-        m=m+1;
-        
-        lat_TObj(:,m)=[time(k);time(j)-time(k);TObj_lat(k);TObj_lat(j);max(abs(TObj_vy(k:j)));k;j];
-        
-    end
+   label_TObj_long(ind_start:ind_end) = long_TObj(end,ind);
 end
 
-[lat_TObj,TObj_lat_pred]=create_lat(lat_TObj,TObj_LaneID);
 
-% assign time variable specific to TObj
-time_Obj=time;
+%%  build the matrix describing the lateral maneuvers of the TObj according to the model labeling method
 
+lat_TObj=create_lat_with_label_TO(TObj,label_data,n, time_Obj, ind_first, ind_last);
+
+%% predict the lateral pos profile and add the init. lat offset
+ TObj_lat_pred= lat_offset_pred(lat_TObj);%+TObj_lat0;
+ 
+ 
+%% plot to test 
+if n==4
+    figure(99);
+    plot(TObj(4).Lane.tRoad);
+    hold on;
+    plot(TObj_lat_pred);
+
+end
+
+end
 
