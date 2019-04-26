@@ -139,7 +139,7 @@ end
 end
 
 
-function b=check_adj(vec) % check whether two consecutive array elements are duplicate 
+function b=check_adj(vec) % check whether an array contains duplicate consecutive elements   
 temp=unique(vec,'stable');
 b=isequal(temp,vec);
  
