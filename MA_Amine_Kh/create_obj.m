@@ -129,13 +129,7 @@ lat_TObj=create_lat_with_label_TO(TObj,label_data,n, time_Obj, ind_first, ind_la
  
  
 %% plot to test 
-if n==4
-    figure(99);
-    plot(TObj(4).Lane.tRoad);
-    hold on;
-    plot(TObj_lat_pred);
 
-end
 
 end
 
