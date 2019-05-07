@@ -37,7 +37,7 @@ Ego.sRoad = Ego.sRoad(1:length(Time));
 Ego.Lane.DevDist = Ego.Lane.DevDist(1:length(Time));
 Ego.Lane.Act_LaneId = Ego.Lane.Act_LaneId(1:length(Time));
 
-% Engine Contol Unit and clutch Quantitites for maneuverual driving case. PS: Ego.GearNo is actually Ego.Gear_trgt
+% Engine Contol Unit and clutch Quantitites for manual driving mode. PS: Ego.GearNo is actually Ego.Gear_trgt
 Ego.GearNo = Ego.GearNo(1:length(Time));
 Ego.Clutch = Ego.Clutch(1:length(Time));
 
@@ -97,6 +97,11 @@ end
 
 %% create the matrix describing the lateral motion of the ego with the data from lateral labeling done witin the function labeling.m
 %this matrix is used later as input for the lat. position prediction model
+% the matrix is linewise:
+% 1- Beginning time of the action
+% 2- duration of the action
+% 3- target absolute lateral position
+% 4- label
 
 
 j=0;
