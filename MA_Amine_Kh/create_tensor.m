@@ -15,6 +15,7 @@
 %dec: deceleration
 %arr: array
 %TOBj: traffic object
+% CM: CarMaker
 
 %%
 function Tensor=create_tensor(prepdata_filename,label_data)
