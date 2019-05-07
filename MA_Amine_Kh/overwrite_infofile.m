@@ -1,5 +1,5 @@
-% function overwrite the CM TR infofile
-% input param: S of the model
+% this function overwrites the CM TestRun infofile with the infos contained
+% in the tensor created within the function create_tensor.m 
 
 function overwrite_infofile(S,Filename)
 
@@ -12,7 +12,7 @@ ifile_read(handle,Filename);
 % overwrite the man of ego
 if isfield(S,'Ego')
     
-    % prepare Data of Ego from the S
+    % prepare Data of Ego from the Tensor
     vec_overwrite_ego=S.Ego;
     
     % initial lat offset &  velocity + maneuver number
@@ -48,12 +48,7 @@ if isfield(S,'Ego')
     ifile_setstr(handle,strcat('Driver.Long.axMin'),strcat(num2str(10)));
     ifile_setstr(handle,strcat('Driver.Long.axMax'),strcat(num2str(10)));
     
-    % set duration of Gear shifting
-    ifile_setstr(handle,strcat('Driver.DecShift.tSwitchGear'),strcat(num2str(1))); % to be changed
-    
-    % set Time limit
-    %     ifile_setstr(handle,strcat('DrivMan.',num2str(nD_man-1),'.EndCondition'),strcat(num2str('Time>=50'))); % to be changed
-    
+  
 end
 
 % overwrite the maneuver of TObj
@@ -69,18 +64,22 @@ for index=0:numel(S.TObj)-1
         % set the new sRoad and tRoad init. pos as the pos. when first detectable
         % set the init.v 
         
-        if S.TObj(index+1).detect_at_start ==0
-            ifile_setstr(handle,strcat('Traffic.',index_str,'.Man.StartCondition'),strcat('Time>=',num2str(vec_overwrite_TObj(1,1))));
-            ifile_setstr(handle,strcat('Traffic.',index_str,'.Init.Road'),strcat(num2str(S.TObj(index+1).sRoad_init),32,num2str(S.TObj(index+1).tRoad_init)));              ifile_setstr(handle,strcat('Traffic.',index_str,'.Init.v'),num2str(vec_overwrite_TObj(2,1)));
+%         if S.TObj(index+1).detect_at_start ==0
+%             ifile_setstr(handle,strcat('Traffic.',index_str,'.Man.StartCondition'),strcat('Time>=',num2str(vec_overwrite_TObj(1,1))));
+%             ifile_setstr(handle,strcat('Traffic.',index_str,'.Init.Road'),strcat(num2str(S.TObj(index+1).sRoad_init),32,num2str(S.TObj(index+1).tRoad_init)));              ifile_setstr(handle,strcat('Traffic.',index_str,'.Init.v'),num2str(vec_overwrite_TObj(2,1)));
+% 
+%         end
 
-        end
-                
-        for i =2:size(vec_overwrite_TObj,2) % consider abs. velocity or avg. acc
+
+         % by overwriting long. maneuver, abolute target velocity or
+         % average acceleration can be considered
+         
+        for i =2:size(vec_overwrite_TObj,2)
             
             
             ifile_setstr(handle,strcat('Traffic.',index_str,'.Man.',num2str(i-2),'.Limit'),strcat('t',32,num2str(vec_overwrite_TObj(1,i))));
             ifile_setstr(handle,strcat('Traffic.',index_str,'.Man.',num2str(i-2),'.LongDyn'), strcat('v',32, num2str(vec_overwrite_TObj(2,i))));
-            %             ifile_setstr(handle,strcat('Traffic.',index_str,'.Man.',num2str(i-2),'.LongDyn'), strcat('a',32, num2str(vec_overwrite_TObj(4,i))));
+            % ifile_setstr(handle,strcat('Traffic.',index_str,'.Man.',num2str(i-2),'.LongDyn'), strcat('a',32, num2str(vec_overwrite_TObj(4,i))));
             
             ifile_setstr(handle,strcat('Traffic.',index_str,'.Man.',num2str(i-2),'.LatDyn'), strcat('y_abs',32, num2str(vec_overwrite_TObj(3,i))));
             
