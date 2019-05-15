@@ -1,6 +1,7 @@
 % main script to run : edited to process erg files from Testrun series with variations!
 % make the necessary changes, e.g path, directory ...
 % the simulations output files are now saved in the default directory
+% automate the creation of model tensor respectively for every Testrun
 
 %% preprocess
 clc
