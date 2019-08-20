@@ -3,11 +3,7 @@
 % provide the final plot by adding plot of the resimulation's GT data
 % see documentation for the function create_tensor.m
 
-
-%%
-function [tensor_CM, tensor_model]=create_tensor_resim(prepdata_filename,label_data, ind_TR)
-
-
+function [tensor_CM, tensor_model]=create_tensor_resim(prepdata_filename,label_data, ind_TR,numOfTObj)
 
 % preallocate the two output tensors
 tensor_CM=[];
@@ -19,7 +15,6 @@ load(prepdata_filename,'Ego','TObj','Time','n','num_TObj');
 load(label_data,'label');
 
 % remove redundant data and process time data
-
 Time=unique(Time); % remove redundant Time values
 Time_offset=Time(1); % Time offset to add later after processing the data
 Time=round(Time-Time(1),2); % round the Time values to 2 decimals
@@ -35,13 +30,8 @@ Ego.Lane.Act_LaneId = Ego.Lane.Act_LaneId(1:length(Time));
 % preallocate arr. containing the long. labeling
 label_ego_long =[];
 
-Time_thr = 1; % must be greater than Gear shifting duration!
-
 % call build_long_matrix func for Ego
 long_ego = build_long_matrix(Ego.Car.ax, Ego.Car.vx, Time, Ego.sRoad);
-
-% predict velocity from the matrix long_ego
-% Ego.Car.vx_pred=velocity_pred_new(long_ego);
 
 % correct the long. labeling for Ego
 for ind=1:size(long_ego,2)
@@ -79,7 +69,7 @@ while j<length(Time)
         end
         %         k=k+1;
         m=m+1;
-        lat_ego(:,m)=[Time(k);Time(j)-Time(k);Ego.Lane.DevDist(j);0];
+        lat_ego(:,m)=[Time(k);Time(j)-Time(k);Ego.Lane.DevDist(k);Ego.Lane.DevDist(j);0];
         
         
     elseif label.ego.lat(j)==1 % if LCR
@@ -91,7 +81,7 @@ while j<length(Time)
         end
         %         k=k+1;
         m=m+1;
-        lat_ego(:,m)=[Time(k);Time(j)-Time(k);Ego.Lane.DevDist(j);1];
+        lat_ego(:,m)=[Time(k);Time(j)-Time(k);Ego.Lane.DevDist(k);Ego.Lane.DevDist(j);1];
         
     elseif label.ego.lat(j)==-1 % if LCL
         
@@ -102,45 +92,31 @@ while j<length(Time)
         end
         %         k=k+1;
         m=m+1;
-        lat_ego(:,m)=[Time(k);Time(j)-Time(k);Ego.Lane.DevDist(j);-1];
+        lat_ego(:,m)=[Time(k);Time(j)-Time(k);Ego.Lane.DevDist(k);Ego.Lane.DevDist(j);-1];
     else %
         
     end
 end
 
-% predict the lateral position profile
-% Ego.Lane.DevDist_pred = lat_pos_pred(lat_ego);
-
 %% load figure from first simulation and plot Ego resimulation GT data
+% define Time_temp for Plot
+Time_temp = [Time,Time(end)];
 
 openfig('Ego_plot.fig','new');
 hold on;
 subplot(2,1,1)
-plot(Ego.Car.vx.*3.6,'Color',[0 0 0]);
+plot(Time_temp,3.6*[Ego.Car.vx,Ego.Car.vx(end)],'Color',[0 0 0]);
 legend('prediction','first simulation GT','resimulation GT');
 title(strcat('Ego long. speed for Testrun ',num2str(ind_TR)));
 
 subplot(2,1,2)
-plot(Ego.Lane.DevDist,'Color',[0 0 0]);
+plot(Time_temp,[Ego.Lane.DevDist,Ego.Lane.DevDist(end)],'Color',[0 0 0]);
 legend('prediction','first simulation GT','resimulation GT');
 title(strcat('Ego lat. pos for Testrun ',num2str(ind_TR)));
 hold off;
-
 savefig( 'Ego_plot_final.fig');
 
-%% predict Car.v quantity for CM
-% CM does not treat the maneuver definition in terms of long. and lat.dynamics
-%separately and does not offer needed model-related quantites in the GUI.
-% For example the GUI offers the quantity Car.v as the only quantity for long. dynamics.
-%the first problem is overriden by the defition of the model, which take in account the overlapping parts in time axis between the lateral and long. maneuvereuvers.
-% In order to override the second problem we predict Car.v from predicted longitudinal velocity and predicted lateral displacement
-
-% derive the lat. velocity as described in CM Reference's Guide
-% Ego.Lane.vy_pred=diff(Ego.Lane.DevDist_pred)./diff(Time);
-% Ego.Lane.vy_pred=[Ego.Lane.vy_pred,Ego.Lane.vy_pred(end)];
-
-% calculate predicted Car.v=sqrt(v_x^2+v_y^2)
-% Ego.Car.v_pred=sqrt((Ego.Lane.vy_pred).^2+(Ego.Car.vx_pred).^2);
+%% Assign Ego velocity
 Ego.Car.v = Ego.Car.vx;
 %% Combining the lat. and the long. to create to resulting matrix according to the model for Ego
 
@@ -155,58 +131,64 @@ vec_temp_ego(1,:) = Time_change_ego;
 
 for i=1:length(Time_change_ego)
     
-    vec_temp_ego(2,i)= Ego.Car.v(Time==Time_change_ego(i)); % long. velo data from predictIon
-    vec_temp_ego(3,i)= Ego.Lane.DevDist(Time==Time_change_ego(i)); % abs. lateral position from prediction
+    vec_temp_ego(2,i)= Ego.Car.v(Time==Time_change_ego(i)); % start long. velocity data from predictIon
+    vec_temp_ego(3,i)= Ego.Lane.DevDist(Time==Time_change_ego(i)); % abs. lateral start position from prediction
     vec_temp_ego(4,i) = label_ego_long(Time==Time_change_ego(i)); % data from long. labeling correction
     vec_temp_ego(5,i) = label.ego.lat(Time==Time_change_ego(i)); % data from data struct from labeling.m function
     
 end
 
-%create the final matrix of the Ego, which will be used to overwrite the
-%maneuver in the infofile. The matrix is described linewise as follows:
-% 1- Duration of the maneuver
-% 2- target velocity
-% 3- target lateral position
-% 4- long. label
-% 5- lat. label
-
-vec_overwrite_ego = [];
-
 % first column is for the initial conditions: initial velocity and initial
 % lat. position
-vec_overwrite_ego(:,1) = vec_temp_ego(:,1);
+vec_temp_ego(1,:) = Time_change_ego;
 
-j=1;
-for i=1:length(Time_change_ego)-1
-    j=j+1;
-    vec_overwrite_ego(1,j)= vec_temp_ego(1,i+1) - vec_temp_ego(1,i); % calculate duration from two consecutive timestamps
-    vec_overwrite_ego(2,j)= vec_temp_ego(2,i+1);
-    vec_overwrite_ego(3,j)= vec_temp_ego(3,i+1);
-    vec_overwrite_ego(4,j)= vec_temp_ego(4,i); % label long. maneuver change
-    vec_overwrite_ego(5,j)= vec_temp_ego(5,i); % label lat. maneuver change
+for i=1:length(Time_change_ego)
+    
+    vec_temp_ego(2,i)= Ego.Car.v(Time==Time_change_ego(i)); % long. velo data from predictIon
+    vec_temp_ego(6,i)= Ego.Lane.DevDist(Time==Time_change_ego(i)); % abs. lateral position from prediction
+    vec_temp_ego(5,i)= Ego.sRoad(Time==Time_change_ego(i));
+    vec_temp_ego(8,i) = label_ego_long(Time==Time_change_ego(i)); % data from long. labeling correction
+    vec_temp_ego(9,i) = label.ego.lat(Time==Time_change_ego(i)); % data from data struct from labeling.m function
 end
 
-% add final maneuver to vec_overwrite_ego with corresponding long. and lat.
-% infos
+% temp. var last element of
+sRoad_ego_temp =   vec_temp_ego(5,end);
 
-vec_overwrite_ego=[vec_overwrite_ego,[0;0;0;0;0]];
-% temp variable
-duration_temp=sum(vec_overwrite_ego(1,1:end));
+%add duration 6. row
+dur_temp_ego = diff(vec_temp_ego(1,:));
+vec_temp_ego(4,1:end-1) = dur_temp_ego;
 
-vec_overwrite_ego(1,end)= Time(end)-duration_temp;
-vec_overwrite_ego(2,end)=Ego.Car.v(end);
-vec_overwrite_ego(3,end)= Ego.Lane.DevDist(end);
-vec_overwrite_ego(4,end) = long_ego(end,end);
-vec_overwrite_ego(5,end) = lat_ego(end,end);
+% add duration of the last maneuver or the last state change
+vec_temp_ego(4,end) = Time(end)- vec_temp_ego(1,end);
 
-% convert velocities to kmh
-vec_overwrite_ego(2,:)=vec_overwrite_ego(2,:)*3.6;
+% add target velocity and target lat. pos
+for i=1:size(vec_temp_ego,2)-1
+    vec_temp_ego(3,i) = vec_temp_ego(2,i+1) ;
+    vec_temp_ego(7,i) = vec_temp_ego(6,i+1) ;
+    
+end
+% add target values for the last column
+vec_temp_ego(3,end) = Ego.Car.v(end); % or ...(end)
+vec_temp_ego(7,end) = Ego.Lane.DevDist(end); % or ...(end)
 
-% fill the Ego Part of the Tensor
-vec_overwrite_ego(2,:) = round(vec_overwrite_ego (2,:),2); % round for better results in the Resim
-vec_overwrite_ego(3,:) = round(vec_overwrite_ego (3,:),3);
-%
-tensor_CM.Ego = vec_overwrite_ego;
+% add performed long. displacmeent
+disp_temp_ego = diff(vec_temp_ego(5,:));
+
+
+vec_temp_ego(5,1:end-1) = disp_temp_ego;
+
+% add last performed long. displacement
+vec_temp_ego(5,end) = Ego.sRoad(end)- sRoad_ego_temp;
+
+
+% round lat. pos
+vec_temp_ego(6:7,:)= round(vec_temp_ego(6:7,:),5);
+
+%convert velocities to kmh
+vec_temp_ego(2:3,:) = vec_temp_ego(2:3,:)*3.6;
+
+% define the CM tensor for ego & assign
+tensor_CM.Ego = vec_temp_ego;
 
 %% create the model matrices for the traffic objects
 %% Combining the lat. and the long. to create to resulting matrix according to the model for detectable TObj
@@ -217,9 +199,11 @@ time_change_allTObj_ego =round(Time_change_ego,2);
 
 % define index of number of TObject including new defined Ojects for every
 % detectable part
-num_detecTObj=0;
+num_detecTObj =0;
+Time_change_obj=[];
 if ~isempty(TObj)
-    for index = 1:length(num_TObj)
+    for index = 1:numOfTObj
+        
         % check whether TObj is detectable or not
         if check_detectable(TObj(index).DetectLevel)
             num_detecTObj = num_detecTObj+1;
@@ -227,15 +211,6 @@ if ~isempty(TObj)
             
             TObj_lat=TObj(index).Lane.t2Ref;
             TObj_long =TObj(index).Car.vx;
-            
-            % figure for TObj1
-%             if index == 1
-%                 openfig('object1.fig','new');
-%                 hold on
-%                 plot(TObj_long,'Color',[0 0 0]);
-%                 hold off;
-%                 savefig( 'object1.fig');
-%             end
             
             % timestamps of maneuver change for ego
             Time_maneuver_change_obj = unique([long_TObj(1,:), lat_TObj(1,:)]);
@@ -247,7 +222,8 @@ if ~isempty(TObj)
             Time_change_obj = unique(round([Time_maneuver_change_obj, Time_state_change],2));
             
             % preallocate temp. array matrix
-            vec_temp_TObj = zeros(11,length(Time_change_obj));
+            vec_temp_TObj = zeros(13,length(Time_change_obj));
+            displ_vector =[];
             
             % timestamps corresponding to state or maneuver change
             vec_temp_TObj(1,:) = Time_change_obj;
@@ -257,34 +233,48 @@ if ~isempty(TObj)
             Time_change_obj = round(Time_change_obj,2);
             
             for i=1:length(Time_change_obj)
-                vec_temp_TObj(2,i) = TObj_long(Time==Time_change_obj(i)); % velocity data from prediction
-                vec_temp_TObj(4,i) = TObj_lat(Time==Time_change_obj(i)); % absolute lat. pos data from prediction
-                vec_temp_TObj(6,i) = TObj_long_label(Time==Time_change_obj(i)); % data from long. labeling
-                vec_temp_TObj(7,i) = label.TObj(index).lat(Time==Time_change_obj(i)); % data from lat. labeling
-                vec_temp_TObj(8,i) = label.state.TObj(index).long(Time==Time_change_obj(i)); % data from long state label
-                vec_temp_TObj(9,i) = label.state.TObj(index).lat(Time==Time_change_obj(i)); % data from lat state label
-                vec_temp_TObj(10,i) = TObj(index).sRoad(Time==Time_change_obj(i));%- Ego.sRoad(Time==Time_change_obj(i)) ;
-                vec_temp_TObj(11,i) = TObj(index).Lane.t2Ref(Time==Time_change_obj(i));%-Ego.Lane.DevDist(Time==Time_change_obj(i));
-                %                 vec_temp_TObj(12,i) = TObj(index).sRoad(Time==Time_change_obj(i));%-Ego.Lane.DevDist(Time==Time_change_obj(i));
+                vec_temp_TObj(2,i) = TObj_long(find(Time==Time_change_obj(i))+1); % velocity data from prediction
+                if vec_temp_TObj(2,i)==0
+                    ind_first_nonzero_vel = find(TObj_long,1,'first');
+                    vec_temp_TObj(2,i)=TObj_long(ind_first_nonzero_vel);
+                end
+                vec_temp_TObj(6,i) = TObj_lat((Time==Time_change_obj(i))); % absolute lat. pos data from prediction
+                vec_temp_TObj(8,i) = round(TObj(index).Sensor.dx(Time==Time_change_obj(i)),4)+Ego.sRoad(Time==Time_change_obj(i)) ;
+                vec_temp_TObj(9,i) = round(TObj(index).Sensor.dy(Time==Time_change_obj(i)),4);%-Ego.Lane.DevDist(Time==Time_change_obj(i));
+                vec_temp_TObj(10,i) = TObj_long_label((Time==Time_change_obj(i))); % data from long. labeling
+                vec_temp_TObj(11,i) = label.TObj(index).lat(find(Time==Time_change_obj(i))); % data from lat. labeling
+                vec_temp_TObj(12,i) = label.state.TObj(index).long((Time==Time_change_obj(i))); % data from lat state label
+                vec_temp_TObj(13,i) = label.state.TObj(index).lat((Time==Time_change_obj(i))); % data from lat state label
+                displ_vector = [displ_vector,TObj(index).sRoad(Time==Time_change_obj(i))];%-Ego.Lane.DevDist(Time==Time_change_obj(i));
             end
             % add target velocity and target lat. pos respectively in 3.th and 5.th  row in vec_temp_TObj
             for i=1:size(vec_temp_TObj,2)-1
                 vec_temp_TObj(3,i) = vec_temp_TObj(2,i+1) ;
-                vec_temp_TObj(5,i) = vec_temp_TObj(4,i+1) ;
+                vec_temp_TObj(7,i) = vec_temp_TObj(6,i+1) ;
                 
             end
-            % add target values for the last column
-            vec_temp_TObj(3,end) = TObj_long(end-1); % or ...(end)
-            vec_temp_TObj(5,end) = TObj_lat(end-1); % or ...(end)
+            ind_end73=round(vec_temp_TObj(1,end)+ vec_temp_TObj(4,end),2);
+            ind_end73 =find(Time==ind_end73);
+            if TObj_long(ind_end73)==0
+                for i=ind_end73:1:length(Time)
+                    if TObj_long(i)~=0
+                        ind_end73=i;
+                        break;
+                    end
+                end
+                
+            end
+            vec_temp_TObj(3,end) = TObj_long(ind_end73);
+            vec_temp_TObj(7,end) = TObj_lat(ind_end73);
             
             %% concatenate columns with non relevant labeling
             j_ind=1;
             ind_to_delete=[] ;
-            %
+            
             while j_ind<= size(vec_temp_TObj,2)
                 
-                if j_ind<= size(vec_temp_TObj,2)&&(vec_temp_TObj(8,j_ind)==-99)
-                    while j_ind<size(vec_temp_TObj,2) && vec_temp_TObj(8,j_ind)==-99 && vec_temp_TObj(8,j_ind+1)==-99
+                if j_ind<= size(vec_temp_TObj,2)&&(vec_temp_TObj(12,j_ind)==-99)
+                    while j_ind<size(vec_temp_TObj,2) && vec_temp_TObj(12,j_ind)==-99 && vec_temp_TObj(12,j_ind+1)==-99
                         
                         ind_to_delete = [ind_to_delete,j_ind];
                         j_ind=j_ind+1;
@@ -293,68 +283,69 @@ if ~isempty(TObj)
                     % assign
                     if ~isempty(ind_to_delete)
                         vec_temp_TObj(:,ind_to_delete)=[];
+                        displ_vector(:,ind_to_delete)=[];
                         j_ind=0;
                         ind_to_delete =[];
                     end
                 end
                 j_ind=j_ind+1;
             end
-            disp('concatenating unknown labeling done');
-                       
-            %%------
+            
             %create the final matrix of the current TObj, which will be used to overwrite the
             %maneuver in the infofile in CM. The matrix is described linewise as follows:
-            % 1- Duration of the maneuvereuver
-            % 2- target velocity
-            % 3- target lateral position
-            % 4- long. label
-            % 5- lat. label
-            % 6- long. state label relative to ego
-            % 7- lat. state label relative to ego
-            % 8- long. position relative to ego
-            % 9- lat. position relative to ego
+            % 1- timestamp of the beginning of the maneuver or state
+            % 2- start velocity
+            % 3- target velocity
+            % 4- duration of the maneuver or state
+            % 5- performed distance
+            % 6- start lateral position
+            % 7- target lateral position
+            % 8- measured relative long. distance
+            % 9- measured relative lat. distance
+            % 10- label long. maneuver
+            % 11- label lat. maneuver
+            % 12- label long. state
+            % 13- label lat. state
             
-          
+            
             % first timestamp must be 0s
             vec_temp_TObj(1,1)=0;
             
             % add displacement for every maneuver column
             
-            vec_temp_TObj = [vec_temp_TObj ; zeros(2,size(vec_temp_TObj,2))];
+            %vec_temp_TObj = [vec_temp_TObj ; zeros(2,size(vec_temp_TObj,2))];
             if ismember(-99, vec_temp_TObj(:,1))
-                vec_temp_TObj(10,1) = 0;
+                vec_temp_TObj(5,1) = 0;
             end
-            disp_temp = diff(vec_temp_TObj(10,:));
+            disp_temp = diff(displ_vector);
             
-            vec_temp_TObj(12,1:end-1) = disp_temp;
+            vec_temp_TObj(5,1:end-1) = disp_temp;
             
             % add last performed displacement if detectable
             if  ~ismember(-99, vec_temp_TObj(:,end))
                 
-                vec_temp_TObj(12,end) = TObj(index).sRoad(end)- vec_temp_TObj(10,end);
+                vec_temp_TObj(5,end) = TObj(index).sRoad(end)- displ_vector(end);
             end
             
             
             % add maneuver duration
             dur_temp = diff(vec_temp_TObj(1,:));
-            vec_temp_TObj(13,1:end-1) = dur_temp;
-            % add duration of the last maneuver or the last state change
+            vec_temp_TObj(4,1:end-1) = dur_temp;
             
-            vec_temp_TObj(13,end) = Time(end)- vec_temp_TObj(1,end);
-            % convert speed to kmh 
-            vec_temp_TObj(2,:) = vec_temp_TObj(2,:)*3.6;
-            vec_temp_TObj(3,:) = vec_temp_TObj(3,:)*3.6;
+            % add duration of the last maneuver or the last state change
+            vec_temp_TObj(4,end) = Time(end)- vec_temp_TObj(1,end);
+            % convert speed to kmh
+            vec_temp_TObj(2:3,:) = vec_temp_TObj(2:3,:)*3.6;
             
             %% Split in detectable parts
             % index arrays for non detectable parts
-            ind_undetec6=find(vec_temp_TObj(6,:)==-9);
-            ind_undetec7=find(vec_temp_TObj(7,:)==-9);
-            ind_undetec8 = find(vec_temp_TObj(8,:)==-99);
-            ind_undetec9 = find(vec_temp_TObj(9,:)==-99);
-            ind_undetec = unique([ind_undetec8,ind_undetec9]);
+            ind_undetec10=find(vec_temp_TObj(10,:)==-9);
+            ind_undete11=find(vec_temp_TObj(11,:)==-9);
+            ind_undetec12 = find(vec_temp_TObj(12,:)==-99);
+            ind_undetec13 = find(vec_temp_TObj(13,:)==-99);
+            ind_undetec = unique([ind_undetec12,ind_undetec13]);
             
             % post process the array of indexes
-            %             ind_undetec_temp = ind_undetec;
             if ~ismember(1,ind_undetec)
                 ind_undetec = [0,ind_undetec];
             end
@@ -362,15 +353,19 @@ if ~isempty(TObj)
                 ind_undetec = [ind_undetec,size(vec_temp_TObj,2)+1];
             end
             
-            % split long. TObj into detectable intervals
+            % split TObj into detectable intervals
             if ~isempty(ind_undetec)
                 for k=1:length(ind_undetec)-1
                     TObj(index).TObj_DetectPart(k).data = vec_temp_TObj(:,ind_undetec(k)+1:ind_undetec(k+1)-1);
+                    if (TObj(index).TObj_DetectPart(k).data(4,1))<=0.02
+                        TObj(index).TObj_DetectPart(k).data(:,1)=[];
+                    end
                     %num_obj =num_obj+1;
                     
                 end
             end
-            % store vec_temp_TObj
+            
+            %store vec_temp_TObj in TObj struct
             TObj(index).vec_temp = vec_temp_TObj;
             
             % add array of timestamps corresponding to maneuver and state change
@@ -380,25 +375,26 @@ if ~isempty(TObj)
     end
 end
 
-%% create new struct with the new defined Objcts TObj_new
+%% create a new struct with the new defined Objcts TObj_new based of the detection over different Time Phases
 
-
-% index for the new added TObjs
+% total number of the detectable TObj
 ind_TObj_new =num_detecTObj;
 
 % preallocate TObj_new
 TObj_new =struct;
 
 % add the new Objects (a new Object is defined pro detectable process)
-for i=1:num_detecTObj
-    if check_detectable(TObj(i).DetectLevel)
-        for j=1:numel(TObj(i).TObj_DetectPart)
+for i=1:numOfTObj
+    for j=1:numel(TObj(i).TObj_DetectPart)
+        if ~isempty(TObj(i).TObj_DetectPart)
             if j==1
                 TObj_new(i).matrix_model.data= TObj(i).TObj_DetectPart(j).data;
             else
                 ind_TObj_new = ind_TObj_new+1;
                 TObj_new(ind_TObj_new).matrix_model.data= TObj(i).TObj_DetectPart(j).data;
             end
+        else
+            TObj_new(i).matrix_model.data =[];
         end
     end
 end
@@ -407,10 +403,16 @@ end
 % round time_change_allTObj_ego
 time_change_allTObj_ego = round(unique([time_change_allTObj_ego,Time_change_obj]),2);
 
-
 % make all TObjs matrices have the same dimensions according to the the
-% definition of the theoretical tensor
-for h=1:ind_TObj_new
+
+if ind_TObj_new< numOfTObj
+    for i=ind_TObj_new+1:numOfTObj
+        TObj_new(i).matrix_model=[];
+    end
+end
+
+
+for h=1:numOfTObj
     if ~isempty(TObj_new)
         if ~isempty(TObj_new(h).matrix_model)
             
@@ -435,18 +437,16 @@ for h=1:ind_TObj_new
             end
             % permute columns of the matrix according to sorted time steps
             tensor_model.Tobj(h).data = permute_sorted_col(tensor_model.Tobj(h).data);
-            
+        else
+            tensor_model.Tobj(h).data=[];
         end
     end
 end
 
 % make ego matrix have the same dimensions as TObj matrices (Tensor pages must have the same dimension)
-tensor_model.Ego = [vec_temp_ego; -9999*ones(8,size(vec_temp_ego,2))];
+tensor_model.Ego = [vec_temp_ego; -9999*ones(4,size(vec_temp_ego,2))];
 
-% convert speed to kmh
-tensor_model.Ego(2,:) = tensor_model.Ego(2,:) *3.6;
-
-% round time to avoid error warning
+% round time to avoid error
 tensor_model.Ego(1,:) = round(tensor_model.Ego(1,:),2);
 
 % unify the dimension for ego
@@ -458,6 +458,11 @@ end
 
 % rearrange the columns of the ego matrix according to sorted time steps
 tensor_model.Ego = permute_sorted_col(tensor_model.Ego);
+
+% permute rows of maneuver labeling due to the Definito if the order of
+% the metaparameter in the tensor
+tensor_model.Ego(10:11,:) = tensor_model.Ego(8:9,:);
+tensor_model.Ego (8:9,:) = -9999*ones(2,size(tensor_model.Ego,2));
 
 %% save changes to Tobj struct
 prepdata_filename= 'prepdata.mat';
