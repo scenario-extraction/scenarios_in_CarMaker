@@ -1,5 +1,5 @@
 % calculate the relative % deviation considering the mapping of driving
-% events (maneuver and spatial relations)
+% events (maneuver and spatial relations) in the resimulation Tensor
 
 function  error=event_dev_func(M_sim,M_resim)
 
@@ -9,14 +9,12 @@ if ~isempty(M_sim) && ~isempty(M_resim)
     % process the two tensors
     index1=[];
     index2=[];
-    % state based evaluation
+    
+    % assign input matrices
     A= M_sim(end-1:end,:);
     B= M_resim(end-1:end,:);
     
-    % maneuver based evaluation
-    % A= M_sim(10:11,:);
-    % B= M_resim(10:11,:);
-    
+   
     % proc A
     for i =2:size(A,2)
         
