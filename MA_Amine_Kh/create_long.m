@@ -1,24 +1,64 @@
-% create the final version of the matrix describing the long. maneuvers
-% according to the model
-function M=create_long(M,time_thr)
+%%
+%this funtion has the long. matrices as a onr of its Inputs and. It concatenates the columns
+% of the these matrices based on a chosen time thresohld. In this case the
+% duration of a Gear shifting is chosen as threshold
 
+function M=create_long(M,time_thr)
 
 m=0;
 ind=0;
-indarr=[]; % array containing the indexes of Gear shifting or unknown maneuver
+indarr=[];
 
 while ind<size(M,2)
     
     ind=ind +1 ;
+    
+    % treat the case that the first maneuver duration is less than the set
+    % threshold
+    if ind ==1 && check_time(M(4,1), time_thr)
+        ind_temp = ind;
+        while ind_temp<= size(M,2) && check_time(M(4,ind_temp), time_thr)
+            if ind_temp >1
+                m=m+1;
+                indarr(m)=ind_temp;
+            end
+            M(3,1)=M(3,ind_temp);
+            if ind_temp ~=1
+                M(4,1)=M(4,1)+M(4,ind_temp);
+                M(5,1)=M(5,1)+M(5,ind_temp);
+            end
+            ind_temp =ind_temp+1;
+        end
+        if ind_temp >1
+            m=m+1;
+            indarr(m)=ind_temp;
+        end
+        
+        % remove exceeded index from indarr
+        M(3,1)=M(3,ind_temp);
+        if ind_temp ~=1
+            M(4,1)=M(4,1)+M(4,ind_temp);
+            M(5,1)=M(5,1)+M(5,ind_temp);
+        end
+        M(end,1) = M(end,ind_temp);
+        if ~isempty(indarr)
+            
+            M(:,indarr)=[]; % remove unknown maneuver segments (columns in the matrix)
+        end
+    end
+    
+    m=0;
+    indarr=[];
+    %
     k=ind+1;
     if k >=size(M,2)
         break;
     end
-    if check_time(M(:,k), time_thr)
+    if check_time(M(4,k), time_thr)
         
         % while GS or unknown maneuver add the duration and performed
         % displacement
-        while k<= size(M,2) && check_time(M(:,k), time_thr)
+        while k<= size(M,2) && check_time(M(4,k), time_thr)
             
             m=m+1;
             indarr(m)=k;
@@ -28,13 +68,7 @@ while ind<size(M,2)
             k=k+1;
             
         end
-        % concatenate to the next available defined maneuver (acc or dec or static cruising)
-%         M(4,ind)=M(4,k-1)+M(4,ind);
-%         M(5,ind)=M(5,k-1)+M(5,ind);
-%         M(end,ind)=M(end,k); % label the new curve segment
-%         m=m+1;
-%         indarr(m)=k;
-        
+       
         if ~isempty(indarr)
             
             M(:,indarr)=[]; % remove unknown maneuver segments (columns in the matrix)
@@ -42,7 +76,7 @@ while ind<size(M,2)
         %             j=1;
         m=0; % preallocate for the next iteration
         indarr=[];% preallocate for the next iteration
-%         ind = k;
+        %         ind = k;
     end
     
 end
@@ -117,14 +151,13 @@ while  ind<length(label) && ~check_adj(label) % &&
             M(:,indarr)=[];
             label(:,indarr)=[];
         end
-        
         j=1;
         m=0;
         indarr=[];
-    elseif label(k)==-99
+    elseif label(k)==-9
         j=k+1;
         
-        while j<=size(M,2) && label(j)==-99
+        while j<=size(M,2) && label(j)==-9
             
             m=m+1;
             indarr(m)=j;
@@ -151,20 +184,15 @@ end
 
 
 %--- subfunctions
-% this function checks if a certain threshold is exceeded
+% this function checks if a certain threshold is exceeded in a given array
 function b=check_time(vec,time_thr)
 
 b=false;
 
-if  vec(4)<(time_thr)
+if (find(vec<time_thr))
+    
     b=true;
     
 end
 end
 
-% this function checks whether two consecutive array elements are duplicate
-% and will be needed in the final labeling
-function b=check_adj(vec) %
-temp=unique(vec,'stable');
-b=isequal(temp,vec);
-end
