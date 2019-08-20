@@ -137,7 +137,7 @@ for index_TR=1:numel(TestRun.first_sim)
     num_obj_dev = min(num_obj_sim,num_obj_resim);
     
     for i=1:num_obj_dev % if necessary replace with num_obj_dev
-        TestRun.tensor_dev(index_TR).TObj(i).data =100*( test_dev_func(TestRun.first_sim(index_TR).Tensor_CM.TObj(i).data,TestRun.resim(index_TR).data.Tensor_CM.TObj(i).data));
+        TestRun.tensor_dev(index_TR).TObj(i).data =100*(event_dev_func(TestRun.first_sim(index_TR).Tensor_CM.TObj(i).data,TestRun.resim(index_TR).data.Tensor_CM.TObj(i).data));
     end
     
     
