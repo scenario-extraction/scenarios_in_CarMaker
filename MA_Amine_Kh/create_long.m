@@ -1,5 +1,5 @@
 %%
-%this funtion has the long. matrices as a onr of its Inputs and. It concatenates the columns
+%this funtion has the long. matrices as a one of its Inputs and. It concatenates the columns
 % of the these matrices based on a chosen time thresohld. In this case the
 % duration of a Gear shifting is chosen as threshold
 
