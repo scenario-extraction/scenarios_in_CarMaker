@@ -1,4 +1,4 @@
-% this function creates two tensors und returns a total number:
+% this function creates two tensors und returns a total number of the detectable traffic objects:
 %1- a tensor for CM simulation, which describes the driving scenario in
 % terms of elementar longitudinal and lateral maneuvers; for lateral: lane Keeping, right Lane
 % Change, left Lane change. For longitudinal: acceleration,
