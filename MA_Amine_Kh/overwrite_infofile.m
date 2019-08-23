@@ -65,8 +65,9 @@ if isfield(S,'TObj')
             
             v_temp = vec_overwrite_TObj(2,1);
             
-            ifile_setstr(handle,strcat('Traffic.',index_str,'.Init.v'),num2str(v_temp)); % target velocity of previous maneuver segment
-            
+            % velocity at first detection's moment
+            ifile_setstr(handle,strcat('Traffic.',index_str,'.Init.v'),num2str(v_temp)); % 
+             %(s,t)-Pos at first detection's moment
             ifile_setstr(handle,strcat('Traffic.',index_str,'.Init.Road'),strcat(num2str(vec_overwrite_TObj(8,1)),32,num2str(vec_overwrite_TObj(6,1))));
             
             start_time_temp = vec_overwrite_TObj(1,1);
