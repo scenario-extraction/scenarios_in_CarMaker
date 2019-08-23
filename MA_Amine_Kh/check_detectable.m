@@ -6,7 +6,7 @@ b=true;
 binc = [0,1,2]; % detection Levels
 counts = hist(vec,binc);
 
-% time threshold is 250 stamps = 5 seconds due to sample time of 0.02 s.
+% time threshold is 250 stamps = 5 seconds (sample time of 0.02 s)
 %TObj detection's duration below 5s will be igonred. Threshold can be
 %adapted
 if counts(1)>=length(vec)-250
