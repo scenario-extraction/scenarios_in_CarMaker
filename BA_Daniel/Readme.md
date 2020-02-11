@@ -1,20 +1,20 @@
 # Dataset-to-Simulation
 
 Dataset file structure:
-- dataset_root
-  - image_02
+- dataset_root/
+  - image_02/
     -   0000.png
     -   0001.png
     -   ...
     -   xxxx.png
-  - velodyne
+  - velodyne/
     -   0000.bin
     -   0001.bin
     -   ...
     -   xxxx.bin
-  - calib
+  - calib/
     -   calib.txt
-  - oxts
+  - oxts/
     -   oxts.txt
 
 Based on:
