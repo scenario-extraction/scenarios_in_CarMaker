@@ -28,4 +28,5 @@ Requirements:
 
 Installation:
  - Setup conda environment using environment.yml 
+ - Install spconv as deescribed in
  - Copy pretrained model "pp_pv_40e_dualadd_subabs_C.pth" to Tracker/mmMOT/model/
