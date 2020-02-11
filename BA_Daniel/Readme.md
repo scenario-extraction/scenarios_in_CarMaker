@@ -1,7 +1,6 @@
 # Dataset-to-Simulation
 
-Dataset-File-Structure
-
+Dataset file structure:
 - dataset_root
   - image_02
     -   0000.png
@@ -18,6 +17,7 @@ Dataset-File-Structure
   - oxts
     -   oxts.txt
 
+Based on:
 - Detector is based on Secondv1.5.1 and spconv at commit 7342772 
 - Tracker is based on mmMOT
 
