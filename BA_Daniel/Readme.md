@@ -2,24 +2,24 @@
 
 Dataset-File-Structure
 
-dataset_root
-  image_02
-    0000.png
-    0001.png
-    ...
-    xxxx.png
-  velodyne
-    0000.bin
-    0001.bin
-    ...
-    xxxx.bin
-  velodyne_reduced
-    calib.txt
-  oxts
-    calib.txt
+- dataset_root
+  - image_02
+    -   0000.png
+    -   0001.png
+    -   ...
+    -   xxxx.png
+  - velodyne
+    -   0000.bin
+    -   0001.bin
+    -   ...
+    -   xxxx.bin
+  - calib
+    -   calib.txt
+  - oxts
+    -   oxts.txt
 
-Detector is based on Secondv1.5.1 and spconv at commit 7342772 
-Tracker is based on mmMOT
+- Detector is based on Secondv1.5.1 and spconv at commit 7342772 
+- Tracker is based on mmMOT
 
 Requirements:
  - CUDA >= 9.0
