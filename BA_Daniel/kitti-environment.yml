@@ -1,4 +1,4 @@
-name: secondv1.5
+name: kitti-env
 channels:
   - pytorch
   - conda-forge
