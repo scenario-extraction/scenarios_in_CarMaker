@@ -3,11 +3,19 @@
 TODO:
  - EGO-Movement-Converter
 
+Setup Anaconda environment:
+You need two separate environments for Kitti and Lyft Tracking.
+- Kitti-Environment
+  -  Install using kitti-environment.yml
+  -  Add kitti detector path to environment using: conda develop /your/path/to/Kitti-Detector/second.pytorch
+- Lyft-Environment
+  -  Install using lyft-environment.yml
+  -  Add lyft detector path to environment using: conda develop /your/path/to/Lyft-Detector/second.pytorch
 
 System-Design:
-Lyft-Data ---> Lyft-Detector ----->
+ - Lyft-Data ---> Lyft-Detector ----->
                                     ---> Tracker
-Kitti-Data ---> Kitti-Detector --->
+ - Kitti-Data ---> Kitti-Detector --->
 
 
 Lyft Dataset File Structure:
