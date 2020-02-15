@@ -1,0 +1,33 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = Scenario-LaneConfig 1.0
+FileCreator = CarMaker 8.1 2019-11-07
+
+Name = 3-Lane-Autobahn
+Prio = 2
+
+LaneL.0 = border 1.5
+LaneL.1 = border 0.75
+LaneL.2 = road 3.5
+LaneL.3 = road 3.5
+LaneL.4 = road 3.5
+LaneL.5 = border 1.0
+LaneR.0 = border 1.5
+LaneR.1 = border 0.75
+LaneR.2 = road 3.5
+LaneR.3 = road 3.5
+LaneR.4 = road 3.5
+LaneR.5 = border 1.0
+
+RoadMarkingL.0 = none 2.0 4.0 0.15 {1.0 1.0 1.0}
+RoadMarkingL.1 = line 2.0 4.0 0.15 {1.0 1.0 1.0}
+RoadMarkingL.2 = dash 2.0 4.0 0.15 {1.0 1.0 1.0}
+RoadMarkingL.3 = dash 2.0 4.0 0.15 {1.0 1.0 1.0}
+RoadMarkingL.4 = line 2.0 4.0 0.15 {1.0 1.0 1.0}
+RoadMarkingL.5 = none 2.0 4.0 0.15 {1.0 1.0 1.0}
+RoadMarkingR.0 = none 2.0 4.0 0.15 {1.0 1.0 1.0}
+RoadMarkingR.1 = line 2.0 4.0 0.15 {1.0 1.0 1.0}
+RoadMarkingR.2 = dash 2.0 4.0 0.15 {1.0 1.0 1.0}
+RoadMarkingR.3 = dash 2.0 4.0 0.15 {1.0 1.0 1.0}
+RoadMarkingR.4 = line 2.0 4.0 0.15 {1.0 1.0 1.0}
+RoadMarkingR.5 = none 2.0 4.0 0.15 {1.0 1.0 1.0}
+RoadMarkingC = none 2.0 4.0 0.15 {1.0 1.0 1.0}

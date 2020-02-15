@@ -1,0 +1,5 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-Plugins 1
+FileCreator = CarMaker 2020-01-31 14:52:19
+VehicleControl.PosCtrl = 1
+VehicleControl.PosCtrl.Info = Position Control

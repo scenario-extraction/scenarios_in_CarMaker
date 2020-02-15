@@ -1,0 +1,39 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-OutputQuantities 1
+
+DStore.Format = ascii
+DStore.Compression = none
+DStore.dt.fast = 0.001
+DStore.dt.normal = 0.01
+DStore.dt.slow = 0.1
+
+DStore.Quantities.fast:
+DStore.Quantities.normal:
+	Car.alHori
+	Car.atHori
+	Car.ax
+	Car.ay
+	Car.az
+	Car.Road.Lane.Act.LaneId
+	Car.v
+	DM.ManDist
+	DM.ManNo
+	DM.ManTime
+	Time
+	Traffic.LeadCar.Lane.Act.LaneId
+	Traffic.LeadCar.LatVel
+	Traffic.LeadCar.LongAcc
+	Traffic.LeadCar.LongVel
+	Traffic.LeadCar.ManNo
+	Traffic.LeadCar.sRoad
+	Traffic.LeadCar.tRoad
+	Traffic.LeadCar.tx
+	Traffic.LeadCar.ty
+	Traffic.LeadCar.tz
+	Vhcl.Fr1.x
+	Vhcl.Fr1.y
+	Vhcl.Fr1.z
+	Vhcl.sRoad
+	Vhcl.tRoad
+	Vhcl.v
+DStore.Quantities.slow:

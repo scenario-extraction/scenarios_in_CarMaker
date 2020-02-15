@@ -24,7 +24,7 @@ from second.protos import pipeline_pb2
 #---->calib.txt
 #
 
-def track(dataset_root,export_video=False):
+def kitti_track(dataset_root,export_video=False):
 
 
     #subprocess.call(["conda","develop", "./Detectorv1.5/second.pytorch"])
@@ -32,20 +32,20 @@ def track(dataset_root,export_video=False):
 
     temp_data_dir = dataset_root+'/temp_data'
     subprocess.call(["mkdir",temp_data_dir])
-    edit_detector_config(dataset_root,temp_data_dir,'./Detectorv1.5/second.pytorch/second/configs/car.fhd.config')
+    edit_detector_config(dataset_root,temp_data_dir,'./Kitti-Detector/second.pytorch/second/configs/car.fhd.config')
 
 
     subprocess.call(["mkdir",dataset_root+'velodyne_reduced'])
 
-    cmd = ['python', './Detectorv1.5/second.pytorch/second/create_track_data.py','create_kitti_info_file','--data_path='+dataset_root,'--save_path='+temp_data_dir]
+    cmd = ['python', './Kitti-Detector/second.pytorch/second/create_track_data.py','create_kitti_info_file','--data_path='+dataset_root,'--save_path='+temp_data_dir]
     subprocess.Popen(cmd).wait()
 
 
-    cmd = ['python', './Detectorv1.5/second.pytorch/second/create_track_data.py','create_reduced_point_cloud','--data_path='+dataset_root,'--test_info_path='+temp_data_dir+'/kitti_infos_test.pkl']
+    cmd = ['python', './Kitti-Detector/second.pytorch/second/create_track_data.py','create_reduced_point_cloud','--data_path='+dataset_root,'--test_info_path='+temp_data_dir+'/kitti_infos_test.pkl']
     subprocess.Popen(cmd).wait()
 
 
-    cmd = ['python', './Detectorv1.5/second.pytorch/second/pytorch/detect.py','detect','--config_path=./Detectorv1.5/second.pytorch/second/configs/car.fhd.config','--model_dir=./Detectorv1.5/second.pytorch/pretrained_models_v1.5/car_fhd','--measure_time=True','--batch_size=1','--result_path='+temp_data_dir]
+    cmd = ['python', './Kitti-Detector/second.pytorch/second/pytorch/detect.py','detect','--config_path=./Kitti-Detector/second.pytorch/second/configs/car.fhd.config','--model_dir=./Kitti-Detector/second.pytorch/pretrained_models_v1.5/car_fhd','--measure_time=True','--batch_size=1','--result_path='+temp_data_dir]
     subprocess.Popen(cmd).wait()
 
 

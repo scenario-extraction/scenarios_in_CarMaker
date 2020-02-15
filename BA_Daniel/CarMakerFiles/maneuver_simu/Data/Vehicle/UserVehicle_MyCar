@@ -1,0 +1,157 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-Car-MyCar 1
+FileCreator = CarMaker 2020-02-13 15:30:22
+Description:
+	Typical, unvalidated data for passenger car
+	with simple MyCar example for vehicle model
+	Tire: RT_195_65R15
+
+
+## General ###############################################################
+Picture.PicFName = BMW_5_2017.png
+Movie.Skin.FName = 3D/Vehicles/BMW_5_2017.mobj
+Vehicle.OuterSkin = 0.2 0.79 0.35 5.2 -0.79 1.2
+VehicleControl.0.Kind =
+
+VehicleControl.1.Kind =
+
+VehicleControl.2.Kind =
+
+VehicleControl.3.Kind =
+
+VehicleControl.4.Kind =
+
+VehicleControl.5.Kind =
+
+VehicleControl.6.Kind =
+
+VehicleControl.7.Kind =
+
+VehicleControl.8.Kind =
+
+VehicleControl.9.Kind =
+
+VehicleControl.Comment:
+Misc.Comment:
+
+
+## Vehicle Model #########################################################
+VehicleModel = Vhcl_2Axle
+VehicleModel.ExtraData =
+nAxle = 2
+Body.mass = 650.0
+Body.I = 1000.0 2000.0 3000.0
+Body.pos = 2.7 0 0.31
+Model.Comment:
+
+
+## Tires #################################################################
+Tire.0 = Examples/RT_195_65R15
+Tire.1 = Examples/RT_195_65R15
+Tire.2 = Examples/RT_195_65R15
+Tire.3 = Examples/RT_195_65R15
+AxleR.TwinTiresOn = 0
+Tires.Comment:
+
+
+## Brake #################################################################
+Brake.Kind = CM4SL 1
+Brake.Torque.Amplify = 1.0 1.0 1.0 1.0
+Brake.Comment:
+
+
+## Powertrain ###########################################################
+PowerTrain.Kind = CM4SL 1
+
+PowerTrain.Comment:
+
+
+## Sensors ###############################################################
+Sensor.Inertial.N = 0
+Sensor.Object.N = 0
+Sensor.Object.ObservRadius = 500.0
+Sensor.FSpace.N = 0
+Sensor.TSign.N = 0
+Sensor.Line.N = 0
+Sensor.Road.N = 0
+Sensor.Collision.Active = 0
+Sensor.GNav.pos = 0.0 0.0 0.0
+Sensor.GNav.Mounting = Fr1A
+Sensor.GNav.UpdRate = 10
+Sensor.GNav.nCycleOffset = 0
+Sensor.GNav.ElevationMask = 10.0
+Sensor.GNav.DirectView = 0
+Sensor.GNav.ShowDDict = 0
+Sensor.GNav.ReceiverClockError.Active = 0
+Sensor.GNav.ReceiverClockError.std = 15.0
+Sensor.GNav.ReceiverClockError.corrTime = 3600.0
+Sensor.GNav.CommonMode.Active = 0
+Sensor.GNav.EphError.std = 3.0
+Sensor.GNav.EphError.corrTime = 1800.0
+Sensor.GNav.IonoModel.Active = 0
+Sensor.GNav.IonoError.std = 5.0
+Sensor.GNav.IonoError.corrTime = 1800.0
+Sensor.GNav.TropoModel.Active = 0
+Sensor.GNav.TropoError.std = 2.0
+Sensor.GNav.TropoError.corrTime = 3600.0
+Sensor.GNav.ReceiverNoise.Active = 0
+Sensor.GNav.ReceiverNoise.stdPsr = 0.1
+Sensor.GNav.ReceiverNoise.stdRr = 0.05
+Sensor.Radar.N = 0
+Sensor.RadarRSI.N = 0
+Sensor.USonicRSI.N = 0
+Sensor.LidarRSI.N = 0
+Sensor.CameraRSI.nProcesses = 0
+Sensor.Comment:
+
+
+## Show ##################################################################
+Crypto.Show:
+	Picture.PicFName
+	Movie.Skin.FName
+	Vehicle.OuterSkin
+	nAxle
+	Steering.Kind
+	Steering.FName
+	Brake.Kind
+	Brake.FName
+	PowerTrain.Kind
+	PowerTrain.FName
+	Sensor.FSpace.N
+	Sensor.RadarRSI.N
+	Sensor.USonicRSI.N
+	Sensor.LidarRSI.N
+	CM4SL.ActivateFcn
+	CM4SL.StartFcn
+	CM4SL.StopFcn
+Crypto.AllowAccess:
+	GenericPlugin
+
+
+## Additional Parameters #################################################
+Aero.Ayz = 1.725
+Aero.ca_f = 1.04
+Aero.ca_r = 1.44
+Aero.cw = 0.91
+Aero.rho = 1.205
+Hitch.pos = 0 0 0.55
+PowerTrain.DL.iDiff = 5.2
+PowerTrain.Engine.Trq:
+	1500	20
+	2000	100
+	4500	150
+	6000	120
+	7000	110
+PowerTrain.GearBox.iBackwardGears = -3.0
+PowerTrain.GearBox.iForwardGears = 2.5 2.063 1.722 1.5 1.364 1.261
+PowerTrain.nMotor = 1
+RefPointInputSystem = 0 0 0
+Steering.i = 10
+Tire.ax0 = 13.0
+Tire.ay0 = 13.0
+VehicleModel.Kind = MyCar
+VehicleModel.Mode = BodyA
+Wheel.fl.pos = 4.2 0.74 0.31
+Wheel.fr.pos = 4.2 -0.74 0.31
+Wheel.rl.pos = 1.2 0.74 0.31
+Wheel.rr.pos = 1.2 -0.74 0.31
