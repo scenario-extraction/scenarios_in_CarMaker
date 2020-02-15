@@ -1,7 +1,21 @@
 # Dataset-to-Simulation
 
-Dataset file structure:
-- dataset_root/
+TODO:
+ - EGO-Movement-Converter
+
+
+System-Design:
+Lyft-Data ---> Lyft-Detector ----->
+                                    ---> Tracker
+Kitti-Data ---> Kitti-Detector --->
+
+
+Lyft Dataset File Structure:
+- lyft_dataset_root/
+
+
+Kitti Dataset File Structure:
+- kitti_dataset_root/
   - image_02/
     -   0000.png
     -   0001.png
