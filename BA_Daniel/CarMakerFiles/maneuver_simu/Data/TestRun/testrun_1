@@ -1,0 +1,3472 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-TestRun 8
+FileCreator = CarMaker 8.1 2019-11-07
+Description:
+Vehicle = UserVehicle_MyCar
+Trailer =
+Tire.0 =
+Tire.1 =
+Tire.2 =
+Tire.3 =
+Snapshot.TimeLimit =
+Snapshot.DistLimit =
+VehicleLoad.0.mass = 0
+VehicleLoad.0.pos = 0 0 0
+VehicleLoad.1.mass = 0
+VehicleLoad.1.pos = 0 0 0
+VehicleLoad.2.mass = 0
+VehicleLoad.2.pos = 0 0 0
+VehicleLoad.3.mass = 0
+VehicleLoad.3.pos = 0 0 0
+TrailerLoad.0.mass = 0
+TrailerLoad.0.pos = 0 0 0
+TrailerLoad.1.mass = 0
+TrailerLoad.1.pos = 0 0 0
+TrailerLoad.2.mass = 0
+TrailerLoad.2.pos = 0 0 0
+DrivMan.Init.Velocity = 0
+DrivMan.Init.SteerAng = 0
+DrivMan.Init.GearNo = 0
+DrivMan.Init.LaneOffset = 0
+DrivMan.Init.OperatorActive = 1
+DrivMan.Init.OperatorState = drive
+DrivMan.VhclOperator.Kind = IPGOperator 1
+DrivMan.nDMan = 1
+DrivMan.0.TimeLimit = 117.5
+DrivMan.0.LongDyn = Stop 2.0 0
+DrivMan.0.LatDyn = Driver 0
+Traffic.IFF.FName = C://CM_Projects//maneuver_simu_2//SimInput//traffic_profile_1.txt
+Traffic.IFF.Time.Name = Time
+Traffic.N = 57
+Traffic.SpeedUnit = ms
+Traffic.0.ObjectKind = Movable
+Traffic.0.ObjectClass = Car
+Traffic.0.Name = T0
+Traffic.0.Info = UNNAMED Object 0
+Traffic.0.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.0.Color = 1.0 0.0 0.0
+Traffic.0.Basics.Dimension = 4.28 1.82 1.28
+Traffic.0.Basics.Offset = 0.0 0.0
+Traffic.0.Basics.Fr12CoM = 2.15
+Traffic.0.Init.Orientation = 0.0 0.0 0.0
+Traffic.0.RCSClass = RCS_Car
+Traffic.0.DetectMask = 1 1
+Traffic.0.Route = 0 1
+Traffic.0.Init.Road = 18 R2
+Traffic.0.Init.v = 1
+Traffic.0.FreeMotion = 1
+Traffic.0.UpdRate = 200
+Traffic.0.IFF.FM_tx.Name =FM_tx_0
+Traffic.0.IFF.FM_tx.Factor = 1.0
+Traffic.0.IFF.FM_tx.Offset = 0.0
+Traffic.0.IFF.FM_ty.Name =FM_ty_0
+Traffic.0.IFF.FM_ty.Factor = 1.0
+Traffic.0.IFF.FM_ty.Offset = 0.0
+Traffic.0.IFF.FM_tz.Name =FM_tz_0
+Traffic.0.IFF.FM_tz.Factor = 1.0
+Traffic.0.IFF.FM_tz.Offset = 0.0
+Traffic.0.IFF.FM_rx.Name =
+Traffic.0.IFF.FM_rx.Factor = 1.0
+Traffic.0.IFF.FM_rx.Offset = 0.0
+Traffic.0.IFF.FM_ry.Name =
+Traffic.0.IFF.FM_ry.Factor = 1.0
+Traffic.0.IFF.FM_ry.Offset = 0.0
+Traffic.0.IFF.FM_rz.Name =FM_rz_0
+Traffic.0.IFF.FM_rz.Factor = 1.0
+Traffic.0.IFF.FM_rz.Offset = 0.0
+Traffic.1.ObjectKind = Movable
+Traffic.1.ObjectClass = Car
+Traffic.1.Name = T1
+Traffic.1.Info = UNNAMED Object 1
+Traffic.1.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.1.Color = 1.0 0.0 0.0
+Traffic.1.Basics.Dimension = 4.28 1.82 1.28
+Traffic.1.Basics.Offset = 0.0 0.0
+Traffic.1.Basics.Fr12CoM = 2.15
+Traffic.1.Init.Orientation = 0.0 0.0 0.0
+Traffic.1.RCSClass = RCS_Car
+Traffic.1.DetectMask = 1 1
+Traffic.1.Route = 0 1
+Traffic.1.Init.Road = 18 R2
+Traffic.1.Init.v = 1
+Traffic.1.FreeMotion = 1
+Traffic.1.UpdRate = 200
+Traffic.1.IFF.FM_tx.Name =FM_tx_1
+Traffic.1.IFF.FM_tx.Factor = 1.0
+Traffic.1.IFF.FM_tx.Offset = 0.0
+Traffic.1.IFF.FM_ty.Name =FM_ty_1
+Traffic.1.IFF.FM_ty.Factor = 1.0
+Traffic.1.IFF.FM_ty.Offset = 0.0
+Traffic.1.IFF.FM_tz.Name =FM_tz_1
+Traffic.1.IFF.FM_tz.Factor = 1.0
+Traffic.1.IFF.FM_tz.Offset = 0.0
+Traffic.1.IFF.FM_rx.Name =
+Traffic.1.IFF.FM_rx.Factor = 1.0
+Traffic.1.IFF.FM_rx.Offset = 0.0
+Traffic.1.IFF.FM_ry.Name =
+Traffic.1.IFF.FM_ry.Factor = 1.0
+Traffic.1.IFF.FM_ry.Offset = 0.0
+Traffic.1.IFF.FM_rz.Name =FM_rz_1
+Traffic.1.IFF.FM_rz.Factor = 1.0
+Traffic.1.IFF.FM_rz.Offset = 0.0
+Traffic.2.ObjectKind = Movable
+Traffic.2.ObjectClass = Car
+Traffic.2.Name = T2
+Traffic.2.Info = UNNAMED Object 2
+Traffic.2.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.2.Color = 1.0 0.0 0.0
+Traffic.2.Basics.Dimension = 4.28 1.82 1.28
+Traffic.2.Basics.Offset = 0.0 0.0
+Traffic.2.Basics.Fr12CoM = 2.15
+Traffic.2.Init.Orientation = 0.0 0.0 0.0
+Traffic.2.RCSClass = RCS_Car
+Traffic.2.DetectMask = 1 1
+Traffic.2.Route = 0 1
+Traffic.2.Init.Road = 18 R2
+Traffic.2.Init.v = 1
+Traffic.2.FreeMotion = 1
+Traffic.2.UpdRate = 200
+Traffic.2.IFF.FM_tx.Name =FM_tx_2
+Traffic.2.IFF.FM_tx.Factor = 1.0
+Traffic.2.IFF.FM_tx.Offset = 0.0
+Traffic.2.IFF.FM_ty.Name =FM_ty_2
+Traffic.2.IFF.FM_ty.Factor = 1.0
+Traffic.2.IFF.FM_ty.Offset = 0.0
+Traffic.2.IFF.FM_tz.Name =FM_tz_2
+Traffic.2.IFF.FM_tz.Factor = 1.0
+Traffic.2.IFF.FM_tz.Offset = 0.0
+Traffic.2.IFF.FM_rx.Name =
+Traffic.2.IFF.FM_rx.Factor = 1.0
+Traffic.2.IFF.FM_rx.Offset = 0.0
+Traffic.2.IFF.FM_ry.Name =
+Traffic.2.IFF.FM_ry.Factor = 1.0
+Traffic.2.IFF.FM_ry.Offset = 0.0
+Traffic.2.IFF.FM_rz.Name =FM_rz_2
+Traffic.2.IFF.FM_rz.Factor = 1.0
+Traffic.2.IFF.FM_rz.Offset = 0.0
+Traffic.3.ObjectKind = Movable
+Traffic.3.ObjectClass = Car
+Traffic.3.Name = T3
+Traffic.3.Info = UNNAMED Object 3
+Traffic.3.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.3.Color = 1.0 0.0 0.0
+Traffic.3.Basics.Dimension = 4.28 1.82 1.28
+Traffic.3.Basics.Offset = 0.0 0.0
+Traffic.3.Basics.Fr12CoM = 2.15
+Traffic.3.Init.Orientation = 0.0 0.0 0.0
+Traffic.3.RCSClass = RCS_Car
+Traffic.3.DetectMask = 1 1
+Traffic.3.Route = 0 1
+Traffic.3.Init.Road = 18 R2
+Traffic.3.Init.v = 1
+Traffic.3.FreeMotion = 1
+Traffic.3.UpdRate = 200
+Traffic.3.IFF.FM_tx.Name =FM_tx_3
+Traffic.3.IFF.FM_tx.Factor = 1.0
+Traffic.3.IFF.FM_tx.Offset = 0.0
+Traffic.3.IFF.FM_ty.Name =FM_ty_3
+Traffic.3.IFF.FM_ty.Factor = 1.0
+Traffic.3.IFF.FM_ty.Offset = 0.0
+Traffic.3.IFF.FM_tz.Name =FM_tz_3
+Traffic.3.IFF.FM_tz.Factor = 1.0
+Traffic.3.IFF.FM_tz.Offset = 0.0
+Traffic.3.IFF.FM_rx.Name =
+Traffic.3.IFF.FM_rx.Factor = 1.0
+Traffic.3.IFF.FM_rx.Offset = 0.0
+Traffic.3.IFF.FM_ry.Name =
+Traffic.3.IFF.FM_ry.Factor = 1.0
+Traffic.3.IFF.FM_ry.Offset = 0.0
+Traffic.3.IFF.FM_rz.Name =FM_rz_3
+Traffic.3.IFF.FM_rz.Factor = 1.0
+Traffic.3.IFF.FM_rz.Offset = 0.0
+Traffic.4.ObjectKind = Movable
+Traffic.4.ObjectClass = Car
+Traffic.4.Name = T4
+Traffic.4.Info = UNNAMED Object 4
+Traffic.4.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.4.Color = 1.0 0.0 0.0
+Traffic.4.Basics.Dimension = 4.28 1.82 1.28
+Traffic.4.Basics.Offset = 0.0 0.0
+Traffic.4.Basics.Fr12CoM = 2.15
+Traffic.4.Init.Orientation = 0.0 0.0 0.0
+Traffic.4.RCSClass = RCS_Car
+Traffic.4.DetectMask = 1 1
+Traffic.4.Route = 0 1
+Traffic.4.Init.Road = 18 R2
+Traffic.4.Init.v = 1
+Traffic.4.FreeMotion = 1
+Traffic.4.UpdRate = 200
+Traffic.4.IFF.FM_tx.Name =FM_tx_4
+Traffic.4.IFF.FM_tx.Factor = 1.0
+Traffic.4.IFF.FM_tx.Offset = 0.0
+Traffic.4.IFF.FM_ty.Name =FM_ty_4
+Traffic.4.IFF.FM_ty.Factor = 1.0
+Traffic.4.IFF.FM_ty.Offset = 0.0
+Traffic.4.IFF.FM_tz.Name =FM_tz_4
+Traffic.4.IFF.FM_tz.Factor = 1.0
+Traffic.4.IFF.FM_tz.Offset = 0.0
+Traffic.4.IFF.FM_rx.Name =
+Traffic.4.IFF.FM_rx.Factor = 1.0
+Traffic.4.IFF.FM_rx.Offset = 0.0
+Traffic.4.IFF.FM_ry.Name =
+Traffic.4.IFF.FM_ry.Factor = 1.0
+Traffic.4.IFF.FM_ry.Offset = 0.0
+Traffic.4.IFF.FM_rz.Name =FM_rz_4
+Traffic.4.IFF.FM_rz.Factor = 1.0
+Traffic.4.IFF.FM_rz.Offset = 0.0
+Traffic.5.ObjectKind = Movable
+Traffic.5.ObjectClass = Car
+Traffic.5.Name = T5
+Traffic.5.Info = UNNAMED Object 5
+Traffic.5.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.5.Color = 1.0 0.0 0.0
+Traffic.5.Basics.Dimension = 4.28 1.82 1.28
+Traffic.5.Basics.Offset = 0.0 0.0
+Traffic.5.Basics.Fr12CoM = 2.15
+Traffic.5.Init.Orientation = 0.0 0.0 0.0
+Traffic.5.RCSClass = RCS_Car
+Traffic.5.DetectMask = 1 1
+Traffic.5.Route = 0 1
+Traffic.5.Init.Road = 18 R2
+Traffic.5.Init.v = 1
+Traffic.5.FreeMotion = 1
+Traffic.5.UpdRate = 200
+Traffic.5.IFF.FM_tx.Name =FM_tx_5
+Traffic.5.IFF.FM_tx.Factor = 1.0
+Traffic.5.IFF.FM_tx.Offset = 0.0
+Traffic.5.IFF.FM_ty.Name =FM_ty_5
+Traffic.5.IFF.FM_ty.Factor = 1.0
+Traffic.5.IFF.FM_ty.Offset = 0.0
+Traffic.5.IFF.FM_tz.Name =FM_tz_5
+Traffic.5.IFF.FM_tz.Factor = 1.0
+Traffic.5.IFF.FM_tz.Offset = 0.0
+Traffic.5.IFF.FM_rx.Name =
+Traffic.5.IFF.FM_rx.Factor = 1.0
+Traffic.5.IFF.FM_rx.Offset = 0.0
+Traffic.5.IFF.FM_ry.Name =
+Traffic.5.IFF.FM_ry.Factor = 1.0
+Traffic.5.IFF.FM_ry.Offset = 0.0
+Traffic.5.IFF.FM_rz.Name =FM_rz_5
+Traffic.5.IFF.FM_rz.Factor = 1.0
+Traffic.5.IFF.FM_rz.Offset = 0.0
+Traffic.6.ObjectKind = Movable
+Traffic.6.ObjectClass = Car
+Traffic.6.Name = T6
+Traffic.6.Info = UNNAMED Object 6
+Traffic.6.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.6.Color = 1.0 0.0 0.0
+Traffic.6.Basics.Dimension = 4.28 1.82 1.28
+Traffic.6.Basics.Offset = 0.0 0.0
+Traffic.6.Basics.Fr12CoM = 2.15
+Traffic.6.Init.Orientation = 0.0 0.0 0.0
+Traffic.6.RCSClass = RCS_Car
+Traffic.6.DetectMask = 1 1
+Traffic.6.Route = 0 1
+Traffic.6.Init.Road = 18 R2
+Traffic.6.Init.v = 1
+Traffic.6.FreeMotion = 1
+Traffic.6.UpdRate = 200
+Traffic.6.IFF.FM_tx.Name =FM_tx_6
+Traffic.6.IFF.FM_tx.Factor = 1.0
+Traffic.6.IFF.FM_tx.Offset = 0.0
+Traffic.6.IFF.FM_ty.Name =FM_ty_6
+Traffic.6.IFF.FM_ty.Factor = 1.0
+Traffic.6.IFF.FM_ty.Offset = 0.0
+Traffic.6.IFF.FM_tz.Name =FM_tz_6
+Traffic.6.IFF.FM_tz.Factor = 1.0
+Traffic.6.IFF.FM_tz.Offset = 0.0
+Traffic.6.IFF.FM_rx.Name =
+Traffic.6.IFF.FM_rx.Factor = 1.0
+Traffic.6.IFF.FM_rx.Offset = 0.0
+Traffic.6.IFF.FM_ry.Name =
+Traffic.6.IFF.FM_ry.Factor = 1.0
+Traffic.6.IFF.FM_ry.Offset = 0.0
+Traffic.6.IFF.FM_rz.Name =FM_rz_6
+Traffic.6.IFF.FM_rz.Factor = 1.0
+Traffic.6.IFF.FM_rz.Offset = 0.0
+Traffic.7.ObjectKind = Movable
+Traffic.7.ObjectClass = Car
+Traffic.7.Name = T7
+Traffic.7.Info = UNNAMED Object 7
+Traffic.7.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.7.Color = 1.0 0.0 0.0
+Traffic.7.Basics.Dimension = 4.28 1.82 1.28
+Traffic.7.Basics.Offset = 0.0 0.0
+Traffic.7.Basics.Fr12CoM = 2.15
+Traffic.7.Init.Orientation = 0.0 0.0 0.0
+Traffic.7.RCSClass = RCS_Car
+Traffic.7.DetectMask = 1 1
+Traffic.7.Route = 0 1
+Traffic.7.Init.Road = 18 R2
+Traffic.7.Init.v = 1
+Traffic.7.FreeMotion = 1
+Traffic.7.UpdRate = 200
+Traffic.7.IFF.FM_tx.Name =FM_tx_7
+Traffic.7.IFF.FM_tx.Factor = 1.0
+Traffic.7.IFF.FM_tx.Offset = 0.0
+Traffic.7.IFF.FM_ty.Name =FM_ty_7
+Traffic.7.IFF.FM_ty.Factor = 1.0
+Traffic.7.IFF.FM_ty.Offset = 0.0
+Traffic.7.IFF.FM_tz.Name =FM_tz_7
+Traffic.7.IFF.FM_tz.Factor = 1.0
+Traffic.7.IFF.FM_tz.Offset = 0.0
+Traffic.7.IFF.FM_rx.Name =
+Traffic.7.IFF.FM_rx.Factor = 1.0
+Traffic.7.IFF.FM_rx.Offset = 0.0
+Traffic.7.IFF.FM_ry.Name =
+Traffic.7.IFF.FM_ry.Factor = 1.0
+Traffic.7.IFF.FM_ry.Offset = 0.0
+Traffic.7.IFF.FM_rz.Name =FM_rz_7
+Traffic.7.IFF.FM_rz.Factor = 1.0
+Traffic.7.IFF.FM_rz.Offset = 0.0
+Traffic.8.ObjectKind = Movable
+Traffic.8.ObjectClass = Car
+Traffic.8.Name = T8
+Traffic.8.Info = UNNAMED Object 8
+Traffic.8.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.8.Color = 1.0 0.0 0.0
+Traffic.8.Basics.Dimension = 4.28 1.82 1.28
+Traffic.8.Basics.Offset = 0.0 0.0
+Traffic.8.Basics.Fr12CoM = 2.15
+Traffic.8.Init.Orientation = 0.0 0.0 0.0
+Traffic.8.RCSClass = RCS_Car
+Traffic.8.DetectMask = 1 1
+Traffic.8.Route = 0 1
+Traffic.8.Init.Road = 18 R2
+Traffic.8.Init.v = 1
+Traffic.8.FreeMotion = 1
+Traffic.8.UpdRate = 200
+Traffic.8.IFF.FM_tx.Name =FM_tx_8
+Traffic.8.IFF.FM_tx.Factor = 1.0
+Traffic.8.IFF.FM_tx.Offset = 0.0
+Traffic.8.IFF.FM_ty.Name =FM_ty_8
+Traffic.8.IFF.FM_ty.Factor = 1.0
+Traffic.8.IFF.FM_ty.Offset = 0.0
+Traffic.8.IFF.FM_tz.Name =FM_tz_8
+Traffic.8.IFF.FM_tz.Factor = 1.0
+Traffic.8.IFF.FM_tz.Offset = 0.0
+Traffic.8.IFF.FM_rx.Name =
+Traffic.8.IFF.FM_rx.Factor = 1.0
+Traffic.8.IFF.FM_rx.Offset = 0.0
+Traffic.8.IFF.FM_ry.Name =
+Traffic.8.IFF.FM_ry.Factor = 1.0
+Traffic.8.IFF.FM_ry.Offset = 0.0
+Traffic.8.IFF.FM_rz.Name =FM_rz_8
+Traffic.8.IFF.FM_rz.Factor = 1.0
+Traffic.8.IFF.FM_rz.Offset = 0.0
+Traffic.9.ObjectKind = Movable
+Traffic.9.ObjectClass = Car
+Traffic.9.Name = T9
+Traffic.9.Info = UNNAMED Object 9
+Traffic.9.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.9.Color = 1.0 0.0 0.0
+Traffic.9.Basics.Dimension = 4.28 1.82 1.28
+Traffic.9.Basics.Offset = 0.0 0.0
+Traffic.9.Basics.Fr12CoM = 2.15
+Traffic.9.Init.Orientation = 0.0 0.0 0.0
+Traffic.9.RCSClass = RCS_Car
+Traffic.9.DetectMask = 1 1
+Traffic.9.Route = 0 1
+Traffic.9.Init.Road = 18 R2
+Traffic.9.Init.v = 1
+Traffic.9.FreeMotion = 1
+Traffic.9.UpdRate = 200
+Traffic.9.IFF.FM_tx.Name =FM_tx_9
+Traffic.9.IFF.FM_tx.Factor = 1.0
+Traffic.9.IFF.FM_tx.Offset = 0.0
+Traffic.9.IFF.FM_ty.Name =FM_ty_9
+Traffic.9.IFF.FM_ty.Factor = 1.0
+Traffic.9.IFF.FM_ty.Offset = 0.0
+Traffic.9.IFF.FM_tz.Name =FM_tz_9
+Traffic.9.IFF.FM_tz.Factor = 1.0
+Traffic.9.IFF.FM_tz.Offset = 0.0
+Traffic.9.IFF.FM_rx.Name =
+Traffic.9.IFF.FM_rx.Factor = 1.0
+Traffic.9.IFF.FM_rx.Offset = 0.0
+Traffic.9.IFF.FM_ry.Name =
+Traffic.9.IFF.FM_ry.Factor = 1.0
+Traffic.9.IFF.FM_ry.Offset = 0.0
+Traffic.9.IFF.FM_rz.Name =FM_rz_9
+Traffic.9.IFF.FM_rz.Factor = 1.0
+Traffic.9.IFF.FM_rz.Offset = 0.0
+Traffic.10.ObjectKind = Movable
+Traffic.10.ObjectClass = Car
+Traffic.10.Name = T10
+Traffic.10.Info = UNNAMED Object 10
+Traffic.10.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.10.Color = 1.0 0.0 0.0
+Traffic.10.Basics.Dimension = 4.28 1.82 1.28
+Traffic.10.Basics.Offset = 0.0 0.0
+Traffic.10.Basics.Fr12CoM = 2.15
+Traffic.10.Init.Orientation = 0.0 0.0 0.0
+Traffic.10.RCSClass = RCS_Car
+Traffic.10.DetectMask = 1 1
+Traffic.10.Route = 0 1
+Traffic.10.Init.Road = 18 R2
+Traffic.10.Init.v = 1
+Traffic.10.FreeMotion = 1
+Traffic.10.UpdRate = 200
+Traffic.10.IFF.FM_tx.Name =FM_tx_10
+Traffic.10.IFF.FM_tx.Factor = 1.0
+Traffic.10.IFF.FM_tx.Offset = 0.0
+Traffic.10.IFF.FM_ty.Name =FM_ty_10
+Traffic.10.IFF.FM_ty.Factor = 1.0
+Traffic.10.IFF.FM_ty.Offset = 0.0
+Traffic.10.IFF.FM_tz.Name =FM_tz_10
+Traffic.10.IFF.FM_tz.Factor = 1.0
+Traffic.10.IFF.FM_tz.Offset = 0.0
+Traffic.10.IFF.FM_rx.Name =
+Traffic.10.IFF.FM_rx.Factor = 1.0
+Traffic.10.IFF.FM_rx.Offset = 0.0
+Traffic.10.IFF.FM_ry.Name =
+Traffic.10.IFF.FM_ry.Factor = 1.0
+Traffic.10.IFF.FM_ry.Offset = 0.0
+Traffic.10.IFF.FM_rz.Name =FM_rz_10
+Traffic.10.IFF.FM_rz.Factor = 1.0
+Traffic.10.IFF.FM_rz.Offset = 0.0
+Traffic.11.ObjectKind = Movable
+Traffic.11.ObjectClass = Car
+Traffic.11.Name = T11
+Traffic.11.Info = UNNAMED Object 11
+Traffic.11.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.11.Color = 1.0 0.0 0.0
+Traffic.11.Basics.Dimension = 4.28 1.82 1.28
+Traffic.11.Basics.Offset = 0.0 0.0
+Traffic.11.Basics.Fr12CoM = 2.15
+Traffic.11.Init.Orientation = 0.0 0.0 0.0
+Traffic.11.RCSClass = RCS_Car
+Traffic.11.DetectMask = 1 1
+Traffic.11.Route = 0 1
+Traffic.11.Init.Road = 18 R2
+Traffic.11.Init.v = 1
+Traffic.11.FreeMotion = 1
+Traffic.11.UpdRate = 200
+Traffic.11.IFF.FM_tx.Name =FM_tx_11
+Traffic.11.IFF.FM_tx.Factor = 1.0
+Traffic.11.IFF.FM_tx.Offset = 0.0
+Traffic.11.IFF.FM_ty.Name =FM_ty_11
+Traffic.11.IFF.FM_ty.Factor = 1.0
+Traffic.11.IFF.FM_ty.Offset = 0.0
+Traffic.11.IFF.FM_tz.Name =FM_tz_11
+Traffic.11.IFF.FM_tz.Factor = 1.0
+Traffic.11.IFF.FM_tz.Offset = 0.0
+Traffic.11.IFF.FM_rx.Name =
+Traffic.11.IFF.FM_rx.Factor = 1.0
+Traffic.11.IFF.FM_rx.Offset = 0.0
+Traffic.11.IFF.FM_ry.Name =
+Traffic.11.IFF.FM_ry.Factor = 1.0
+Traffic.11.IFF.FM_ry.Offset = 0.0
+Traffic.11.IFF.FM_rz.Name =FM_rz_11
+Traffic.11.IFF.FM_rz.Factor = 1.0
+Traffic.11.IFF.FM_rz.Offset = 0.0
+Traffic.12.ObjectKind = Movable
+Traffic.12.ObjectClass = Car
+Traffic.12.Name = T12
+Traffic.12.Info = UNNAMED Object 12
+Traffic.12.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.12.Color = 1.0 0.0 0.0
+Traffic.12.Basics.Dimension = 4.28 1.82 1.28
+Traffic.12.Basics.Offset = 0.0 0.0
+Traffic.12.Basics.Fr12CoM = 2.15
+Traffic.12.Init.Orientation = 0.0 0.0 0.0
+Traffic.12.RCSClass = RCS_Car
+Traffic.12.DetectMask = 1 1
+Traffic.12.Route = 0 1
+Traffic.12.Init.Road = 18 R2
+Traffic.12.Init.v = 1
+Traffic.12.FreeMotion = 1
+Traffic.12.UpdRate = 200
+Traffic.12.IFF.FM_tx.Name =FM_tx_12
+Traffic.12.IFF.FM_tx.Factor = 1.0
+Traffic.12.IFF.FM_tx.Offset = 0.0
+Traffic.12.IFF.FM_ty.Name =FM_ty_12
+Traffic.12.IFF.FM_ty.Factor = 1.0
+Traffic.12.IFF.FM_ty.Offset = 0.0
+Traffic.12.IFF.FM_tz.Name =FM_tz_12
+Traffic.12.IFF.FM_tz.Factor = 1.0
+Traffic.12.IFF.FM_tz.Offset = 0.0
+Traffic.12.IFF.FM_rx.Name =
+Traffic.12.IFF.FM_rx.Factor = 1.0
+Traffic.12.IFF.FM_rx.Offset = 0.0
+Traffic.12.IFF.FM_ry.Name =
+Traffic.12.IFF.FM_ry.Factor = 1.0
+Traffic.12.IFF.FM_ry.Offset = 0.0
+Traffic.12.IFF.FM_rz.Name =FM_rz_12
+Traffic.12.IFF.FM_rz.Factor = 1.0
+Traffic.12.IFF.FM_rz.Offset = 0.0
+Traffic.13.ObjectKind = Movable
+Traffic.13.ObjectClass = Car
+Traffic.13.Name = T13
+Traffic.13.Info = UNNAMED Object 13
+Traffic.13.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.13.Color = 1.0 0.0 0.0
+Traffic.13.Basics.Dimension = 4.28 1.82 1.28
+Traffic.13.Basics.Offset = 0.0 0.0
+Traffic.13.Basics.Fr12CoM = 2.15
+Traffic.13.Init.Orientation = 0.0 0.0 0.0
+Traffic.13.RCSClass = RCS_Car
+Traffic.13.DetectMask = 1 1
+Traffic.13.Route = 0 1
+Traffic.13.Init.Road = 18 R2
+Traffic.13.Init.v = 1
+Traffic.13.FreeMotion = 1
+Traffic.13.UpdRate = 200
+Traffic.13.IFF.FM_tx.Name =FM_tx_13
+Traffic.13.IFF.FM_tx.Factor = 1.0
+Traffic.13.IFF.FM_tx.Offset = 0.0
+Traffic.13.IFF.FM_ty.Name =FM_ty_13
+Traffic.13.IFF.FM_ty.Factor = 1.0
+Traffic.13.IFF.FM_ty.Offset = 0.0
+Traffic.13.IFF.FM_tz.Name =FM_tz_13
+Traffic.13.IFF.FM_tz.Factor = 1.0
+Traffic.13.IFF.FM_tz.Offset = 0.0
+Traffic.13.IFF.FM_rx.Name =
+Traffic.13.IFF.FM_rx.Factor = 1.0
+Traffic.13.IFF.FM_rx.Offset = 0.0
+Traffic.13.IFF.FM_ry.Name =
+Traffic.13.IFF.FM_ry.Factor = 1.0
+Traffic.13.IFF.FM_ry.Offset = 0.0
+Traffic.13.IFF.FM_rz.Name =FM_rz_13
+Traffic.13.IFF.FM_rz.Factor = 1.0
+Traffic.13.IFF.FM_rz.Offset = 0.0
+Traffic.14.ObjectKind = Movable
+Traffic.14.ObjectClass = Car
+Traffic.14.Name = T14
+Traffic.14.Info = UNNAMED Object 14
+Traffic.14.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.14.Color = 1.0 0.0 0.0
+Traffic.14.Basics.Dimension = 4.28 1.82 1.28
+Traffic.14.Basics.Offset = 0.0 0.0
+Traffic.14.Basics.Fr12CoM = 2.15
+Traffic.14.Init.Orientation = 0.0 0.0 0.0
+Traffic.14.RCSClass = RCS_Car
+Traffic.14.DetectMask = 1 1
+Traffic.14.Route = 0 1
+Traffic.14.Init.Road = 18 R2
+Traffic.14.Init.v = 1
+Traffic.14.FreeMotion = 1
+Traffic.14.UpdRate = 200
+Traffic.14.IFF.FM_tx.Name =FM_tx_14
+Traffic.14.IFF.FM_tx.Factor = 1.0
+Traffic.14.IFF.FM_tx.Offset = 0.0
+Traffic.14.IFF.FM_ty.Name =FM_ty_14
+Traffic.14.IFF.FM_ty.Factor = 1.0
+Traffic.14.IFF.FM_ty.Offset = 0.0
+Traffic.14.IFF.FM_tz.Name =FM_tz_14
+Traffic.14.IFF.FM_tz.Factor = 1.0
+Traffic.14.IFF.FM_tz.Offset = 0.0
+Traffic.14.IFF.FM_rx.Name =
+Traffic.14.IFF.FM_rx.Factor = 1.0
+Traffic.14.IFF.FM_rx.Offset = 0.0
+Traffic.14.IFF.FM_ry.Name =
+Traffic.14.IFF.FM_ry.Factor = 1.0
+Traffic.14.IFF.FM_ry.Offset = 0.0
+Traffic.14.IFF.FM_rz.Name =FM_rz_14
+Traffic.14.IFF.FM_rz.Factor = 1.0
+Traffic.14.IFF.FM_rz.Offset = 0.0
+Traffic.15.ObjectKind = Movable
+Traffic.15.ObjectClass = Car
+Traffic.15.Name = T15
+Traffic.15.Info = UNNAMED Object 15
+Traffic.15.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.15.Color = 1.0 0.0 0.0
+Traffic.15.Basics.Dimension = 4.28 1.82 1.28
+Traffic.15.Basics.Offset = 0.0 0.0
+Traffic.15.Basics.Fr12CoM = 2.15
+Traffic.15.Init.Orientation = 0.0 0.0 0.0
+Traffic.15.RCSClass = RCS_Car
+Traffic.15.DetectMask = 1 1
+Traffic.15.Route = 0 1
+Traffic.15.Init.Road = 18 R2
+Traffic.15.Init.v = 1
+Traffic.15.FreeMotion = 1
+Traffic.15.UpdRate = 200
+Traffic.15.IFF.FM_tx.Name =FM_tx_15
+Traffic.15.IFF.FM_tx.Factor = 1.0
+Traffic.15.IFF.FM_tx.Offset = 0.0
+Traffic.15.IFF.FM_ty.Name =FM_ty_15
+Traffic.15.IFF.FM_ty.Factor = 1.0
+Traffic.15.IFF.FM_ty.Offset = 0.0
+Traffic.15.IFF.FM_tz.Name =FM_tz_15
+Traffic.15.IFF.FM_tz.Factor = 1.0
+Traffic.15.IFF.FM_tz.Offset = 0.0
+Traffic.15.IFF.FM_rx.Name =
+Traffic.15.IFF.FM_rx.Factor = 1.0
+Traffic.15.IFF.FM_rx.Offset = 0.0
+Traffic.15.IFF.FM_ry.Name =
+Traffic.15.IFF.FM_ry.Factor = 1.0
+Traffic.15.IFF.FM_ry.Offset = 0.0
+Traffic.15.IFF.FM_rz.Name =FM_rz_15
+Traffic.15.IFF.FM_rz.Factor = 1.0
+Traffic.15.IFF.FM_rz.Offset = 0.0
+Traffic.16.ObjectKind = Movable
+Traffic.16.ObjectClass = Car
+Traffic.16.Name = T16
+Traffic.16.Info = UNNAMED Object 16
+Traffic.16.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.16.Color = 1.0 0.0 0.0
+Traffic.16.Basics.Dimension = 4.28 1.82 1.28
+Traffic.16.Basics.Offset = 0.0 0.0
+Traffic.16.Basics.Fr12CoM = 2.15
+Traffic.16.Init.Orientation = 0.0 0.0 0.0
+Traffic.16.RCSClass = RCS_Car
+Traffic.16.DetectMask = 1 1
+Traffic.16.Route = 0 1
+Traffic.16.Init.Road = 18 R2
+Traffic.16.Init.v = 1
+Traffic.16.FreeMotion = 1
+Traffic.16.UpdRate = 200
+Traffic.16.IFF.FM_tx.Name =FM_tx_16
+Traffic.16.IFF.FM_tx.Factor = 1.0
+Traffic.16.IFF.FM_tx.Offset = 0.0
+Traffic.16.IFF.FM_ty.Name =FM_ty_16
+Traffic.16.IFF.FM_ty.Factor = 1.0
+Traffic.16.IFF.FM_ty.Offset = 0.0
+Traffic.16.IFF.FM_tz.Name =FM_tz_16
+Traffic.16.IFF.FM_tz.Factor = 1.0
+Traffic.16.IFF.FM_tz.Offset = 0.0
+Traffic.16.IFF.FM_rx.Name =
+Traffic.16.IFF.FM_rx.Factor = 1.0
+Traffic.16.IFF.FM_rx.Offset = 0.0
+Traffic.16.IFF.FM_ry.Name =
+Traffic.16.IFF.FM_ry.Factor = 1.0
+Traffic.16.IFF.FM_ry.Offset = 0.0
+Traffic.16.IFF.FM_rz.Name =FM_rz_16
+Traffic.16.IFF.FM_rz.Factor = 1.0
+Traffic.16.IFF.FM_rz.Offset = 0.0
+Traffic.17.ObjectKind = Movable
+Traffic.17.ObjectClass = Car
+Traffic.17.Name = T17
+Traffic.17.Info = UNNAMED Object 17
+Traffic.17.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.17.Color = 1.0 0.0 0.0
+Traffic.17.Basics.Dimension = 4.28 1.82 1.28
+Traffic.17.Basics.Offset = 0.0 0.0
+Traffic.17.Basics.Fr12CoM = 2.15
+Traffic.17.Init.Orientation = 0.0 0.0 0.0
+Traffic.17.RCSClass = RCS_Car
+Traffic.17.DetectMask = 1 1
+Traffic.17.Route = 0 1
+Traffic.17.Init.Road = 18 R2
+Traffic.17.Init.v = 1
+Traffic.17.FreeMotion = 1
+Traffic.17.UpdRate = 200
+Traffic.17.IFF.FM_tx.Name =FM_tx_17
+Traffic.17.IFF.FM_tx.Factor = 1.0
+Traffic.17.IFF.FM_tx.Offset = 0.0
+Traffic.17.IFF.FM_ty.Name =FM_ty_17
+Traffic.17.IFF.FM_ty.Factor = 1.0
+Traffic.17.IFF.FM_ty.Offset = 0.0
+Traffic.17.IFF.FM_tz.Name =FM_tz_17
+Traffic.17.IFF.FM_tz.Factor = 1.0
+Traffic.17.IFF.FM_tz.Offset = 0.0
+Traffic.17.IFF.FM_rx.Name =
+Traffic.17.IFF.FM_rx.Factor = 1.0
+Traffic.17.IFF.FM_rx.Offset = 0.0
+Traffic.17.IFF.FM_ry.Name =
+Traffic.17.IFF.FM_ry.Factor = 1.0
+Traffic.17.IFF.FM_ry.Offset = 0.0
+Traffic.17.IFF.FM_rz.Name =FM_rz_17
+Traffic.17.IFF.FM_rz.Factor = 1.0
+Traffic.17.IFF.FM_rz.Offset = 0.0
+Traffic.18.ObjectKind = Movable
+Traffic.18.ObjectClass = Car
+Traffic.18.Name = T18
+Traffic.18.Info = UNNAMED Object 18
+Traffic.18.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.18.Color = 1.0 0.0 0.0
+Traffic.18.Basics.Dimension = 4.28 1.82 1.28
+Traffic.18.Basics.Offset = 0.0 0.0
+Traffic.18.Basics.Fr12CoM = 2.15
+Traffic.18.Init.Orientation = 0.0 0.0 0.0
+Traffic.18.RCSClass = RCS_Car
+Traffic.18.DetectMask = 1 1
+Traffic.18.Route = 0 1
+Traffic.18.Init.Road = 18 R2
+Traffic.18.Init.v = 1
+Traffic.18.FreeMotion = 1
+Traffic.18.UpdRate = 200
+Traffic.18.IFF.FM_tx.Name =FM_tx_18
+Traffic.18.IFF.FM_tx.Factor = 1.0
+Traffic.18.IFF.FM_tx.Offset = 0.0
+Traffic.18.IFF.FM_ty.Name =FM_ty_18
+Traffic.18.IFF.FM_ty.Factor = 1.0
+Traffic.18.IFF.FM_ty.Offset = 0.0
+Traffic.18.IFF.FM_tz.Name =FM_tz_18
+Traffic.18.IFF.FM_tz.Factor = 1.0
+Traffic.18.IFF.FM_tz.Offset = 0.0
+Traffic.18.IFF.FM_rx.Name =
+Traffic.18.IFF.FM_rx.Factor = 1.0
+Traffic.18.IFF.FM_rx.Offset = 0.0
+Traffic.18.IFF.FM_ry.Name =
+Traffic.18.IFF.FM_ry.Factor = 1.0
+Traffic.18.IFF.FM_ry.Offset = 0.0
+Traffic.18.IFF.FM_rz.Name =FM_rz_18
+Traffic.18.IFF.FM_rz.Factor = 1.0
+Traffic.18.IFF.FM_rz.Offset = 0.0
+Traffic.19.ObjectKind = Movable
+Traffic.19.ObjectClass = Car
+Traffic.19.Name = T19
+Traffic.19.Info = UNNAMED Object 19
+Traffic.19.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.19.Color = 1.0 0.0 0.0
+Traffic.19.Basics.Dimension = 4.28 1.82 1.28
+Traffic.19.Basics.Offset = 0.0 0.0
+Traffic.19.Basics.Fr12CoM = 2.15
+Traffic.19.Init.Orientation = 0.0 0.0 0.0
+Traffic.19.RCSClass = RCS_Car
+Traffic.19.DetectMask = 1 1
+Traffic.19.Route = 0 1
+Traffic.19.Init.Road = 18 R2
+Traffic.19.Init.v = 1
+Traffic.19.FreeMotion = 1
+Traffic.19.UpdRate = 200
+Traffic.19.IFF.FM_tx.Name =FM_tx_19
+Traffic.19.IFF.FM_tx.Factor = 1.0
+Traffic.19.IFF.FM_tx.Offset = 0.0
+Traffic.19.IFF.FM_ty.Name =FM_ty_19
+Traffic.19.IFF.FM_ty.Factor = 1.0
+Traffic.19.IFF.FM_ty.Offset = 0.0
+Traffic.19.IFF.FM_tz.Name =FM_tz_19
+Traffic.19.IFF.FM_tz.Factor = 1.0
+Traffic.19.IFF.FM_tz.Offset = 0.0
+Traffic.19.IFF.FM_rx.Name =
+Traffic.19.IFF.FM_rx.Factor = 1.0
+Traffic.19.IFF.FM_rx.Offset = 0.0
+Traffic.19.IFF.FM_ry.Name =
+Traffic.19.IFF.FM_ry.Factor = 1.0
+Traffic.19.IFF.FM_ry.Offset = 0.0
+Traffic.19.IFF.FM_rz.Name =FM_rz_19
+Traffic.19.IFF.FM_rz.Factor = 1.0
+Traffic.19.IFF.FM_rz.Offset = 0.0
+Traffic.20.ObjectKind = Movable
+Traffic.20.ObjectClass = Car
+Traffic.20.Name = T20
+Traffic.20.Info = UNNAMED Object 20
+Traffic.20.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.20.Color = 1.0 0.0 0.0
+Traffic.20.Basics.Dimension = 4.28 1.82 1.28
+Traffic.20.Basics.Offset = 0.0 0.0
+Traffic.20.Basics.Fr12CoM = 2.15
+Traffic.20.Init.Orientation = 0.0 0.0 0.0
+Traffic.20.RCSClass = RCS_Car
+Traffic.20.DetectMask = 1 1
+Traffic.20.Route = 0 1
+Traffic.20.Init.Road = 18 R2
+Traffic.20.Init.v = 1
+Traffic.20.FreeMotion = 1
+Traffic.20.UpdRate = 200
+Traffic.20.IFF.FM_tx.Name =FM_tx_20
+Traffic.20.IFF.FM_tx.Factor = 1.0
+Traffic.20.IFF.FM_tx.Offset = 0.0
+Traffic.20.IFF.FM_ty.Name =FM_ty_20
+Traffic.20.IFF.FM_ty.Factor = 1.0
+Traffic.20.IFF.FM_ty.Offset = 0.0
+Traffic.20.IFF.FM_tz.Name =FM_tz_20
+Traffic.20.IFF.FM_tz.Factor = 1.0
+Traffic.20.IFF.FM_tz.Offset = 0.0
+Traffic.20.IFF.FM_rx.Name =
+Traffic.20.IFF.FM_rx.Factor = 1.0
+Traffic.20.IFF.FM_rx.Offset = 0.0
+Traffic.20.IFF.FM_ry.Name =
+Traffic.20.IFF.FM_ry.Factor = 1.0
+Traffic.20.IFF.FM_ry.Offset = 0.0
+Traffic.20.IFF.FM_rz.Name =FM_rz_20
+Traffic.20.IFF.FM_rz.Factor = 1.0
+Traffic.20.IFF.FM_rz.Offset = 0.0
+Traffic.21.ObjectKind = Movable
+Traffic.21.ObjectClass = Car
+Traffic.21.Name = T21
+Traffic.21.Info = UNNAMED Object 21
+Traffic.21.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.21.Color = 1.0 0.0 0.0
+Traffic.21.Basics.Dimension = 4.28 1.82 1.28
+Traffic.21.Basics.Offset = 0.0 0.0
+Traffic.21.Basics.Fr12CoM = 2.15
+Traffic.21.Init.Orientation = 0.0 0.0 0.0
+Traffic.21.RCSClass = RCS_Car
+Traffic.21.DetectMask = 1 1
+Traffic.21.Route = 0 1
+Traffic.21.Init.Road = 18 R2
+Traffic.21.Init.v = 1
+Traffic.21.FreeMotion = 1
+Traffic.21.UpdRate = 200
+Traffic.21.IFF.FM_tx.Name =FM_tx_21
+Traffic.21.IFF.FM_tx.Factor = 1.0
+Traffic.21.IFF.FM_tx.Offset = 0.0
+Traffic.21.IFF.FM_ty.Name =FM_ty_21
+Traffic.21.IFF.FM_ty.Factor = 1.0
+Traffic.21.IFF.FM_ty.Offset = 0.0
+Traffic.21.IFF.FM_tz.Name =FM_tz_21
+Traffic.21.IFF.FM_tz.Factor = 1.0
+Traffic.21.IFF.FM_tz.Offset = 0.0
+Traffic.21.IFF.FM_rx.Name =
+Traffic.21.IFF.FM_rx.Factor = 1.0
+Traffic.21.IFF.FM_rx.Offset = 0.0
+Traffic.21.IFF.FM_ry.Name =
+Traffic.21.IFF.FM_ry.Factor = 1.0
+Traffic.21.IFF.FM_ry.Offset = 0.0
+Traffic.21.IFF.FM_rz.Name =FM_rz_21
+Traffic.21.IFF.FM_rz.Factor = 1.0
+Traffic.21.IFF.FM_rz.Offset = 0.0
+Traffic.22.ObjectKind = Movable
+Traffic.22.ObjectClass = Car
+Traffic.22.Name = T22
+Traffic.22.Info = UNNAMED Object 22
+Traffic.22.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.22.Color = 1.0 0.0 0.0
+Traffic.22.Basics.Dimension = 4.28 1.82 1.28
+Traffic.22.Basics.Offset = 0.0 0.0
+Traffic.22.Basics.Fr12CoM = 2.15
+Traffic.22.Init.Orientation = 0.0 0.0 0.0
+Traffic.22.RCSClass = RCS_Car
+Traffic.22.DetectMask = 1 1
+Traffic.22.Route = 0 1
+Traffic.22.Init.Road = 18 R2
+Traffic.22.Init.v = 1
+Traffic.22.FreeMotion = 1
+Traffic.22.UpdRate = 200
+Traffic.22.IFF.FM_tx.Name =FM_tx_22
+Traffic.22.IFF.FM_tx.Factor = 1.0
+Traffic.22.IFF.FM_tx.Offset = 0.0
+Traffic.22.IFF.FM_ty.Name =FM_ty_22
+Traffic.22.IFF.FM_ty.Factor = 1.0
+Traffic.22.IFF.FM_ty.Offset = 0.0
+Traffic.22.IFF.FM_tz.Name =FM_tz_22
+Traffic.22.IFF.FM_tz.Factor = 1.0
+Traffic.22.IFF.FM_tz.Offset = 0.0
+Traffic.22.IFF.FM_rx.Name =
+Traffic.22.IFF.FM_rx.Factor = 1.0
+Traffic.22.IFF.FM_rx.Offset = 0.0
+Traffic.22.IFF.FM_ry.Name =
+Traffic.22.IFF.FM_ry.Factor = 1.0
+Traffic.22.IFF.FM_ry.Offset = 0.0
+Traffic.22.IFF.FM_rz.Name =FM_rz_22
+Traffic.22.IFF.FM_rz.Factor = 1.0
+Traffic.22.IFF.FM_rz.Offset = 0.0
+Traffic.23.ObjectKind = Movable
+Traffic.23.ObjectClass = Car
+Traffic.23.Name = T23
+Traffic.23.Info = UNNAMED Object 23
+Traffic.23.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.23.Color = 1.0 0.0 0.0
+Traffic.23.Basics.Dimension = 4.28 1.82 1.28
+Traffic.23.Basics.Offset = 0.0 0.0
+Traffic.23.Basics.Fr12CoM = 2.15
+Traffic.23.Init.Orientation = 0.0 0.0 0.0
+Traffic.23.RCSClass = RCS_Car
+Traffic.23.DetectMask = 1 1
+Traffic.23.Route = 0 1
+Traffic.23.Init.Road = 18 R2
+Traffic.23.Init.v = 1
+Traffic.23.FreeMotion = 1
+Traffic.23.UpdRate = 200
+Traffic.23.IFF.FM_tx.Name =FM_tx_23
+Traffic.23.IFF.FM_tx.Factor = 1.0
+Traffic.23.IFF.FM_tx.Offset = 0.0
+Traffic.23.IFF.FM_ty.Name =FM_ty_23
+Traffic.23.IFF.FM_ty.Factor = 1.0
+Traffic.23.IFF.FM_ty.Offset = 0.0
+Traffic.23.IFF.FM_tz.Name =FM_tz_23
+Traffic.23.IFF.FM_tz.Factor = 1.0
+Traffic.23.IFF.FM_tz.Offset = 0.0
+Traffic.23.IFF.FM_rx.Name =
+Traffic.23.IFF.FM_rx.Factor = 1.0
+Traffic.23.IFF.FM_rx.Offset = 0.0
+Traffic.23.IFF.FM_ry.Name =
+Traffic.23.IFF.FM_ry.Factor = 1.0
+Traffic.23.IFF.FM_ry.Offset = 0.0
+Traffic.23.IFF.FM_rz.Name =FM_rz_23
+Traffic.23.IFF.FM_rz.Factor = 1.0
+Traffic.23.IFF.FM_rz.Offset = 0.0
+Traffic.24.ObjectKind = Movable
+Traffic.24.ObjectClass = Car
+Traffic.24.Name = T24
+Traffic.24.Info = UNNAMED Object 24
+Traffic.24.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.24.Color = 1.0 0.0 0.0
+Traffic.24.Basics.Dimension = 4.28 1.82 1.28
+Traffic.24.Basics.Offset = 0.0 0.0
+Traffic.24.Basics.Fr12CoM = 2.15
+Traffic.24.Init.Orientation = 0.0 0.0 0.0
+Traffic.24.RCSClass = RCS_Car
+Traffic.24.DetectMask = 1 1
+Traffic.24.Route = 0 1
+Traffic.24.Init.Road = 18 R2
+Traffic.24.Init.v = 1
+Traffic.24.FreeMotion = 1
+Traffic.24.UpdRate = 200
+Traffic.24.IFF.FM_tx.Name =FM_tx_24
+Traffic.24.IFF.FM_tx.Factor = 1.0
+Traffic.24.IFF.FM_tx.Offset = 0.0
+Traffic.24.IFF.FM_ty.Name =FM_ty_24
+Traffic.24.IFF.FM_ty.Factor = 1.0
+Traffic.24.IFF.FM_ty.Offset = 0.0
+Traffic.24.IFF.FM_tz.Name =FM_tz_24
+Traffic.24.IFF.FM_tz.Factor = 1.0
+Traffic.24.IFF.FM_tz.Offset = 0.0
+Traffic.24.IFF.FM_rx.Name =
+Traffic.24.IFF.FM_rx.Factor = 1.0
+Traffic.24.IFF.FM_rx.Offset = 0.0
+Traffic.24.IFF.FM_ry.Name =
+Traffic.24.IFF.FM_ry.Factor = 1.0
+Traffic.24.IFF.FM_ry.Offset = 0.0
+Traffic.24.IFF.FM_rz.Name =FM_rz_24
+Traffic.24.IFF.FM_rz.Factor = 1.0
+Traffic.24.IFF.FM_rz.Offset = 0.0
+Traffic.25.ObjectKind = Movable
+Traffic.25.ObjectClass = Car
+Traffic.25.Name = T25
+Traffic.25.Info = UNNAMED Object 25
+Traffic.25.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.25.Color = 1.0 0.0 0.0
+Traffic.25.Basics.Dimension = 4.28 1.82 1.28
+Traffic.25.Basics.Offset = 0.0 0.0
+Traffic.25.Basics.Fr12CoM = 2.15
+Traffic.25.Init.Orientation = 0.0 0.0 0.0
+Traffic.25.RCSClass = RCS_Car
+Traffic.25.DetectMask = 1 1
+Traffic.25.Route = 0 1
+Traffic.25.Init.Road = 18 R2
+Traffic.25.Init.v = 1
+Traffic.25.FreeMotion = 1
+Traffic.25.UpdRate = 200
+Traffic.25.IFF.FM_tx.Name =FM_tx_25
+Traffic.25.IFF.FM_tx.Factor = 1.0
+Traffic.25.IFF.FM_tx.Offset = 0.0
+Traffic.25.IFF.FM_ty.Name =FM_ty_25
+Traffic.25.IFF.FM_ty.Factor = 1.0
+Traffic.25.IFF.FM_ty.Offset = 0.0
+Traffic.25.IFF.FM_tz.Name =FM_tz_25
+Traffic.25.IFF.FM_tz.Factor = 1.0
+Traffic.25.IFF.FM_tz.Offset = 0.0
+Traffic.25.IFF.FM_rx.Name =
+Traffic.25.IFF.FM_rx.Factor = 1.0
+Traffic.25.IFF.FM_rx.Offset = 0.0
+Traffic.25.IFF.FM_ry.Name =
+Traffic.25.IFF.FM_ry.Factor = 1.0
+Traffic.25.IFF.FM_ry.Offset = 0.0
+Traffic.25.IFF.FM_rz.Name =FM_rz_25
+Traffic.25.IFF.FM_rz.Factor = 1.0
+Traffic.25.IFF.FM_rz.Offset = 0.0
+Traffic.26.ObjectKind = Movable
+Traffic.26.ObjectClass = Car
+Traffic.26.Name = T26
+Traffic.26.Info = UNNAMED Object 26
+Traffic.26.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.26.Color = 1.0 0.0 0.0
+Traffic.26.Basics.Dimension = 4.28 1.82 1.28
+Traffic.26.Basics.Offset = 0.0 0.0
+Traffic.26.Basics.Fr12CoM = 2.15
+Traffic.26.Init.Orientation = 0.0 0.0 0.0
+Traffic.26.RCSClass = RCS_Car
+Traffic.26.DetectMask = 1 1
+Traffic.26.Route = 0 1
+Traffic.26.Init.Road = 18 R2
+Traffic.26.Init.v = 1
+Traffic.26.FreeMotion = 1
+Traffic.26.UpdRate = 200
+Traffic.26.IFF.FM_tx.Name =FM_tx_26
+Traffic.26.IFF.FM_tx.Factor = 1.0
+Traffic.26.IFF.FM_tx.Offset = 0.0
+Traffic.26.IFF.FM_ty.Name =FM_ty_26
+Traffic.26.IFF.FM_ty.Factor = 1.0
+Traffic.26.IFF.FM_ty.Offset = 0.0
+Traffic.26.IFF.FM_tz.Name =FM_tz_26
+Traffic.26.IFF.FM_tz.Factor = 1.0
+Traffic.26.IFF.FM_tz.Offset = 0.0
+Traffic.26.IFF.FM_rx.Name =
+Traffic.26.IFF.FM_rx.Factor = 1.0
+Traffic.26.IFF.FM_rx.Offset = 0.0
+Traffic.26.IFF.FM_ry.Name =
+Traffic.26.IFF.FM_ry.Factor = 1.0
+Traffic.26.IFF.FM_ry.Offset = 0.0
+Traffic.26.IFF.FM_rz.Name =FM_rz_26
+Traffic.26.IFF.FM_rz.Factor = 1.0
+Traffic.26.IFF.FM_rz.Offset = 0.0
+Traffic.27.ObjectKind = Movable
+Traffic.27.ObjectClass = Car
+Traffic.27.Name = T27
+Traffic.27.Info = UNNAMED Object 27
+Traffic.27.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.27.Color = 1.0 0.0 0.0
+Traffic.27.Basics.Dimension = 4.28 1.82 1.28
+Traffic.27.Basics.Offset = 0.0 0.0
+Traffic.27.Basics.Fr12CoM = 2.15
+Traffic.27.Init.Orientation = 0.0 0.0 0.0
+Traffic.27.RCSClass = RCS_Car
+Traffic.27.DetectMask = 1 1
+Traffic.27.Route = 0 1
+Traffic.27.Init.Road = 18 R2
+Traffic.27.Init.v = 1
+Traffic.27.FreeMotion = 1
+Traffic.27.UpdRate = 200
+Traffic.27.IFF.FM_tx.Name =FM_tx_27
+Traffic.27.IFF.FM_tx.Factor = 1.0
+Traffic.27.IFF.FM_tx.Offset = 0.0
+Traffic.27.IFF.FM_ty.Name =FM_ty_27
+Traffic.27.IFF.FM_ty.Factor = 1.0
+Traffic.27.IFF.FM_ty.Offset = 0.0
+Traffic.27.IFF.FM_tz.Name =FM_tz_27
+Traffic.27.IFF.FM_tz.Factor = 1.0
+Traffic.27.IFF.FM_tz.Offset = 0.0
+Traffic.27.IFF.FM_rx.Name =
+Traffic.27.IFF.FM_rx.Factor = 1.0
+Traffic.27.IFF.FM_rx.Offset = 0.0
+Traffic.27.IFF.FM_ry.Name =
+Traffic.27.IFF.FM_ry.Factor = 1.0
+Traffic.27.IFF.FM_ry.Offset = 0.0
+Traffic.27.IFF.FM_rz.Name =FM_rz_27
+Traffic.27.IFF.FM_rz.Factor = 1.0
+Traffic.27.IFF.FM_rz.Offset = 0.0
+Traffic.28.ObjectKind = Movable
+Traffic.28.ObjectClass = Car
+Traffic.28.Name = T28
+Traffic.28.Info = UNNAMED Object 28
+Traffic.28.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.28.Color = 1.0 0.0 0.0
+Traffic.28.Basics.Dimension = 4.28 1.82 1.28
+Traffic.28.Basics.Offset = 0.0 0.0
+Traffic.28.Basics.Fr12CoM = 2.15
+Traffic.28.Init.Orientation = 0.0 0.0 0.0
+Traffic.28.RCSClass = RCS_Car
+Traffic.28.DetectMask = 1 1
+Traffic.28.Route = 0 1
+Traffic.28.Init.Road = 18 R2
+Traffic.28.Init.v = 1
+Traffic.28.FreeMotion = 1
+Traffic.28.UpdRate = 200
+Traffic.28.IFF.FM_tx.Name =FM_tx_28
+Traffic.28.IFF.FM_tx.Factor = 1.0
+Traffic.28.IFF.FM_tx.Offset = 0.0
+Traffic.28.IFF.FM_ty.Name =FM_ty_28
+Traffic.28.IFF.FM_ty.Factor = 1.0
+Traffic.28.IFF.FM_ty.Offset = 0.0
+Traffic.28.IFF.FM_tz.Name =FM_tz_28
+Traffic.28.IFF.FM_tz.Factor = 1.0
+Traffic.28.IFF.FM_tz.Offset = 0.0
+Traffic.28.IFF.FM_rx.Name =
+Traffic.28.IFF.FM_rx.Factor = 1.0
+Traffic.28.IFF.FM_rx.Offset = 0.0
+Traffic.28.IFF.FM_ry.Name =
+Traffic.28.IFF.FM_ry.Factor = 1.0
+Traffic.28.IFF.FM_ry.Offset = 0.0
+Traffic.28.IFF.FM_rz.Name =FM_rz_28
+Traffic.28.IFF.FM_rz.Factor = 1.0
+Traffic.28.IFF.FM_rz.Offset = 0.0
+Traffic.29.ObjectKind = Movable
+Traffic.29.ObjectClass = Car
+Traffic.29.Name = T29
+Traffic.29.Info = UNNAMED Object 29
+Traffic.29.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.29.Color = 1.0 0.0 0.0
+Traffic.29.Basics.Dimension = 4.28 1.82 1.28
+Traffic.29.Basics.Offset = 0.0 0.0
+Traffic.29.Basics.Fr12CoM = 2.15
+Traffic.29.Init.Orientation = 0.0 0.0 0.0
+Traffic.29.RCSClass = RCS_Car
+Traffic.29.DetectMask = 1 1
+Traffic.29.Route = 0 1
+Traffic.29.Init.Road = 18 R2
+Traffic.29.Init.v = 1
+Traffic.29.FreeMotion = 1
+Traffic.29.UpdRate = 200
+Traffic.29.IFF.FM_tx.Name =FM_tx_29
+Traffic.29.IFF.FM_tx.Factor = 1.0
+Traffic.29.IFF.FM_tx.Offset = 0.0
+Traffic.29.IFF.FM_ty.Name =FM_ty_29
+Traffic.29.IFF.FM_ty.Factor = 1.0
+Traffic.29.IFF.FM_ty.Offset = 0.0
+Traffic.29.IFF.FM_tz.Name =FM_tz_29
+Traffic.29.IFF.FM_tz.Factor = 1.0
+Traffic.29.IFF.FM_tz.Offset = 0.0
+Traffic.29.IFF.FM_rx.Name =
+Traffic.29.IFF.FM_rx.Factor = 1.0
+Traffic.29.IFF.FM_rx.Offset = 0.0
+Traffic.29.IFF.FM_ry.Name =
+Traffic.29.IFF.FM_ry.Factor = 1.0
+Traffic.29.IFF.FM_ry.Offset = 0.0
+Traffic.29.IFF.FM_rz.Name =FM_rz_29
+Traffic.29.IFF.FM_rz.Factor = 1.0
+Traffic.29.IFF.FM_rz.Offset = 0.0
+Traffic.30.ObjectKind = Movable
+Traffic.30.ObjectClass = Car
+Traffic.30.Name = T30
+Traffic.30.Info = UNNAMED Object 30
+Traffic.30.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.30.Color = 1.0 0.0 0.0
+Traffic.30.Basics.Dimension = 4.28 1.82 1.28
+Traffic.30.Basics.Offset = 0.0 0.0
+Traffic.30.Basics.Fr12CoM = 2.15
+Traffic.30.Init.Orientation = 0.0 0.0 0.0
+Traffic.30.RCSClass = RCS_Car
+Traffic.30.DetectMask = 1 1
+Traffic.30.Route = 0 1
+Traffic.30.Init.Road = 18 R2
+Traffic.30.Init.v = 1
+Traffic.30.FreeMotion = 1
+Traffic.30.UpdRate = 200
+Traffic.30.IFF.FM_tx.Name =FM_tx_30
+Traffic.30.IFF.FM_tx.Factor = 1.0
+Traffic.30.IFF.FM_tx.Offset = 0.0
+Traffic.30.IFF.FM_ty.Name =FM_ty_30
+Traffic.30.IFF.FM_ty.Factor = 1.0
+Traffic.30.IFF.FM_ty.Offset = 0.0
+Traffic.30.IFF.FM_tz.Name =FM_tz_30
+Traffic.30.IFF.FM_tz.Factor = 1.0
+Traffic.30.IFF.FM_tz.Offset = 0.0
+Traffic.30.IFF.FM_rx.Name =
+Traffic.30.IFF.FM_rx.Factor = 1.0
+Traffic.30.IFF.FM_rx.Offset = 0.0
+Traffic.30.IFF.FM_ry.Name =
+Traffic.30.IFF.FM_ry.Factor = 1.0
+Traffic.30.IFF.FM_ry.Offset = 0.0
+Traffic.30.IFF.FM_rz.Name =FM_rz_30
+Traffic.30.IFF.FM_rz.Factor = 1.0
+Traffic.30.IFF.FM_rz.Offset = 0.0
+Traffic.31.ObjectKind = Movable
+Traffic.31.ObjectClass = Car
+Traffic.31.Name = T31
+Traffic.31.Info = UNNAMED Object 31
+Traffic.31.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.31.Color = 1.0 0.0 0.0
+Traffic.31.Basics.Dimension = 4.28 1.82 1.28
+Traffic.31.Basics.Offset = 0.0 0.0
+Traffic.31.Basics.Fr12CoM = 2.15
+Traffic.31.Init.Orientation = 0.0 0.0 0.0
+Traffic.31.RCSClass = RCS_Car
+Traffic.31.DetectMask = 1 1
+Traffic.31.Route = 0 1
+Traffic.31.Init.Road = 18 R2
+Traffic.31.Init.v = 1
+Traffic.31.FreeMotion = 1
+Traffic.31.UpdRate = 200
+Traffic.31.IFF.FM_tx.Name =FM_tx_31
+Traffic.31.IFF.FM_tx.Factor = 1.0
+Traffic.31.IFF.FM_tx.Offset = 0.0
+Traffic.31.IFF.FM_ty.Name =FM_ty_31
+Traffic.31.IFF.FM_ty.Factor = 1.0
+Traffic.31.IFF.FM_ty.Offset = 0.0
+Traffic.31.IFF.FM_tz.Name =FM_tz_31
+Traffic.31.IFF.FM_tz.Factor = 1.0
+Traffic.31.IFF.FM_tz.Offset = 0.0
+Traffic.31.IFF.FM_rx.Name =
+Traffic.31.IFF.FM_rx.Factor = 1.0
+Traffic.31.IFF.FM_rx.Offset = 0.0
+Traffic.31.IFF.FM_ry.Name =
+Traffic.31.IFF.FM_ry.Factor = 1.0
+Traffic.31.IFF.FM_ry.Offset = 0.0
+Traffic.31.IFF.FM_rz.Name =FM_rz_31
+Traffic.31.IFF.FM_rz.Factor = 1.0
+Traffic.31.IFF.FM_rz.Offset = 0.0
+Traffic.32.ObjectKind = Movable
+Traffic.32.ObjectClass = Car
+Traffic.32.Name = T32
+Traffic.32.Info = UNNAMED Object 32
+Traffic.32.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.32.Color = 1.0 0.0 0.0
+Traffic.32.Basics.Dimension = 4.28 1.82 1.28
+Traffic.32.Basics.Offset = 0.0 0.0
+Traffic.32.Basics.Fr12CoM = 2.15
+Traffic.32.Init.Orientation = 0.0 0.0 0.0
+Traffic.32.RCSClass = RCS_Car
+Traffic.32.DetectMask = 1 1
+Traffic.32.Route = 0 1
+Traffic.32.Init.Road = 18 R2
+Traffic.32.Init.v = 1
+Traffic.32.FreeMotion = 1
+Traffic.32.UpdRate = 200
+Traffic.32.IFF.FM_tx.Name =FM_tx_32
+Traffic.32.IFF.FM_tx.Factor = 1.0
+Traffic.32.IFF.FM_tx.Offset = 0.0
+Traffic.32.IFF.FM_ty.Name =FM_ty_32
+Traffic.32.IFF.FM_ty.Factor = 1.0
+Traffic.32.IFF.FM_ty.Offset = 0.0
+Traffic.32.IFF.FM_tz.Name =FM_tz_32
+Traffic.32.IFF.FM_tz.Factor = 1.0
+Traffic.32.IFF.FM_tz.Offset = 0.0
+Traffic.32.IFF.FM_rx.Name =
+Traffic.32.IFF.FM_rx.Factor = 1.0
+Traffic.32.IFF.FM_rx.Offset = 0.0
+Traffic.32.IFF.FM_ry.Name =
+Traffic.32.IFF.FM_ry.Factor = 1.0
+Traffic.32.IFF.FM_ry.Offset = 0.0
+Traffic.32.IFF.FM_rz.Name =FM_rz_32
+Traffic.32.IFF.FM_rz.Factor = 1.0
+Traffic.32.IFF.FM_rz.Offset = 0.0
+Traffic.33.ObjectKind = Movable
+Traffic.33.ObjectClass = Car
+Traffic.33.Name = T33
+Traffic.33.Info = UNNAMED Object 33
+Traffic.33.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.33.Color = 1.0 0.0 0.0
+Traffic.33.Basics.Dimension = 4.28 1.82 1.28
+Traffic.33.Basics.Offset = 0.0 0.0
+Traffic.33.Basics.Fr12CoM = 2.15
+Traffic.33.Init.Orientation = 0.0 0.0 0.0
+Traffic.33.RCSClass = RCS_Car
+Traffic.33.DetectMask = 1 1
+Traffic.33.Route = 0 1
+Traffic.33.Init.Road = 18 R2
+Traffic.33.Init.v = 1
+Traffic.33.FreeMotion = 1
+Traffic.33.UpdRate = 200
+Traffic.33.IFF.FM_tx.Name =FM_tx_33
+Traffic.33.IFF.FM_tx.Factor = 1.0
+Traffic.33.IFF.FM_tx.Offset = 0.0
+Traffic.33.IFF.FM_ty.Name =FM_ty_33
+Traffic.33.IFF.FM_ty.Factor = 1.0
+Traffic.33.IFF.FM_ty.Offset = 0.0
+Traffic.33.IFF.FM_tz.Name =FM_tz_33
+Traffic.33.IFF.FM_tz.Factor = 1.0
+Traffic.33.IFF.FM_tz.Offset = 0.0
+Traffic.33.IFF.FM_rx.Name =
+Traffic.33.IFF.FM_rx.Factor = 1.0
+Traffic.33.IFF.FM_rx.Offset = 0.0
+Traffic.33.IFF.FM_ry.Name =
+Traffic.33.IFF.FM_ry.Factor = 1.0
+Traffic.33.IFF.FM_ry.Offset = 0.0
+Traffic.33.IFF.FM_rz.Name =FM_rz_33
+Traffic.33.IFF.FM_rz.Factor = 1.0
+Traffic.33.IFF.FM_rz.Offset = 0.0
+Traffic.34.ObjectKind = Movable
+Traffic.34.ObjectClass = Car
+Traffic.34.Name = T34
+Traffic.34.Info = UNNAMED Object 34
+Traffic.34.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.34.Color = 1.0 0.0 0.0
+Traffic.34.Basics.Dimension = 4.28 1.82 1.28
+Traffic.34.Basics.Offset = 0.0 0.0
+Traffic.34.Basics.Fr12CoM = 2.15
+Traffic.34.Init.Orientation = 0.0 0.0 0.0
+Traffic.34.RCSClass = RCS_Car
+Traffic.34.DetectMask = 1 1
+Traffic.34.Route = 0 1
+Traffic.34.Init.Road = 18 R2
+Traffic.34.Init.v = 1
+Traffic.34.FreeMotion = 1
+Traffic.34.UpdRate = 200
+Traffic.34.IFF.FM_tx.Name =FM_tx_34
+Traffic.34.IFF.FM_tx.Factor = 1.0
+Traffic.34.IFF.FM_tx.Offset = 0.0
+Traffic.34.IFF.FM_ty.Name =FM_ty_34
+Traffic.34.IFF.FM_ty.Factor = 1.0
+Traffic.34.IFF.FM_ty.Offset = 0.0
+Traffic.34.IFF.FM_tz.Name =FM_tz_34
+Traffic.34.IFF.FM_tz.Factor = 1.0
+Traffic.34.IFF.FM_tz.Offset = 0.0
+Traffic.34.IFF.FM_rx.Name =
+Traffic.34.IFF.FM_rx.Factor = 1.0
+Traffic.34.IFF.FM_rx.Offset = 0.0
+Traffic.34.IFF.FM_ry.Name =
+Traffic.34.IFF.FM_ry.Factor = 1.0
+Traffic.34.IFF.FM_ry.Offset = 0.0
+Traffic.34.IFF.FM_rz.Name =FM_rz_34
+Traffic.34.IFF.FM_rz.Factor = 1.0
+Traffic.34.IFF.FM_rz.Offset = 0.0
+Traffic.35.ObjectKind = Movable
+Traffic.35.ObjectClass = Car
+Traffic.35.Name = T35
+Traffic.35.Info = UNNAMED Object 35
+Traffic.35.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.35.Color = 1.0 0.0 0.0
+Traffic.35.Basics.Dimension = 4.28 1.82 1.28
+Traffic.35.Basics.Offset = 0.0 0.0
+Traffic.35.Basics.Fr12CoM = 2.15
+Traffic.35.Init.Orientation = 0.0 0.0 0.0
+Traffic.35.RCSClass = RCS_Car
+Traffic.35.DetectMask = 1 1
+Traffic.35.Route = 0 1
+Traffic.35.Init.Road = 18 R2
+Traffic.35.Init.v = 1
+Traffic.35.FreeMotion = 1
+Traffic.35.UpdRate = 200
+Traffic.35.IFF.FM_tx.Name =FM_tx_35
+Traffic.35.IFF.FM_tx.Factor = 1.0
+Traffic.35.IFF.FM_tx.Offset = 0.0
+Traffic.35.IFF.FM_ty.Name =FM_ty_35
+Traffic.35.IFF.FM_ty.Factor = 1.0
+Traffic.35.IFF.FM_ty.Offset = 0.0
+Traffic.35.IFF.FM_tz.Name =FM_tz_35
+Traffic.35.IFF.FM_tz.Factor = 1.0
+Traffic.35.IFF.FM_tz.Offset = 0.0
+Traffic.35.IFF.FM_rx.Name =
+Traffic.35.IFF.FM_rx.Factor = 1.0
+Traffic.35.IFF.FM_rx.Offset = 0.0
+Traffic.35.IFF.FM_ry.Name =
+Traffic.35.IFF.FM_ry.Factor = 1.0
+Traffic.35.IFF.FM_ry.Offset = 0.0
+Traffic.35.IFF.FM_rz.Name =FM_rz_35
+Traffic.35.IFF.FM_rz.Factor = 1.0
+Traffic.35.IFF.FM_rz.Offset = 0.0
+Traffic.36.ObjectKind = Movable
+Traffic.36.ObjectClass = Car
+Traffic.36.Name = T36
+Traffic.36.Info = UNNAMED Object 36
+Traffic.36.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.36.Color = 1.0 0.0 0.0
+Traffic.36.Basics.Dimension = 4.28 1.82 1.28
+Traffic.36.Basics.Offset = 0.0 0.0
+Traffic.36.Basics.Fr12CoM = 2.15
+Traffic.36.Init.Orientation = 0.0 0.0 0.0
+Traffic.36.RCSClass = RCS_Car
+Traffic.36.DetectMask = 1 1
+Traffic.36.Route = 0 1
+Traffic.36.Init.Road = 18 R2
+Traffic.36.Init.v = 1
+Traffic.36.FreeMotion = 1
+Traffic.36.UpdRate = 200
+Traffic.36.IFF.FM_tx.Name =FM_tx_36
+Traffic.36.IFF.FM_tx.Factor = 1.0
+Traffic.36.IFF.FM_tx.Offset = 0.0
+Traffic.36.IFF.FM_ty.Name =FM_ty_36
+Traffic.36.IFF.FM_ty.Factor = 1.0
+Traffic.36.IFF.FM_ty.Offset = 0.0
+Traffic.36.IFF.FM_tz.Name =FM_tz_36
+Traffic.36.IFF.FM_tz.Factor = 1.0
+Traffic.36.IFF.FM_tz.Offset = 0.0
+Traffic.36.IFF.FM_rx.Name =
+Traffic.36.IFF.FM_rx.Factor = 1.0
+Traffic.36.IFF.FM_rx.Offset = 0.0
+Traffic.36.IFF.FM_ry.Name =
+Traffic.36.IFF.FM_ry.Factor = 1.0
+Traffic.36.IFF.FM_ry.Offset = 0.0
+Traffic.36.IFF.FM_rz.Name =FM_rz_36
+Traffic.36.IFF.FM_rz.Factor = 1.0
+Traffic.36.IFF.FM_rz.Offset = 0.0
+Traffic.37.ObjectKind = Movable
+Traffic.37.ObjectClass = Car
+Traffic.37.Name = T37
+Traffic.37.Info = UNNAMED Object 37
+Traffic.37.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.37.Color = 1.0 0.0 0.0
+Traffic.37.Basics.Dimension = 4.28 1.82 1.28
+Traffic.37.Basics.Offset = 0.0 0.0
+Traffic.37.Basics.Fr12CoM = 2.15
+Traffic.37.Init.Orientation = 0.0 0.0 0.0
+Traffic.37.RCSClass = RCS_Car
+Traffic.37.DetectMask = 1 1
+Traffic.37.Route = 0 1
+Traffic.37.Init.Road = 18 R2
+Traffic.37.Init.v = 1
+Traffic.37.FreeMotion = 1
+Traffic.37.UpdRate = 200
+Traffic.37.IFF.FM_tx.Name =FM_tx_37
+Traffic.37.IFF.FM_tx.Factor = 1.0
+Traffic.37.IFF.FM_tx.Offset = 0.0
+Traffic.37.IFF.FM_ty.Name =FM_ty_37
+Traffic.37.IFF.FM_ty.Factor = 1.0
+Traffic.37.IFF.FM_ty.Offset = 0.0
+Traffic.37.IFF.FM_tz.Name =FM_tz_37
+Traffic.37.IFF.FM_tz.Factor = 1.0
+Traffic.37.IFF.FM_tz.Offset = 0.0
+Traffic.37.IFF.FM_rx.Name =
+Traffic.37.IFF.FM_rx.Factor = 1.0
+Traffic.37.IFF.FM_rx.Offset = 0.0
+Traffic.37.IFF.FM_ry.Name =
+Traffic.37.IFF.FM_ry.Factor = 1.0
+Traffic.37.IFF.FM_ry.Offset = 0.0
+Traffic.37.IFF.FM_rz.Name =FM_rz_37
+Traffic.37.IFF.FM_rz.Factor = 1.0
+Traffic.37.IFF.FM_rz.Offset = 0.0
+Traffic.38.ObjectKind = Movable
+Traffic.38.ObjectClass = Car
+Traffic.38.Name = T38
+Traffic.38.Info = UNNAMED Object 38
+Traffic.38.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.38.Color = 1.0 0.0 0.0
+Traffic.38.Basics.Dimension = 4.28 1.82 1.28
+Traffic.38.Basics.Offset = 0.0 0.0
+Traffic.38.Basics.Fr12CoM = 2.15
+Traffic.38.Init.Orientation = 0.0 0.0 0.0
+Traffic.38.RCSClass = RCS_Car
+Traffic.38.DetectMask = 1 1
+Traffic.38.Route = 0 1
+Traffic.38.Init.Road = 18 R2
+Traffic.38.Init.v = 1
+Traffic.38.FreeMotion = 1
+Traffic.38.UpdRate = 200
+Traffic.38.IFF.FM_tx.Name =FM_tx_38
+Traffic.38.IFF.FM_tx.Factor = 1.0
+Traffic.38.IFF.FM_tx.Offset = 0.0
+Traffic.38.IFF.FM_ty.Name =FM_ty_38
+Traffic.38.IFF.FM_ty.Factor = 1.0
+Traffic.38.IFF.FM_ty.Offset = 0.0
+Traffic.38.IFF.FM_tz.Name =FM_tz_38
+Traffic.38.IFF.FM_tz.Factor = 1.0
+Traffic.38.IFF.FM_tz.Offset = 0.0
+Traffic.38.IFF.FM_rx.Name =
+Traffic.38.IFF.FM_rx.Factor = 1.0
+Traffic.38.IFF.FM_rx.Offset = 0.0
+Traffic.38.IFF.FM_ry.Name =
+Traffic.38.IFF.FM_ry.Factor = 1.0
+Traffic.38.IFF.FM_ry.Offset = 0.0
+Traffic.38.IFF.FM_rz.Name =FM_rz_38
+Traffic.38.IFF.FM_rz.Factor = 1.0
+Traffic.38.IFF.FM_rz.Offset = 0.0
+Traffic.39.ObjectKind = Movable
+Traffic.39.ObjectClass = Car
+Traffic.39.Name = T39
+Traffic.39.Info = UNNAMED Object 39
+Traffic.39.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.39.Color = 1.0 0.0 0.0
+Traffic.39.Basics.Dimension = 4.28 1.82 1.28
+Traffic.39.Basics.Offset = 0.0 0.0
+Traffic.39.Basics.Fr12CoM = 2.15
+Traffic.39.Init.Orientation = 0.0 0.0 0.0
+Traffic.39.RCSClass = RCS_Car
+Traffic.39.DetectMask = 1 1
+Traffic.39.Route = 0 1
+Traffic.39.Init.Road = 18 R2
+Traffic.39.Init.v = 1
+Traffic.39.FreeMotion = 1
+Traffic.39.UpdRate = 200
+Traffic.39.IFF.FM_tx.Name =FM_tx_39
+Traffic.39.IFF.FM_tx.Factor = 1.0
+Traffic.39.IFF.FM_tx.Offset = 0.0
+Traffic.39.IFF.FM_ty.Name =FM_ty_39
+Traffic.39.IFF.FM_ty.Factor = 1.0
+Traffic.39.IFF.FM_ty.Offset = 0.0
+Traffic.39.IFF.FM_tz.Name =FM_tz_39
+Traffic.39.IFF.FM_tz.Factor = 1.0
+Traffic.39.IFF.FM_tz.Offset = 0.0
+Traffic.39.IFF.FM_rx.Name =
+Traffic.39.IFF.FM_rx.Factor = 1.0
+Traffic.39.IFF.FM_rx.Offset = 0.0
+Traffic.39.IFF.FM_ry.Name =
+Traffic.39.IFF.FM_ry.Factor = 1.0
+Traffic.39.IFF.FM_ry.Offset = 0.0
+Traffic.39.IFF.FM_rz.Name =FM_rz_39
+Traffic.39.IFF.FM_rz.Factor = 1.0
+Traffic.39.IFF.FM_rz.Offset = 0.0
+Traffic.40.ObjectKind = Movable
+Traffic.40.ObjectClass = Car
+Traffic.40.Name = T40
+Traffic.40.Info = UNNAMED Object 40
+Traffic.40.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.40.Color = 1.0 0.0 0.0
+Traffic.40.Basics.Dimension = 4.28 1.82 1.28
+Traffic.40.Basics.Offset = 0.0 0.0
+Traffic.40.Basics.Fr12CoM = 2.15
+Traffic.40.Init.Orientation = 0.0 0.0 0.0
+Traffic.40.RCSClass = RCS_Car
+Traffic.40.DetectMask = 1 1
+Traffic.40.Route = 0 1
+Traffic.40.Init.Road = 18 R2
+Traffic.40.Init.v = 1
+Traffic.40.FreeMotion = 1
+Traffic.40.UpdRate = 200
+Traffic.40.IFF.FM_tx.Name =FM_tx_40
+Traffic.40.IFF.FM_tx.Factor = 1.0
+Traffic.40.IFF.FM_tx.Offset = 0.0
+Traffic.40.IFF.FM_ty.Name =FM_ty_40
+Traffic.40.IFF.FM_ty.Factor = 1.0
+Traffic.40.IFF.FM_ty.Offset = 0.0
+Traffic.40.IFF.FM_tz.Name =FM_tz_40
+Traffic.40.IFF.FM_tz.Factor = 1.0
+Traffic.40.IFF.FM_tz.Offset = 0.0
+Traffic.40.IFF.FM_rx.Name =
+Traffic.40.IFF.FM_rx.Factor = 1.0
+Traffic.40.IFF.FM_rx.Offset = 0.0
+Traffic.40.IFF.FM_ry.Name =
+Traffic.40.IFF.FM_ry.Factor = 1.0
+Traffic.40.IFF.FM_ry.Offset = 0.0
+Traffic.40.IFF.FM_rz.Name =FM_rz_40
+Traffic.40.IFF.FM_rz.Factor = 1.0
+Traffic.40.IFF.FM_rz.Offset = 0.0
+Traffic.41.ObjectKind = Movable
+Traffic.41.ObjectClass = Car
+Traffic.41.Name = T41
+Traffic.41.Info = UNNAMED Object 41
+Traffic.41.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.41.Color = 1.0 0.0 0.0
+Traffic.41.Basics.Dimension = 4.28 1.82 1.28
+Traffic.41.Basics.Offset = 0.0 0.0
+Traffic.41.Basics.Fr12CoM = 2.15
+Traffic.41.Init.Orientation = 0.0 0.0 0.0
+Traffic.41.RCSClass = RCS_Car
+Traffic.41.DetectMask = 1 1
+Traffic.41.Route = 0 1
+Traffic.41.Init.Road = 18 R2
+Traffic.41.Init.v = 1
+Traffic.41.FreeMotion = 1
+Traffic.41.UpdRate = 200
+Traffic.41.IFF.FM_tx.Name =FM_tx_41
+Traffic.41.IFF.FM_tx.Factor = 1.0
+Traffic.41.IFF.FM_tx.Offset = 0.0
+Traffic.41.IFF.FM_ty.Name =FM_ty_41
+Traffic.41.IFF.FM_ty.Factor = 1.0
+Traffic.41.IFF.FM_ty.Offset = 0.0
+Traffic.41.IFF.FM_tz.Name =FM_tz_41
+Traffic.41.IFF.FM_tz.Factor = 1.0
+Traffic.41.IFF.FM_tz.Offset = 0.0
+Traffic.41.IFF.FM_rx.Name =
+Traffic.41.IFF.FM_rx.Factor = 1.0
+Traffic.41.IFF.FM_rx.Offset = 0.0
+Traffic.41.IFF.FM_ry.Name =
+Traffic.41.IFF.FM_ry.Factor = 1.0
+Traffic.41.IFF.FM_ry.Offset = 0.0
+Traffic.41.IFF.FM_rz.Name =FM_rz_41
+Traffic.41.IFF.FM_rz.Factor = 1.0
+Traffic.41.IFF.FM_rz.Offset = 0.0
+Traffic.42.ObjectKind = Movable
+Traffic.42.ObjectClass = Car
+Traffic.42.Name = T42
+Traffic.42.Info = UNNAMED Object 42
+Traffic.42.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.42.Color = 1.0 0.0 0.0
+Traffic.42.Basics.Dimension = 4.28 1.82 1.28
+Traffic.42.Basics.Offset = 0.0 0.0
+Traffic.42.Basics.Fr12CoM = 2.15
+Traffic.42.Init.Orientation = 0.0 0.0 0.0
+Traffic.42.RCSClass = RCS_Car
+Traffic.42.DetectMask = 1 1
+Traffic.42.Route = 0 1
+Traffic.42.Init.Road = 18 R2
+Traffic.42.Init.v = 1
+Traffic.42.FreeMotion = 1
+Traffic.42.UpdRate = 200
+Traffic.42.IFF.FM_tx.Name =FM_tx_42
+Traffic.42.IFF.FM_tx.Factor = 1.0
+Traffic.42.IFF.FM_tx.Offset = 0.0
+Traffic.42.IFF.FM_ty.Name =FM_ty_42
+Traffic.42.IFF.FM_ty.Factor = 1.0
+Traffic.42.IFF.FM_ty.Offset = 0.0
+Traffic.42.IFF.FM_tz.Name =FM_tz_42
+Traffic.42.IFF.FM_tz.Factor = 1.0
+Traffic.42.IFF.FM_tz.Offset = 0.0
+Traffic.42.IFF.FM_rx.Name =
+Traffic.42.IFF.FM_rx.Factor = 1.0
+Traffic.42.IFF.FM_rx.Offset = 0.0
+Traffic.42.IFF.FM_ry.Name =
+Traffic.42.IFF.FM_ry.Factor = 1.0
+Traffic.42.IFF.FM_ry.Offset = 0.0
+Traffic.42.IFF.FM_rz.Name =FM_rz_42
+Traffic.42.IFF.FM_rz.Factor = 1.0
+Traffic.42.IFF.FM_rz.Offset = 0.0
+Traffic.43.ObjectKind = Movable
+Traffic.43.ObjectClass = Car
+Traffic.43.Name = T43
+Traffic.43.Info = UNNAMED Object 43
+Traffic.43.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.43.Color = 1.0 0.0 0.0
+Traffic.43.Basics.Dimension = 4.28 1.82 1.28
+Traffic.43.Basics.Offset = 0.0 0.0
+Traffic.43.Basics.Fr12CoM = 2.15
+Traffic.43.Init.Orientation = 0.0 0.0 0.0
+Traffic.43.RCSClass = RCS_Car
+Traffic.43.DetectMask = 1 1
+Traffic.43.Route = 0 1
+Traffic.43.Init.Road = 18 R2
+Traffic.43.Init.v = 1
+Traffic.43.FreeMotion = 1
+Traffic.43.UpdRate = 200
+Traffic.43.IFF.FM_tx.Name =FM_tx_43
+Traffic.43.IFF.FM_tx.Factor = 1.0
+Traffic.43.IFF.FM_tx.Offset = 0.0
+Traffic.43.IFF.FM_ty.Name =FM_ty_43
+Traffic.43.IFF.FM_ty.Factor = 1.0
+Traffic.43.IFF.FM_ty.Offset = 0.0
+Traffic.43.IFF.FM_tz.Name =FM_tz_43
+Traffic.43.IFF.FM_tz.Factor = 1.0
+Traffic.43.IFF.FM_tz.Offset = 0.0
+Traffic.43.IFF.FM_rx.Name =
+Traffic.43.IFF.FM_rx.Factor = 1.0
+Traffic.43.IFF.FM_rx.Offset = 0.0
+Traffic.43.IFF.FM_ry.Name =
+Traffic.43.IFF.FM_ry.Factor = 1.0
+Traffic.43.IFF.FM_ry.Offset = 0.0
+Traffic.43.IFF.FM_rz.Name =FM_rz_43
+Traffic.43.IFF.FM_rz.Factor = 1.0
+Traffic.43.IFF.FM_rz.Offset = 0.0
+Traffic.44.ObjectKind = Movable
+Traffic.44.ObjectClass = Car
+Traffic.44.Name = T44
+Traffic.44.Info = UNNAMED Object 44
+Traffic.44.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.44.Color = 1.0 0.0 0.0
+Traffic.44.Basics.Dimension = 4.28 1.82 1.28
+Traffic.44.Basics.Offset = 0.0 0.0
+Traffic.44.Basics.Fr12CoM = 2.15
+Traffic.44.Init.Orientation = 0.0 0.0 0.0
+Traffic.44.RCSClass = RCS_Car
+Traffic.44.DetectMask = 1 1
+Traffic.44.Route = 0 1
+Traffic.44.Init.Road = 18 R2
+Traffic.44.Init.v = 1
+Traffic.44.FreeMotion = 1
+Traffic.44.UpdRate = 200
+Traffic.44.IFF.FM_tx.Name =FM_tx_44
+Traffic.44.IFF.FM_tx.Factor = 1.0
+Traffic.44.IFF.FM_tx.Offset = 0.0
+Traffic.44.IFF.FM_ty.Name =FM_ty_44
+Traffic.44.IFF.FM_ty.Factor = 1.0
+Traffic.44.IFF.FM_ty.Offset = 0.0
+Traffic.44.IFF.FM_tz.Name =FM_tz_44
+Traffic.44.IFF.FM_tz.Factor = 1.0
+Traffic.44.IFF.FM_tz.Offset = 0.0
+Traffic.44.IFF.FM_rx.Name =
+Traffic.44.IFF.FM_rx.Factor = 1.0
+Traffic.44.IFF.FM_rx.Offset = 0.0
+Traffic.44.IFF.FM_ry.Name =
+Traffic.44.IFF.FM_ry.Factor = 1.0
+Traffic.44.IFF.FM_ry.Offset = 0.0
+Traffic.44.IFF.FM_rz.Name =FM_rz_44
+Traffic.44.IFF.FM_rz.Factor = 1.0
+Traffic.44.IFF.FM_rz.Offset = 0.0
+Traffic.45.ObjectKind = Movable
+Traffic.45.ObjectClass = Car
+Traffic.45.Name = T45
+Traffic.45.Info = UNNAMED Object 45
+Traffic.45.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.45.Color = 1.0 0.0 0.0
+Traffic.45.Basics.Dimension = 4.28 1.82 1.28
+Traffic.45.Basics.Offset = 0.0 0.0
+Traffic.45.Basics.Fr12CoM = 2.15
+Traffic.45.Init.Orientation = 0.0 0.0 0.0
+Traffic.45.RCSClass = RCS_Car
+Traffic.45.DetectMask = 1 1
+Traffic.45.Route = 0 1
+Traffic.45.Init.Road = 18 R2
+Traffic.45.Init.v = 1
+Traffic.45.FreeMotion = 1
+Traffic.45.UpdRate = 200
+Traffic.45.IFF.FM_tx.Name =FM_tx_45
+Traffic.45.IFF.FM_tx.Factor = 1.0
+Traffic.45.IFF.FM_tx.Offset = 0.0
+Traffic.45.IFF.FM_ty.Name =FM_ty_45
+Traffic.45.IFF.FM_ty.Factor = 1.0
+Traffic.45.IFF.FM_ty.Offset = 0.0
+Traffic.45.IFF.FM_tz.Name =FM_tz_45
+Traffic.45.IFF.FM_tz.Factor = 1.0
+Traffic.45.IFF.FM_tz.Offset = 0.0
+Traffic.45.IFF.FM_rx.Name =
+Traffic.45.IFF.FM_rx.Factor = 1.0
+Traffic.45.IFF.FM_rx.Offset = 0.0
+Traffic.45.IFF.FM_ry.Name =
+Traffic.45.IFF.FM_ry.Factor = 1.0
+Traffic.45.IFF.FM_ry.Offset = 0.0
+Traffic.45.IFF.FM_rz.Name =FM_rz_45
+Traffic.45.IFF.FM_rz.Factor = 1.0
+Traffic.45.IFF.FM_rz.Offset = 0.0
+Traffic.46.ObjectKind = Movable
+Traffic.46.ObjectClass = Car
+Traffic.46.Name = T46
+Traffic.46.Info = UNNAMED Object 46
+Traffic.46.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.46.Color = 1.0 0.0 0.0
+Traffic.46.Basics.Dimension = 4.28 1.82 1.28
+Traffic.46.Basics.Offset = 0.0 0.0
+Traffic.46.Basics.Fr12CoM = 2.15
+Traffic.46.Init.Orientation = 0.0 0.0 0.0
+Traffic.46.RCSClass = RCS_Car
+Traffic.46.DetectMask = 1 1
+Traffic.46.Route = 0 1
+Traffic.46.Init.Road = 18 R2
+Traffic.46.Init.v = 1
+Traffic.46.FreeMotion = 1
+Traffic.46.UpdRate = 200
+Traffic.46.IFF.FM_tx.Name =FM_tx_46
+Traffic.46.IFF.FM_tx.Factor = 1.0
+Traffic.46.IFF.FM_tx.Offset = 0.0
+Traffic.46.IFF.FM_ty.Name =FM_ty_46
+Traffic.46.IFF.FM_ty.Factor = 1.0
+Traffic.46.IFF.FM_ty.Offset = 0.0
+Traffic.46.IFF.FM_tz.Name =FM_tz_46
+Traffic.46.IFF.FM_tz.Factor = 1.0
+Traffic.46.IFF.FM_tz.Offset = 0.0
+Traffic.46.IFF.FM_rx.Name =
+Traffic.46.IFF.FM_rx.Factor = 1.0
+Traffic.46.IFF.FM_rx.Offset = 0.0
+Traffic.46.IFF.FM_ry.Name =
+Traffic.46.IFF.FM_ry.Factor = 1.0
+Traffic.46.IFF.FM_ry.Offset = 0.0
+Traffic.46.IFF.FM_rz.Name =FM_rz_46
+Traffic.46.IFF.FM_rz.Factor = 1.0
+Traffic.46.IFF.FM_rz.Offset = 0.0
+Traffic.47.ObjectKind = Movable
+Traffic.47.ObjectClass = Car
+Traffic.47.Name = T47
+Traffic.47.Info = UNNAMED Object 47
+Traffic.47.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.47.Color = 1.0 0.0 0.0
+Traffic.47.Basics.Dimension = 4.28 1.82 1.28
+Traffic.47.Basics.Offset = 0.0 0.0
+Traffic.47.Basics.Fr12CoM = 2.15
+Traffic.47.Init.Orientation = 0.0 0.0 0.0
+Traffic.47.RCSClass = RCS_Car
+Traffic.47.DetectMask = 1 1
+Traffic.47.Route = 0 1
+Traffic.47.Init.Road = 18 R2
+Traffic.47.Init.v = 1
+Traffic.47.FreeMotion = 1
+Traffic.47.UpdRate = 200
+Traffic.47.IFF.FM_tx.Name =FM_tx_47
+Traffic.47.IFF.FM_tx.Factor = 1.0
+Traffic.47.IFF.FM_tx.Offset = 0.0
+Traffic.47.IFF.FM_ty.Name =FM_ty_47
+Traffic.47.IFF.FM_ty.Factor = 1.0
+Traffic.47.IFF.FM_ty.Offset = 0.0
+Traffic.47.IFF.FM_tz.Name =FM_tz_47
+Traffic.47.IFF.FM_tz.Factor = 1.0
+Traffic.47.IFF.FM_tz.Offset = 0.0
+Traffic.47.IFF.FM_rx.Name =
+Traffic.47.IFF.FM_rx.Factor = 1.0
+Traffic.47.IFF.FM_rx.Offset = 0.0
+Traffic.47.IFF.FM_ry.Name =
+Traffic.47.IFF.FM_ry.Factor = 1.0
+Traffic.47.IFF.FM_ry.Offset = 0.0
+Traffic.47.IFF.FM_rz.Name =FM_rz_47
+Traffic.47.IFF.FM_rz.Factor = 1.0
+Traffic.47.IFF.FM_rz.Offset = 0.0
+Traffic.48.ObjectKind = Movable
+Traffic.48.ObjectClass = Car
+Traffic.48.Name = T48
+Traffic.48.Info = UNNAMED Object 48
+Traffic.48.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.48.Color = 1.0 0.0 0.0
+Traffic.48.Basics.Dimension = 4.28 1.82 1.28
+Traffic.48.Basics.Offset = 0.0 0.0
+Traffic.48.Basics.Fr12CoM = 2.15
+Traffic.48.Init.Orientation = 0.0 0.0 0.0
+Traffic.48.RCSClass = RCS_Car
+Traffic.48.DetectMask = 1 1
+Traffic.48.Route = 0 1
+Traffic.48.Init.Road = 18 R2
+Traffic.48.Init.v = 1
+Traffic.48.FreeMotion = 1
+Traffic.48.UpdRate = 200
+Traffic.48.IFF.FM_tx.Name =FM_tx_48
+Traffic.48.IFF.FM_tx.Factor = 1.0
+Traffic.48.IFF.FM_tx.Offset = 0.0
+Traffic.48.IFF.FM_ty.Name =FM_ty_48
+Traffic.48.IFF.FM_ty.Factor = 1.0
+Traffic.48.IFF.FM_ty.Offset = 0.0
+Traffic.48.IFF.FM_tz.Name =FM_tz_48
+Traffic.48.IFF.FM_tz.Factor = 1.0
+Traffic.48.IFF.FM_tz.Offset = 0.0
+Traffic.48.IFF.FM_rx.Name =
+Traffic.48.IFF.FM_rx.Factor = 1.0
+Traffic.48.IFF.FM_rx.Offset = 0.0
+Traffic.48.IFF.FM_ry.Name =
+Traffic.48.IFF.FM_ry.Factor = 1.0
+Traffic.48.IFF.FM_ry.Offset = 0.0
+Traffic.48.IFF.FM_rz.Name =FM_rz_48
+Traffic.48.IFF.FM_rz.Factor = 1.0
+Traffic.48.IFF.FM_rz.Offset = 0.0
+Traffic.49.ObjectKind = Movable
+Traffic.49.ObjectClass = Car
+Traffic.49.Name = T49
+Traffic.49.Info = UNNAMED Object 49
+Traffic.49.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.49.Color = 1.0 0.0 0.0
+Traffic.49.Basics.Dimension = 4.28 1.82 1.28
+Traffic.49.Basics.Offset = 0.0 0.0
+Traffic.49.Basics.Fr12CoM = 2.15
+Traffic.49.Init.Orientation = 0.0 0.0 0.0
+Traffic.49.RCSClass = RCS_Car
+Traffic.49.DetectMask = 1 1
+Traffic.49.Route = 0 1
+Traffic.49.Init.Road = 18 R2
+Traffic.49.Init.v = 1
+Traffic.49.FreeMotion = 1
+Traffic.49.UpdRate = 200
+Traffic.49.IFF.FM_tx.Name =FM_tx_49
+Traffic.49.IFF.FM_tx.Factor = 1.0
+Traffic.49.IFF.FM_tx.Offset = 0.0
+Traffic.49.IFF.FM_ty.Name =FM_ty_49
+Traffic.49.IFF.FM_ty.Factor = 1.0
+Traffic.49.IFF.FM_ty.Offset = 0.0
+Traffic.49.IFF.FM_tz.Name =FM_tz_49
+Traffic.49.IFF.FM_tz.Factor = 1.0
+Traffic.49.IFF.FM_tz.Offset = 0.0
+Traffic.49.IFF.FM_rx.Name =
+Traffic.49.IFF.FM_rx.Factor = 1.0
+Traffic.49.IFF.FM_rx.Offset = 0.0
+Traffic.49.IFF.FM_ry.Name =
+Traffic.49.IFF.FM_ry.Factor = 1.0
+Traffic.49.IFF.FM_ry.Offset = 0.0
+Traffic.49.IFF.FM_rz.Name =FM_rz_49
+Traffic.49.IFF.FM_rz.Factor = 1.0
+Traffic.49.IFF.FM_rz.Offset = 0.0
+Traffic.50.ObjectKind = Movable
+Traffic.50.ObjectClass = Car
+Traffic.50.Name = T50
+Traffic.50.Info = UNNAMED Object 50
+Traffic.50.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.50.Color = 1.0 0.0 0.0
+Traffic.50.Basics.Dimension = 4.28 1.82 1.28
+Traffic.50.Basics.Offset = 0.0 0.0
+Traffic.50.Basics.Fr12CoM = 2.15
+Traffic.50.Init.Orientation = 0.0 0.0 0.0
+Traffic.50.RCSClass = RCS_Car
+Traffic.50.DetectMask = 1 1
+Traffic.50.Route = 0 1
+Traffic.50.Init.Road = 18 R2
+Traffic.50.Init.v = 1
+Traffic.50.FreeMotion = 1
+Traffic.50.UpdRate = 200
+Traffic.50.IFF.FM_tx.Name =FM_tx_50
+Traffic.50.IFF.FM_tx.Factor = 1.0
+Traffic.50.IFF.FM_tx.Offset = 0.0
+Traffic.50.IFF.FM_ty.Name =FM_ty_50
+Traffic.50.IFF.FM_ty.Factor = 1.0
+Traffic.50.IFF.FM_ty.Offset = 0.0
+Traffic.50.IFF.FM_tz.Name =FM_tz_50
+Traffic.50.IFF.FM_tz.Factor = 1.0
+Traffic.50.IFF.FM_tz.Offset = 0.0
+Traffic.50.IFF.FM_rx.Name =
+Traffic.50.IFF.FM_rx.Factor = 1.0
+Traffic.50.IFF.FM_rx.Offset = 0.0
+Traffic.50.IFF.FM_ry.Name =
+Traffic.50.IFF.FM_ry.Factor = 1.0
+Traffic.50.IFF.FM_ry.Offset = 0.0
+Traffic.50.IFF.FM_rz.Name =FM_rz_50
+Traffic.50.IFF.FM_rz.Factor = 1.0
+Traffic.50.IFF.FM_rz.Offset = 0.0
+Traffic.51.ObjectKind = Movable
+Traffic.51.ObjectClass = Car
+Traffic.51.Name = T51
+Traffic.51.Info = UNNAMED Object 51
+Traffic.51.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.51.Color = 1.0 0.0 0.0
+Traffic.51.Basics.Dimension = 4.28 1.82 1.28
+Traffic.51.Basics.Offset = 0.0 0.0
+Traffic.51.Basics.Fr12CoM = 2.15
+Traffic.51.Init.Orientation = 0.0 0.0 0.0
+Traffic.51.RCSClass = RCS_Car
+Traffic.51.DetectMask = 1 1
+Traffic.51.Route = 0 1
+Traffic.51.Init.Road = 18 R2
+Traffic.51.Init.v = 1
+Traffic.51.FreeMotion = 1
+Traffic.51.UpdRate = 200
+Traffic.51.IFF.FM_tx.Name =FM_tx_51
+Traffic.51.IFF.FM_tx.Factor = 1.0
+Traffic.51.IFF.FM_tx.Offset = 0.0
+Traffic.51.IFF.FM_ty.Name =FM_ty_51
+Traffic.51.IFF.FM_ty.Factor = 1.0
+Traffic.51.IFF.FM_ty.Offset = 0.0
+Traffic.51.IFF.FM_tz.Name =FM_tz_51
+Traffic.51.IFF.FM_tz.Factor = 1.0
+Traffic.51.IFF.FM_tz.Offset = 0.0
+Traffic.51.IFF.FM_rx.Name =
+Traffic.51.IFF.FM_rx.Factor = 1.0
+Traffic.51.IFF.FM_rx.Offset = 0.0
+Traffic.51.IFF.FM_ry.Name =
+Traffic.51.IFF.FM_ry.Factor = 1.0
+Traffic.51.IFF.FM_ry.Offset = 0.0
+Traffic.51.IFF.FM_rz.Name =FM_rz_51
+Traffic.51.IFF.FM_rz.Factor = 1.0
+Traffic.51.IFF.FM_rz.Offset = 0.0
+Traffic.52.ObjectKind = Movable
+Traffic.52.ObjectClass = Car
+Traffic.52.Name = T52
+Traffic.52.Info = UNNAMED Object 52
+Traffic.52.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.52.Color = 1.0 0.0 0.0
+Traffic.52.Basics.Dimension = 4.28 1.82 1.28
+Traffic.52.Basics.Offset = 0.0 0.0
+Traffic.52.Basics.Fr12CoM = 2.15
+Traffic.52.Init.Orientation = 0.0 0.0 0.0
+Traffic.52.RCSClass = RCS_Car
+Traffic.52.DetectMask = 1 1
+Traffic.52.Route = 0 1
+Traffic.52.Init.Road = 18 R2
+Traffic.52.Init.v = 1
+Traffic.52.FreeMotion = 1
+Traffic.52.UpdRate = 200
+Traffic.52.IFF.FM_tx.Name =FM_tx_52
+Traffic.52.IFF.FM_tx.Factor = 1.0
+Traffic.52.IFF.FM_tx.Offset = 0.0
+Traffic.52.IFF.FM_ty.Name =FM_ty_52
+Traffic.52.IFF.FM_ty.Factor = 1.0
+Traffic.52.IFF.FM_ty.Offset = 0.0
+Traffic.52.IFF.FM_tz.Name =FM_tz_52
+Traffic.52.IFF.FM_tz.Factor = 1.0
+Traffic.52.IFF.FM_tz.Offset = 0.0
+Traffic.52.IFF.FM_rx.Name =
+Traffic.52.IFF.FM_rx.Factor = 1.0
+Traffic.52.IFF.FM_rx.Offset = 0.0
+Traffic.52.IFF.FM_ry.Name =
+Traffic.52.IFF.FM_ry.Factor = 1.0
+Traffic.52.IFF.FM_ry.Offset = 0.0
+Traffic.52.IFF.FM_rz.Name =FM_rz_52
+Traffic.52.IFF.FM_rz.Factor = 1.0
+Traffic.52.IFF.FM_rz.Offset = 0.0
+Traffic.53.ObjectKind = Movable
+Traffic.53.ObjectClass = Car
+Traffic.53.Name = T53
+Traffic.53.Info = UNNAMED Object 53
+Traffic.53.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.53.Color = 1.0 0.0 0.0
+Traffic.53.Basics.Dimension = 4.28 1.82 1.28
+Traffic.53.Basics.Offset = 0.0 0.0
+Traffic.53.Basics.Fr12CoM = 2.15
+Traffic.53.Init.Orientation = 0.0 0.0 0.0
+Traffic.53.RCSClass = RCS_Car
+Traffic.53.DetectMask = 1 1
+Traffic.53.Route = 0 1
+Traffic.53.Init.Road = 18 R2
+Traffic.53.Init.v = 1
+Traffic.53.FreeMotion = 1
+Traffic.53.UpdRate = 200
+Traffic.53.IFF.FM_tx.Name =FM_tx_53
+Traffic.53.IFF.FM_tx.Factor = 1.0
+Traffic.53.IFF.FM_tx.Offset = 0.0
+Traffic.53.IFF.FM_ty.Name =FM_ty_53
+Traffic.53.IFF.FM_ty.Factor = 1.0
+Traffic.53.IFF.FM_ty.Offset = 0.0
+Traffic.53.IFF.FM_tz.Name =FM_tz_53
+Traffic.53.IFF.FM_tz.Factor = 1.0
+Traffic.53.IFF.FM_tz.Offset = 0.0
+Traffic.53.IFF.FM_rx.Name =
+Traffic.53.IFF.FM_rx.Factor = 1.0
+Traffic.53.IFF.FM_rx.Offset = 0.0
+Traffic.53.IFF.FM_ry.Name =
+Traffic.53.IFF.FM_ry.Factor = 1.0
+Traffic.53.IFF.FM_ry.Offset = 0.0
+Traffic.53.IFF.FM_rz.Name =FM_rz_53
+Traffic.53.IFF.FM_rz.Factor = 1.0
+Traffic.53.IFF.FM_rz.Offset = 0.0
+Traffic.54.ObjectKind = Movable
+Traffic.54.ObjectClass = Car
+Traffic.54.Name = T54
+Traffic.54.Info = UNNAMED Object 54
+Traffic.54.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.54.Color = 1.0 0.0 0.0
+Traffic.54.Basics.Dimension = 4.28 1.82 1.28
+Traffic.54.Basics.Offset = 0.0 0.0
+Traffic.54.Basics.Fr12CoM = 2.15
+Traffic.54.Init.Orientation = 0.0 0.0 0.0
+Traffic.54.RCSClass = RCS_Car
+Traffic.54.DetectMask = 1 1
+Traffic.54.Route = 0 1
+Traffic.54.Init.Road = 18 R2
+Traffic.54.Init.v = 1
+Traffic.54.FreeMotion = 1
+Traffic.54.UpdRate = 200
+Traffic.54.IFF.FM_tx.Name =FM_tx_54
+Traffic.54.IFF.FM_tx.Factor = 1.0
+Traffic.54.IFF.FM_tx.Offset = 0.0
+Traffic.54.IFF.FM_ty.Name =FM_ty_54
+Traffic.54.IFF.FM_ty.Factor = 1.0
+Traffic.54.IFF.FM_ty.Offset = 0.0
+Traffic.54.IFF.FM_tz.Name =FM_tz_54
+Traffic.54.IFF.FM_tz.Factor = 1.0
+Traffic.54.IFF.FM_tz.Offset = 0.0
+Traffic.54.IFF.FM_rx.Name =
+Traffic.54.IFF.FM_rx.Factor = 1.0
+Traffic.54.IFF.FM_rx.Offset = 0.0
+Traffic.54.IFF.FM_ry.Name =
+Traffic.54.IFF.FM_ry.Factor = 1.0
+Traffic.54.IFF.FM_ry.Offset = 0.0
+Traffic.54.IFF.FM_rz.Name =FM_rz_54
+Traffic.54.IFF.FM_rz.Factor = 1.0
+Traffic.54.IFF.FM_rz.Offset = 0.0
+Traffic.55.ObjectKind = Movable
+Traffic.55.ObjectClass = Car
+Traffic.55.Name = T55
+Traffic.55.Info = UNNAMED Object 55
+Traffic.55.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.55.Color = 1.0 0.0 0.0
+Traffic.55.Basics.Dimension = 4.28 1.82 1.28
+Traffic.55.Basics.Offset = 0.0 0.0
+Traffic.55.Basics.Fr12CoM = 2.15
+Traffic.55.Init.Orientation = 0.0 0.0 0.0
+Traffic.55.RCSClass = RCS_Car
+Traffic.55.DetectMask = 1 1
+Traffic.55.Route = 0 1
+Traffic.55.Init.Road = 18 R2
+Traffic.55.Init.v = 1
+Traffic.55.FreeMotion = 1
+Traffic.55.UpdRate = 200
+Traffic.55.IFF.FM_tx.Name =FM_tx_55
+Traffic.55.IFF.FM_tx.Factor = 1.0
+Traffic.55.IFF.FM_tx.Offset = 0.0
+Traffic.55.IFF.FM_ty.Name =FM_ty_55
+Traffic.55.IFF.FM_ty.Factor = 1.0
+Traffic.55.IFF.FM_ty.Offset = 0.0
+Traffic.55.IFF.FM_tz.Name =FM_tz_55
+Traffic.55.IFF.FM_tz.Factor = 1.0
+Traffic.55.IFF.FM_tz.Offset = 0.0
+Traffic.55.IFF.FM_rx.Name =
+Traffic.55.IFF.FM_rx.Factor = 1.0
+Traffic.55.IFF.FM_rx.Offset = 0.0
+Traffic.55.IFF.FM_ry.Name =
+Traffic.55.IFF.FM_ry.Factor = 1.0
+Traffic.55.IFF.FM_ry.Offset = 0.0
+Traffic.55.IFF.FM_rz.Name =FM_rz_55
+Traffic.55.IFF.FM_rz.Factor = 1.0
+Traffic.55.IFF.FM_rz.Offset = 0.0
+Traffic.56.ObjectKind = Movable
+Traffic.56.ObjectClass = Car
+Traffic.56.Name = T56
+Traffic.56.Info = UNNAMED Object 56
+Traffic.56.Movie.Geometry = 3D/Vehicles/VW_Beetle_2012_Blue.mobj
+Traffic.56.Color = 1.0 0.0 0.0
+Traffic.56.Basics.Dimension = 4.28 1.82 1.28
+Traffic.56.Basics.Offset = 0.0 0.0
+Traffic.56.Basics.Fr12CoM = 2.15
+Traffic.56.Init.Orientation = 0.0 0.0 0.0
+Traffic.56.RCSClass = RCS_Car
+Traffic.56.DetectMask = 1 1
+Traffic.56.Route = 0 1
+Traffic.56.Init.Road = 18 R2
+Traffic.56.Init.v = 1
+Traffic.56.FreeMotion = 1
+Traffic.56.UpdRate = 200
+Traffic.56.IFF.FM_tx.Name =FM_tx_56
+Traffic.56.IFF.FM_tx.Factor = 1.0
+Traffic.56.IFF.FM_tx.Offset = 0.0
+Traffic.56.IFF.FM_ty.Name =FM_ty_56
+Traffic.56.IFF.FM_ty.Factor = 1.0
+Traffic.56.IFF.FM_ty.Offset = 0.0
+Traffic.56.IFF.FM_tz.Name =FM_tz_56
+Traffic.56.IFF.FM_tz.Factor = 1.0
+Traffic.56.IFF.FM_tz.Offset = 0.0
+Traffic.56.IFF.FM_rx.Name =
+Traffic.56.IFF.FM_rx.Factor = 1.0
+Traffic.56.IFF.FM_rx.Offset = 0.0
+Traffic.56.IFF.FM_ry.Name =
+Traffic.56.IFF.FM_ry.Factor = 1.0
+Traffic.56.IFF.FM_ry.Offset = 0.0
+Traffic.56.IFF.FM_rz.Name =FM_rz_56
+Traffic.56.IFF.FM_rz.Factor = 1.0
+Traffic.56.IFF.FM_rz.Offset = 0.0
+DrivMan.OW.Active = 1
+DrivMan.OW.Quantities = Time User1 User2 User3 User4
+DrivMan.OW.StartGearNo = 1
+DrivMan.OW.StartVelocity =
+DrivMan.OW.GasMax = 0.5
+DrivMan.OW.RefCh = Time
+DrivMan.OW.ConsiderRoadSigns = 0
+DrivMan.OW.sRoute.Offset = 0
+DrivMan.OW.Time.Name = t[s]
+DrivMan.OW.Time.Factor = 1.0
+DrivMan.OW.User1.Name = x
+DrivMan.OW.User1.Factor = 1.0
+DrivMan.OW.User1.Offset = 0.0
+DrivMan.OW.User2.Name = y
+DrivMan.OW.User2.Factor = 1.0
+DrivMan.OW.User2.Offset = 0.0
+DrivMan.OW.User3.Name = yaw
+DrivMan.OW.User3.Factor = 1.0
+DrivMan.OW.User3.Offset = 0.0
+DrivMan.OW.User4.Name = -
+DrivMan.OW.User4.Factor = 1.0
+DrivMan.OW.User4.Offset = 0.0
+DrivMan.OW.FName = ego_profile_1.txt
+ErrorClass.0.Action = abort
+ErrorClass.0.Save = 0
+ErrorClass.0.WarningLimit = 3 5
+ErrorClass.1.Action = abort
+ErrorClass.1.Save = 0
+ErrorClass.1.WarningLimit = 3 5
+ErrorClass.2.Action = abort
+ErrorClass.2.Save = 0
+ErrorClass.2.WarningLimit = 3 5
+ErrorClass.3.Action = abort
+ErrorClass.3.Save = 0
+ErrorClass.3.WarningLimit = 3 5
+ErrorClass.4.Action = abort
+ErrorClass.4.Save = 0
+ErrorClass.4.WarningLimit = 3 5
+ErrorClass.5.Action = abort
+ErrorClass.5.Save = 0
+ErrorClass.5.WarningLimit = 3 5
+ErrorClass.6.Action = abort
+ErrorClass.6.Save = 0
+ErrorClass.6.WarningLimit = 10 5
+ErrorClass.7.Action = abort
+ErrorClass.7.Save = 0
+ErrorClass.7.WarningLimit = 3 5
+ErrorClass.10.Action = abort
+ErrorClass.10.Save = 0
+ErrorClass.10.WarningLimit = 3 5
+ErrorClass.11.Action = abort
+ErrorClass.11.Save = 0
+ErrorClass.11.WarningLimit = 3 5
+Road.FileIdent = IPGRoad 8.0
+Road.LibVersion = 8.1
+Road.Country = DEU
+Road.nLinks = 1
+Road.nJunctions = 0
+Road.nObjects = 149
+Road.nRoutes = 1
+Road.RoadNetworkLength = 595.296984550432
+Road.BBox = -19.5668198180623 547.415304391587 -224.837648089968 34.6179698226834 -11 11
+Road.Route.0.Length = 595.296984550432
+Road.RST.Unit = kmh
+Road.RST = 50 100 130 30 70 30 0 -1
+Road.Movie = 0.2 1 0.01 1.5 1.5 1 1
+Road.PathMode = -1
+Road.Link.0.ID = 0
+Road.Link.0.Junctions = -1 -1 -2 -1
+Road.Link.0.Node0 = 0 0 0 105.98990017157544
+Road.Link.0.RST = countryroad
+Road.Link.0.RL.ID = 1
+Road.Link.0.Seg.0.ID = 5
+Road.Link.0.Seg.0.Type = PointList
+Road.Link.0.Seg.0.Param =  0.32131850672885776 -0.8241037297993898 1 0 0 0 0 0
+Road.Link.0.Seg.0.PointList:
+	0.0 0.0
+	-0.00010137585923075676 0.0003537749871611595
+	-3.794650547206402e-05 0.001198244746774435
+	0.00021262920927256346 0.001673803199082613
+	0.0004631538176909089 0.0026956023648381233
+	0.0010113111929968 0.0038102446123957634
+	0.0017251649405807257 0.005081292241811752
+	0.002043875283561647 0.005932775791734457
+	0.0020404340466484427 0.007708539254963398
+	0.001991083030588925 0.009139776695519686
+	0.001876447000540793 0.01067910622805357
+	0.0019364281324669719 0.011670436710119247
+	0.0019964089151471853 0.012661769520491362
+	0.0020563900470733643 0.013653097674250603
+	0.0021163710625842214 0.014644430484622717
+	0.0021763519616797566 0.015635764226317406
+	0.0022363329771906137 0.016627094708383083
+	0.002296313876286149 0.017618428450077772
+	0.0023562947753816843 0.01860975567251444
+	0.0024162756744772196 0.019601091742515564
+	0.0024762568064033985 0.02059242222458124
+	0.002536237705498934 0.02158375270664692
+	0.002596218721009791 0.022575086448341608
+	0.002656199736520648 0.023566416464746
+	0.002716180752031505 0.0245577497407794
+	0.0027465876191854477 0.024603950325399637
+	0.0027655536541715264 0.024554971139878035
+	0.0027181823970749974 0.024554076604545116
+	0.0026874321047216654 0.024294812232255936
+	0.0024172766134142876 0.023946717381477356
+	0.0021920084254816175 0.02347672637552023
+	0.0019877589074894786 0.02342073479667306
+	0.0017595390090718865 0.023380213882774115
+	0.001758406637236476 0.023012415505945683
+	0.0014368619304150343 0.022906215395778418
+	0.0010518000926822424 0.022462716326117516
+	0.0007297805277630687 0.022011760156601667
+	0.00011821568477898836 0.021295195445418358
+	-0.000739957788027823 0.021520619746297598
+	-0.0011609203647822142 0.021372677758336067
+	-0.001325162942521274 0.02101055346429348
+	-0.0015278855571523309 0.020195920020341873
+	-0.0017009243601933122 0.01967193791642785
+	-0.0016332868253812194 0.01931827375665307
+	-0.0010872191051021218 0.018657258711755276
+	-0.0005321430508047342 0.018094317987561226
+	2.565083559602499e-05 0.01732042757794261
+	0.0005050090840086341 0.017078750766813755
+	0.0010135907214134932 0.016384117770940065
+	0.0016129837604239583 0.015362537000328302
+	0.0020278753945603967 0.014946759212762117
+	0.0022623344557359815 0.014587085228413343
+	0.0024657510221004486 0.013957018032670021
+	0.0026171791832894087 0.013497269712388515
+	0.002968670567497611 0.01307647954672575
+	0.0031354555394500494 0.012855847366154194
+	0.0032152062049135566 0.013028503395617008
+	0.003604227560572326 0.013216187711805105
+	0.0041147308656945825 0.012739849276840687
+	0.0042679415782913566 0.01216165628284216
+	0.0043254385236650705 0.011857977136969566
+	0.004779226495884359 0.011821018531918526
+	0.005111189209856093 0.011395113077014685
+	0.005184145411476493 0.010789980180561543
+	0.005294025409966707 0.010307076387107372
+	0.0055024828761816025 0.009617117699235678
+	0.005924818804487586 0.009137773886322975
+	0.005923204473219812 0.00876107020303607
+	0.005999440909363329 0.008045953698456287
+	0.006173692527227104 0.007379594258964062
+	0.0064777982188388705 0.0065361266024410725
+	0.006421382422558963 0.0062214285135269165
+	0.00615045998711139 0.005882235709577799
+	0.006109488662332296 0.005336211062967777
+	0.006022169254720211 0.004714717622846365
+	0.006080528371967375 0.004108247812837362
+	0.006146843545138836 0.003522820770740509
+	0.0064017737749964 0.0026656612753868103
+	0.006387220462784171 0.002330920659005642
+	0.006275952327996492 0.0022164834663271904
+	0.006304233334958553 0.0016490905545651913
+	0.006373419659212232 0.0010279263369739056
+	0.00682430702727288 0.0005386774428188801
+	0.007342897588387132 4.6310946345329285e-05
+	0.007485851179808378 -0.0005413428880274296
+	0.007580016041174531 -0.0010408335365355015
+	0.007465073256753385 -0.0013868128880858421
+	0.007092847838066518 -0.0015500113368034363
+	0.006833490449935198 -0.0016932771541178226
+	0.006658617872744799 -0.0018573645502328873
+	0.006406076718121767 -0.002008535899221897
+	0.0061394061194732785 -0.0020099827088415623
+	0.005659375921823084 -0.0013270368799567223
+	0.0053247829200699925 -0.0012648077681660652
+	0.00497641833499074 -0.0011157523840665817
+	0.0047476725885644555 -0.001170075498521328
+	0.004386091721244156 -0.0010373834520578384
+	0.003568224492482841 -0.0002628238871693611
+	0.002756998408585787 0.0003138110041618347
+	0.0017845981055870652 0.0008570519275963306
+	0.0008787612896412611 0.0010639941319823265
+	-0.0001511287409812212 0.0014157635159790516
+	-0.0008187658386304975 0.0019940673373639584
+	-0.002194514381699264 0.0028673717752099037
+	-0.0029667054768651724 0.003224593121558428
+	-0.003818632452748716 0.003762379288673401
+	-0.004679589415900409 0.004055594559758902
+	-0.005998725071549416 0.004420612007379532
+	-0.006949448958039284 0.00444398820400238
+	-0.007640669238753617 0.0043893298134207726
+	-0.008782207267358899 0.004479943308979273
+	-0.009559263824485242 0.004769485909491777
+	-0.010055958991870284 0.004962847102433443
+	-0.010562860174104571 0.005019510630518198
+	-0.011132277548313141 0.005557961296290159
+	-0.011582777835428715 0.005604383070021868
+	-0.011525894398801029 0.00587288336828351
+	-0.011705245589837432 0.006358350161463022
+	-0.011813123594038188 0.007073356304317713
+	-0.012055085855536163 0.007472546771168709
+	-0.012301343958824873 0.007870734669268131
+	-0.012326695257797837 0.009162597358226776
+	-0.01237051549833268 0.009892186149954796
+	-0.012173243216238916 0.010442219208925962
+	-0.012174945557489991 0.010908312164247036
+	-0.011729062534868717 0.012056237552314997
+	-0.011489226366393268 0.013079821597784758
+	-0.01091221091337502 0.013850152492523193
+	-0.010479588177986443 0.01423297869041562
+	-0.009859577985480428 0.014905794057995081
+	-0.009620888624340296 0.015405949205160141
+	-0.008919432875700295 0.015449258498847485
+	-0.007857462856918573 0.015938840340822935
+	-0.007369863684289157 0.016150569543242455
+	-0.006622760905884206 0.016665310133248568
+	-0.005570135195739567 0.017452672589570284
+	-0.004224420757964253 0.0174827273003757
+	-0.0034423668403178453 0.017755797132849693
+	-0.0022635546047240496 0.017971310298889875
+	-0.0016271937638521194 0.01790362549945712
+	-0.0005268901586532593 0.0168436449021101
+	0.0003181035863235593 0.01617316994816065
+	0.0011630974477156997 0.01550268940627575
+	0.0023069585440680385 0.014317358378320932
+	0.0027678548358380795 0.013721577823162079
+	0.003502727602608502 0.01304575800895691
+	0.004189155297353864 0.012300361879169941
+	0.004935629782266915 0.011169799603521824
+	0.00570968387182802 0.010625337716192007
+	0.0064421165734529495 0.009503124747425318
+	0.007004235289059579 0.008347851224243641
+	0.007644387776963413 0.006900250446051359
+	0.008144633378833532 0.0058055357076227665
+	0.008839470217935741 0.004441872239112854
+	0.009447922697290778 0.004388772416859865
+	0.009875804069451988 0.004384767264127731
+	0.01008124416694045 0.004618312232196331
+	0.01067537721246481 0.004407922271639109
+	0.011094060610048473 0.004199753515422344
+	0.011356062605045736 0.003761155065149069
+	0.011596256750635803 0.003908094950020313
+	0.011702227988280356 0.004010066390037537
+	0.011770932236686349 0.004283245652914047
+	0.011947463266551495 0.00416056951507926
+	0.011695988941937685 0.004022532142698765
+	0.011130874627269804 0.004246953409165144
+	0.010520785697735846 0.004208768717944622
+	0.00964203174225986 0.0039357030764222145
+	0.0092801806749776 0.004051921423524618
+	0.009020099882036448 0.004957949742674828
+	0.009140054695308208 0.005212984513491392
+	0.009231903590261936 0.005916853900998831
+	0.00924948148895055 0.006408334244042635
+	0.009509394061751664 0.006871087476611137
+	0.00979937775991857 0.007615705020725727
+	0.01003295264672488 0.008399838116019964
+	0.0103728350950405 0.00929740583524108
+	0.010666792979463935 0.009850664529949427
+	0.010448092594742775 0.010822596028447151
+	0.010104776476509869 0.011527357157319784
+	0.00964851921889931 0.012542033568024635
+	0.0092753148637712 0.013377487659454346
+	0.009425011579878628 0.014491794630885124
+	0.009274460026063025 0.01481729606166482
+	0.009377925423905253 0.015380684286355972
+	0.010444030398502946 0.01727511640638113
+	0.013026397326029837 0.02166767604649067
+	0.0174934962997213 0.030036895535886288
+	0.02285651082638651 0.039509516675025225
+	0.02907354896888137 0.05098689068108797
+	0.03655698907095939 0.06542224623262882
+	0.044613353558816016 0.08071576431393623
+	0.05534421151969582 0.10133970389142632
+	0.07286880153696984 0.13566607143729925
+	0.0968900463776663 0.18306257156655192
+	0.13349751173518598 0.2573683327063918
+	0.17815302731469274 0.3484616354107857
+	0.23990206653252244 0.47344237426295877
+	0.3077780700987205 0.6106949811801314
+	0.4722700749989599 0.9421836938709021
+	0.6367620798991993 1.2736724261194468
+	0.801254085614346 1.6051611807197332
+	0.9657460906310007 1.9366499530151486
+	1.13023809553124 2.2681387504562736
+	1.2947301006643102 2.599627564661205
+	1.4592221063794568 2.9311163988895714
+	1.623714111163281 3.2626052531413734
+	1.7882061161799356 3.5940941269509494
+	1.9526981218950823 3.9255830203182995
+	2.1171901267953217 4.257071930915117
+	2.2816821319283918 4.588560867123306
+	2.4461741369450465 4.920049816835672
+	2.610666142543778 5.251538789831102
+	2.775158147676848 5.583027780056
+	2.939650152460672 5.914516794960946
+	3.175688736140728 6.403542970307171
+	3.418766184709966 6.9061243566684425
+	3.667730257497169 7.422664493322372
+	3.9483735664980486 8.00977588025853
+	4.211154273478314 8.559352572076023
+	4.510414103860967 9.182575177401304
+	4.789339626557194 9.76479224814102
+	5.0751338101690635 10.36276089400053
+	5.396793178282678 11.03695010067895
+	5.698571208282374 11.665538931265473
+	6.007912706816569 12.310574212577194
+	6.356443979078904 13.035403901711106
+	6.681099129724316 13.709738816600293
+	7.012781594996341 14.396656618453562
+	7.386225432041101 15.16955213015899
+	7.732641589944251 15.887924866285175
+	8.12233703257516 16.69575541326776
+	8.484013093286194 17.446087491698563
+	8.852402113261633 18.211892910767347
+	9.264628562144935 19.06997192138806
+	9.647346033831127 19.864158344920725
+	10.035731831332669 20.675035410095006
+	10.470461210119538 21.58626160491258
+	10.87023794814013 22.43153700698167
+	11.273425031802617 23.287599441129714
+	11.720305509865284 24.241364879067987
+	12.129528154386207 25.11904092365876
+	12.584250767715275 26.09784432919696
+	13.001949614146724 26.997757849749178
+	13.424407939310186 27.909583313390613
+	13.893776801531203 28.926735420245677
+	14.329080573050305 29.863312444649637
+	14.771573549485765 30.81020989548415
+	15.26436395640485 31.8615411487408
+	15.717936498578638 32.82591642672196
+	16.1744863394415 33.80032448749989
+	16.680802491027862 34.88441494805738
+	17.145183040760458 35.87851602723822
+	17.66148968343623 36.982063887640834
+	18.13443173817359 37.993199901189655
+	18.611081413109787 39.010881514288485
+	19.13883397297468 40.14015689538792
+	19.6208735111868 41.177639002446085
+	20.104652117588557 42.22290425701067
+	20.638988220365718 43.38164011435583
+	21.127917453064583 44.44518136791885
+	21.62189661548473 45.51681314734742
+	22.170889802160673 46.705219922121614
+	22.67297635274008 47.79179167933762
+	23.227610804024152 48.99405522458255
+	23.73340214753989 50.0920467954129
+	24.239686482120305 51.19515754375607
+	24.79869371384848 52.411704366095364
+	25.307495919289067 53.52157373307273
+	25.817361584980972 54.63444686867297
+	26.377185989986174 55.86430594045669
+	26.886912822839804 56.98811178514734
+	27.39857443247456 58.11657384503633
+	27.965685487375595 59.36272903298959
+	28.48613444052171 60.49710159189999
+	29.011577550554648 61.6342640821822
+	29.595696314470842 62.88676679274067
+	30.132729749195278 64.0279016927816
+	30.67607234127354 65.17121404409409
+	31.279429244226776 66.43268166203052
+	31.833261221530847 67.58290263125673
+	32.44587046990637 68.85258805844933
+	33.008769523818046 70.01078278338537
+	33.57804236281663 71.17263485863805
+	34.212386718951166 72.45450173364952
+	34.796405086060986 73.6223594234325
+	35.269307550392114 74.55889222910628
+	36.0461788038956 76.08391425851732
+	36.65098743618 77.25933987554163
+	37.26362414704636 78.43660353636369
+	37.94513546070084 79.73529971856624
+	38.57261274114717 80.91921378020197
+	39.27210046746768 82.22499057138339
+	39.91560163768008 83.41387721057981
+	40.63324200804345 84.72367472853512
+	41.296292984625325 85.91745425434783
+	41.9728554446483 87.1119313496165
+	42.66440051444806 88.30694070924073
+	43.4406209345907 89.62048378540203
+	44.15976660803426 90.81441431259736
+	44.88888290070463 92.00845374306664
+	45.70283359894529 93.32392021873966
+	46.4527483395068 94.5229204534553
+	47.211195303010754 95.7239924124442
+	48.0559805505909 97.0464855954051
+	48.83355823531747 98.24858414987102
+	49.699251116486266 99.57069165073335
+	50.49605780793354 100.77133812010288
+	51.30336615093984 101.97233217069879
+	52.20390066783875 103.29521680343896
+	53.033770453650504 104.50337795214728
+	53.876682950765826 105.71572327287868
+	54.8177816310199 107.05377681646496
+	55.686356206890196 108.27467453945428
+	56.567280147457495 109.50065514445305
+	57.55081731255632 110.8534497092478
+	58.45663625502493 112.08517486415803
+	59.37479608040303 113.31855920655653
+	60.39818788738921 114.67474611895159
+	61.342114199185744 115.90448792185634
+	62.39649689325597 117.25449209706858
+	63.36743378150277 118.48038362339139
+	64.34777708805632 119.70365924621001
+	65.4354344898602 121.04585054563358
+	66.43689295242075 122.26329324068502
+	67.44881474017166 123.47858201758936
+	68.57428390264977 124.81259818468243
+	69.60723821725696 126.02311102533713
+	70.64834800723474 127.23178975936025
+	71.80345778376795 128.55924194632098
+	72.86128483188804 129.76348248915747
+	73.92659452394582 130.96583304181695
+	75.10679522249848 132.28644738160074
+	76.18860553973354 133.48508177138865
+	77.27774645877071 134.68120832787827
+	78.48509059811477 135.9935392853804
+	79.59063618024811 137.18462148448452
+	80.70383922744077 138.3738713474013
+	81.9366001514718 139.68081062147394
+	83.06673937651794 140.8682962297462
+	84.31968238356058 142.17309813946486
+	85.46710528852418 143.3567980933003
+	86.62270799011458 144.54094259487465
+	87.9024154470535 145.84504414303228
+	89.07345082028769 147.0332762650214
+	90.24961227946915 148.22529927967116
+	91.54858811420854 149.54150301404297
+	92.7338765944587 150.74318502051756
+	93.92542787641287 151.9484271602705
+	95.24300272786058 153.27809501299635
+	96.44524614687543 154.49223171453923
+	97.65139840357006 155.7115646614693
+	98.98244497273117 157.05654417537153
+	100.19679190812167 158.28263775631785
+	101.41674270213116 159.51052056485787
+	102.76282145851292 160.86478909803554
+	103.98924584279303 162.0983021785505
+	105.3432636174839 163.45632949424908
+	106.57899425679352 164.69222545716912
+	107.81937486759853 165.92585616232827
+	109.18633350264281 167.27973752981052
+	110.43090006930288 168.5064022266306
+	111.80112817848567 169.85251232422888
+	113.04761512938421 171.07446217536926
+	114.29318814864382 172.2945973984897
+	115.53942262427881 173.51144117489457
+	116.91115974087734 174.8468625890091
+	118.15980515198316 176.05770060420036
+	119.40984201163519 177.26599181815982
+	120.78267623914871 178.5946738529019
+	122.02979103953112 179.8014303590171
+	123.27696054603439 181.00670898053795
+	124.65023298526648 182.33119302242994
+	125.89935558463912 183.53569771675393
+	127.15048314118758 184.7398915286176
+	128.53069859254174 186.06351871835068
+	129.78845746500883 187.26684252778068
+	131.0507173864171 188.46982105262578
+	132.443028734182 189.7930065104738
+	133.71334960102104 190.9952773442492
+	134.98763921309728 192.19700929429382
+	136.3925559958443 193.51872049737722
+	137.67363200499676 194.71956151910126
+	138.95770519960206 195.91942037222907
+	139.9883070185315 196.87769135879353
+	141.66725983785 198.43221445009112
+	142.96074636932462 199.62661435594782
+	144.3835340901278 200.9406850761734
+	145.6774099135073 202.13437038194388
+	147.10079897823744 203.4448854639195
+	148.3965963186929 204.6320562073961
+	149.69552980852313 205.8139422275126
+	151.12884123029653 207.1065900651738
+	152.4357866870705 208.27492173109204
+	153.7438169812085 209.43801574828103
+	155.18285880621988 210.7132595255971
+	156.4913496680092 211.86888556648046
+	157.80093613581266 213.02020773664117
+	159.2428222859744 214.28177710296586
+	160.55487721506506 215.4237344362773
+	161.86739995225798 216.56281138956547
+	163.31106232083403 217.81217312114313
+	164.62222378212027 218.94435260165483
+	165.93272153672297 220.0742338099517
+	167.37393266358413 221.31660919683054
+	168.6840301094344 222.44524784386158
+	169.99316426506266 223.57087674271315
+	171.43312274687923 224.80565070500597
+	172.74394751118962 225.92484121304005
+	174.05705378740095 227.04133323347196
+	175.5040891392855 228.2672208561562
+	176.82397163601127 229.37868305342272
+	178.14773529558443 230.48746044561267
+	179.60586388257798 231.70306593179703
+	180.93090207572095 232.80560874659568
+	182.39113929658197 234.01294513279572
+	183.7235772998538 235.10478402813897
+	185.0590177635895 236.19345752103254
+	186.52685002156068 237.3931708293967
+	187.85932069679257 238.48159284098074
+	189.19434687506873 239.56403339421377
+	190.6647801370127 240.74879234377295
+	192.00137208902743 241.82194231823087
+	193.33710079744924 242.89362547174096
+	194.80561219912488 244.06916802702472
+	196.1402356356848 245.1352949636057
+	197.47549516998697 246.19933600258082
+	198.94537953694817 247.3661608863622
+	200.28040282940492 248.42376846075058
+	201.61445242876653 249.47688774578273
+	203.08139309613034 250.63365403329954
+	204.41536285704933 251.68390613235533
+	205.74990728823468 252.7296442138031
+	207.2188364234753 253.87199409352615
+	208.55537223012652 254.90380788315088
+	209.8930638647871 255.93379035266116
+	211.3656469368143 257.06179381441325
+	212.70628436014522 258.08115041349083
+	214.1804754481418 259.1963472953066
+	215.521449115593 260.2074917485006
+	216.86095244588796 261.21482462994754
+	218.3339590887772 262.3203443456441
+	219.67113889055327 263.3228399925865
+	221.0069992064964 264.32395127322525
+	222.47470424766652 265.4233420630917
+	223.80712836259045 266.42096202168614
+	225.13861290970817 267.4170914054848
+	226.53487706906162 268.4590164073743
+	227.93114122806583 269.50094160158187
+	229.25730864878278 270.4881620975211
+	230.71417908195872 271.5710390564054
+	232.03815860731993 272.5527229444124
+	233.36185761762317 273.53013012884185
+	234.81771986640524 274.6006346861832
+	236.14057964005042 275.571773965843
+	237.4625720421318 276.5378511287272
+	238.91535549901891 277.5984063646756
+	240.23518469219562 278.55730296857655
+	241.55616735375952 279.5128577603027
+	243.012669777032 280.5539891109802
+	244.33947950555012 281.49130429001525
+	245.6663534595864 282.4246077979915
+	247.12673622765578 283.4451096979901
+	248.45862955134362 284.3675104593858
+	249.92680888040923 285.3775421329774
+	251.26137012965046 286.2942156405188
+	252.59932087326888 287.2051350134425
+	254.076640038169 288.19943549111485
+	255.43091703113168 289.09495966974646
+	256.7895509437658 289.98310100566596
+	258.2899168926524 290.9536366998218
+	259.6571977958083 291.834679227788
+	261.027862575138 292.7139351251535
+	262.541072728578 293.6776807787828
+	263.91978482040577 294.54885085020214
+	265.301271459437 295.41393333440647
+	266.8220928394003 296.3583482434042
+	268.20574542693794 297.2084694225341
+	269.5906332861632 298.0546979070641
+	271.11572181165684 298.9808824909851
+	272.49789976596367 299.8213435835205
+	273.8795679186005 300.6614362038672
+	275.39880846778397 301.58370790677145
+	276.7791263035033 302.41725596645847
+	278.15605915966444 303.2506148922257
+	279.6650079903193 304.1628774101846
+	281.0332616007654 304.9911302071996
+	282.3993873553118 305.81479350524023
+	283.89875577169005 306.71821685368195
+	285.2604022192536 307.5353096332401
+	286.6212278698804 308.34820143831894
+	288.1147310246015 309.2382874866016
+	289.4702692104038 310.04593832511455
+	290.9567289703991 310.9333084146492
+	292.30453874426894 311.7378102056682
+	293.6501446956536 312.53903969330713
+	295.1302745641442 313.41441237414256
+	296.47203691198956 314.20288294553757
+	297.81455322995316 314.9851811649278
+	299.28964636311866 315.839618077036
+	300.63106855819933 316.61109855165705
+	301.97211132454686 317.3777146404609
+	303.44539829250425 318.2153017488308
+	304.78330137289595 318.9733061045408
+	306.11704427271616 319.7253261380829
+	307.585676549701 320.54526999546215
+	308.9179054524284 321.2868179176003
+	310.2488773558289 322.0260921069421
+	311.71173689956777 322.834378587082
+	313.0394378969213 323.5630318126641
+	314.3642613274278 324.28853216255084
+	315.81686128361616 325.08401269605383
+	317.13514271972235 325.80697645572945
+	318.4513791258214 326.5269043385051
+	319.8971402583411 327.31707026576623
+	321.2057019282365 328.03234368842095
+	322.5097761671059 328.75052704755217
+	323.9388419811148 329.5424571391195
+	325.23561712075025 330.2628237963654
+	326.5277134163771 330.9858615989797
+	327.94376069377176 331.78179541090503
+	329.22824617184233 332.50555502669886
+	330.5094273412833 333.2327520400286
+	331.91404895321466 334.0363317229785
+	333.18526852631476 334.7679161927663
+	334.5826232432155 335.5667346762493
+	335.8495406318689 336.28835431532934
+	337.11364823032636 337.01540932944044
+	338.498346444685 337.81880230875686
+	339.75204004661646 338.5500721121207
+	340.99980102700647 339.2824297831394
+	342.3673765892163 340.091115990188
+	343.60944890452083 340.82717847125605
+	344.8453345814487 341.56898804940283
+	346.19951271172613 342.3877004175447
+	347.42261337593663 343.140665885061
+	348.64291855471674 343.89434361457825
+	349.9794436142547 344.7257069000043
+	351.1904015955515 345.4843148216605
+	352.3975469645811 346.24820194533095
+	353.71919322328176 347.0929258754477
+	354.91395891539287 347.8628653702326
+	356.10253652220126 348.6376047069207
+	357.4042419148609 349.49467822536826
+	358.5828299218556 350.2775500798598
+	359.7552457486745 351.06086423480883
+	361.03575954411644 351.93022679770365
+	362.1921597002074 352.72772029507905
+	363.3398575533647 353.53487292909995
+	364.5940108682262 354.4294073828496
+	365.7258204425452 355.249255400151
+	366.84934592212085 356.0742487241514
+	368.07723868556786 356.98903946904466
+	369.18711117480416 357.82579838391393
+	370.40150490403175 358.7514213984832
+	371.50031092681456 359.60059105884284
+	372.5931637326721 360.4581337310374
+	373.78719357308 361.409850389231
+	374.8676273160381 362.27843484003097
+	375.94694921944756 363.1487642545253
+	377.13103769300506 364.1102608763613
+	378.20714969176333 365.0542762107216
+	379.28326169075444 365.9982917024754
+	380.3593736895127 366.94230735860765
+	381.43548568792176 367.88632317539304
+	382.51159768668003 368.8303391491063
+	383.58770968578756 369.7743552867323
+	384.66382168454584 370.71837158547714
+	385.73993368342053 371.6623880416155
+	386.8160456822952 372.6064046607353
+	387.8921576811699 373.5504214381799
+	388.96826968016103 374.49443837907165
+	390.04438167915214 375.43845548061654
+	391.12049367732834 376.3824727400206
+	392.19660567620303 377.3264901628718
+	393.27271767507773 378.2705077454448
+	394.3488296739524 379.2145254900679
+	395.33711733168457 380.1532567180693
+	396.3198429417098 381.0961932661012
+	397.3945304789813 382.14023963408545
+	398.36491220339667 383.0958847417496
+	399.32629717013333 384.0577029925771
+	400.3746238175081 385.1233120006509
+	401.3192062670132 386.09875115472823
+	402.2554865105776 387.08103121072054
+	403.18537872249726 388.0684320493601
+	404.19936607661657 389.1612623552792
+	405.11433925433084 390.1611131853424
+	406.11201494873967 391.27066704956815
+	407.0120106819086 392.2867101584561
+	407.9036723698955 393.31011519860476
+	408.8785398451146 394.44064555643126
+	409.76067258871626 395.4724792591296
+	410.64456606225576 396.50605397857726
+	411.61519142927136 397.6462092506699
+	412.4952288864879 398.6853755777702
+	413.3729276629165 399.72797677479684
+	414.33541999803856 400.881107264664
+	415.2074741857359 401.935059719719
+	416.11938486387953 403.0469008842483
+	417.03129554190673 404.15874226996675
+	417.9040002125548 405.23035547463223
+	418.8645360211376 406.40759733272716
+	419.7322524525225 407.47740289755166
+	420.59717487415764 408.55088359629735
+	421.5489780824864 409.7371114208363
+	422.4157795008505 410.81768736289814
+	423.27904020098504 411.90462923562154
+	424.2244731237879 413.1031373422593
+	425.086132967961 414.19644761364907
+	425.94755871838424 415.29219105793163
+	426.89437210164033 416.4959418773651
+	427.75047263794113 417.58474303781986
+	428.6069119903259 418.66916633211076
+	429.5505132213002 419.87229222245514
+	430.41154517943505 420.9632266401313
+	431.3649766916642 422.1723764296621
+	432.2347329144832 423.25870554940775
+	433.10855546663515 424.3502315664664
+	434.07052493002266 425.5517182722688
+	434.9482758777449 426.6506813406013
+	435.8282231516205 427.75116659142077
+	436.79904860362876 428.96129743522033
+	437.6822383783292 430.06607272848487
+	438.5655702369986 431.16938739595935
+	439.5382134997053 432.38677958445624
+	440.4225726110162 433.4895290574059
+	441.3967652017018 434.702105473727
+	442.28004567860626 435.8006071164273
+	443.16007637791336 436.90076599037275
+	444.1266069224803 438.1087917149998
+	445.00608002510853 439.20440451195464
+	445.8861572770402 440.2973378491588
+	446.8523104019696 441.49652985529974
+	447.72885889571626 442.5842767399736
+	448.60522162367124 443.6705868160352
+	449.57006305013783 444.8608572469093
+	450.4472656358266 445.93684984743595
+	451.32147940131836 447.00991360330954
+	452.27790471643675 448.18160369666293
+	453.14449538313784 449.2491221688688
+	454.0073568484513 450.32201233832166
+	454.9521903194254 451.50375620648265
+	455.8085422498407 452.57511615473777
+	456.6644270888064 453.64301899587736
+	457.60481623304076 454.81426317151636
+	458.45915702567436 455.88126702420413
+	459.3111140461406 456.9454544680193
+	460.24306795967277 458.11755089089274
+	461.0869436151115 459.1790313576348
+	462.0082173659466 460.3433936932124
+	462.8432216538349 461.3888169727288
+	463.67553809308447 462.426577469334
+	464.58867961587384 463.56321571581066
+	465.41793413250707 464.59365608310327
+	466.2477827386465 465.6158787915483
+	467.1535449291114 466.7454640045762
+	467.9690069651697 467.7649960690178
+	468.7864509008359 468.7695997785777
+	469.67491927102674 469.8659302452579
+	470.47997479175683 470.85982092795894
+	471.28254962852225 471.847979797516
+	472.1575690166792 472.92365177487954
+	472.9493278823793 473.8920733840205
+	473.7337448510807 474.8557164748199
+	474.59315055806655 475.9005199377425
+	475.3713037603302 476.83914873795584
+	476.2209691060707 477.869277512189
+	476.99037277314346 478.80574841983616
+	477.7524465104798 479.7386907963082
+	478.57868003228214 480.7643070486374
+	479.32588792871684 481.68857521144673
+	480.0700855262112 482.6089912089519
+	480.8816774088191 483.62202155264094
+	481.6161183604272 484.53611781913787
+	482.3479245766066 485.445161559619
+	483.147171025048 486.43873374257237
+	483.72239958681166 487.15732369897887
+	484.7179460738553 488.40536131942645
+	485.3507356514456 489.2007153118029
+	486.0484810585622 490.07530038477853
+	486.80731194408145 491.03585389163345
+	487.490552886622 491.9083345727995
+	488.2357020919444 492.8618435827084
+	488.90749099466484 493.72000191221014
+	489.57206463301554 494.57147359801456
+	490.2287909928709 495.4177569015883
+	490.94407156156376 496.33007484069094
+	491.58581813890487 497.15062961773947
+	492.2190773434704 497.96264844108373
+	492.9066944126971 498.85623037908226
+	493.52455583109986 499.6654003052972
+	494.13505146245006 500.4747512633912
+	494.79876883421093 501.3658298035152
+	495.39544572040904 502.17570915305987
+	495.98527465038933 502.9884267449379
+	496.62930797832087 503.880630122032
+	497.20347438019235 504.7032989417203
+	497.8280611332739 505.6055717980489
+	498.3909174700966 506.4294742969796
+	498.94831076823175 507.25108975870535
+	499.55526072811335 508.1629904890433
+	500.10233703709673 508.9990490125492
+	500.6439379089279 509.8408687445335
+	501.23184275021777 510.7735956888646
+	501.76386375608854 511.62631532596424
+	502.2927574228961 512.485600321088
+	502.87234710506164 513.4363467697985
+	503.3991528277984 514.3068111147732
+	503.92730650049634 515.1806593546644
+	504.51181365025695 516.1479599010199
+	505.0477532540681 517.0323559385724
+	505.5889563158853 517.9213061686605
+	506.1969571847003 518.9017686191946
+	506.75881789589766 519.7945403284393
+	507.39168097043876 520.7758433120325
+	507.98071539006196 521.666682636831
+	508.5833047630731 522.5557933780365
+	509.2618155158125 523.529848927632
+	509.8951488895109 524.4152953159064
+	510.54460459179245 525.2999680978246
+	511.27639424579684 526.2718979516067
+	511.95772131334525 527.1544968448579
+	512.6543207039358 528.0343906632625
+	513.4399997568689 528.9981623948552
+	514.1710277110105 529.8687293762341
+	514.9899728659075 530.82297657663
+	515.7436857604189 531.6869637868367
+	516.5065621467074 532.5513125145808
+	517.3556961313589 533.5034024859779
+	518.1380529985763 534.3770143915899
+	518.973969833809 535.3105955198407
+	519.8098866689252 536.244176811073
+	520.6138169292826 537.1522974087857
+	521.4236196989659 538.071277984418
+	522.3217528584646 539.0958803347312
+	523.1435690196231 540.0349599183537
+	523.9728362046881 540.9843387166038
+	524.8890276387101 542.0373354130425
+	525.7286730654305 543.0016667852178
+	526.5679001231911 543.9701896947809
+	527.4936378969578 545.0399870504625
+	528.3355731572956 546.0163125754334
+	529.1778181560803 546.9975005141459
+	530.1052700489527 548.0833090068772
+	530.945398289361 549.0741754965857
+	531.7877658582292 550.0698887165636
+	532.7116841854295 551.1694392273203
+	533.551689585438 552.1739346920513
+	534.3882800666615 553.1821965370327
+	535.3054149918025 554.2963306405582
+	536.1333246929571 555.3164818701334
+	536.9567738195183 556.3426508232951
+	537.8576386553468 557.4789766599424
+	538.6693687429652 558.5161285619251
+	539.5588423312875 559.6594793642871
+	540.3647526430432 560.7034979979508
+	541.1697087020148 561.750598130282
+	542.0533226978732 562.902756202966
+	542.855122844805 563.9489339254797
+	543.6538484523771 564.9945855881087
+	544.5276313192444 566.1422465667129
+	545.3183648319682 567.1843874873593
+	546.1072563516209 568.2276161960326
+	546.9750560695538 569.3770209522918
+	547.758006573189 570.4242128999904
+	548.5360715648858 571.4715944202617
+	549.3898861982161 572.6207619304769
+	550.1617287379922 573.6652534874156
+	550.9325152186211 574.7066948809661
+	551.7787428293377 575.8501242864877
+	552.5468244676013 576.8911101929843
+	553.3906356709776 578.0352449878119
+	554.160014987574 579.0761065050028
+	554.9283641660586 580.1209166813642
+	555.7706218186067 581.2769577889703
+	556.5353216336807 582.3336775884964
+	557.2966862365138 583.3963951105252
+	558.136851364281 584.5662042349577
+	558.90021170408 585.6315740970895
+	559.6666845449945 586.6981781600043
+	560.5108220784459 587.8730731443502
+	561.2798668385949 588.943764498923
+	562.0508692797739 590.0149765321985
+	562.9042330182856 591.1940285572782
+	563.6794542766875 592.2696802499704
+	564.4566257419065 593.3469719560817
+	565.3117688767379 594.5341219319962
+	566.0903944387101 595.6133356569335
+	566.8694589134539 596.6924432744272
+	567.7282607484376 597.8749249423854
+	568.5072811326245 598.9514580117539
+	569.3690187035827 600.1331914602779
+	570.1496691525681 601.2097918749787
+	570.9285166587215 602.2842498123646
+	571.7852142793126 603.4608618267812
+	572.5627349204151 604.5296516390517
+	573.3395034318091 605.5987712019123
+	574.1924079762539 606.7702175700106
+	574.9661297688726 607.8322382746264
+	575.7347343958681 608.8915662923828
+	576.5781146496302 610.0538739124313
+	577.3416286826832 611.1086199376732
+	578.1019443930127 612.1609025020152
+	578.9360252443003 613.3139997725375
+	579.6916053368477 614.3610470467247
+	580.444579121191 615.4055233048275
+	581.2689073962392 616.5533058182336
+	582.0148017460015 617.5940841566771
+	582.7562690186314 618.6317637679167
+	583.5701224249788 619.7703602886759
+	584.3067469174275 620.8018583757803
+	585.0406942643458 621.8299696021713
+	585.8451367811067 622.9555035261437
+	586.5711093551945 623.9749929332174
+	587.2903584062587 624.9941180306487
+	588.0743602938019 626.1085186093114
+	588.7821960627334 627.1158160609193
+	589.5522674545646 628.2169465078041
+	590.2450021860423 629.2103803819045
+	590.9303871813463 630.1923609115183
+	591.676872303593 631.2606789297424
+	592.3462408030173 632.2184529830702
+	593.0090006415267 633.1683027958497
+	593.7334503057646 634.2070662453771
+	594.3849230998894 635.1461812998168
+	595.0965279748198 636.1721642855555
+	595.7374295145273 637.0995052815415
+	596.3750811743084 638.0223402627744
+	597.0060665453784 638.9413906508125
+	597.6963890118059 639.9484704448842
+	598.3189539316809 640.8594844047911
+	598.9374683460919 641.7663463759236
+	599.6115412524668 642.7572446293198
+	600.2181587092346 643.6522917556576
+	600.8842131686397 644.6331609631889
+	601.4878376115812 645.5112555832602
+	602.0896688790526 646.3758453773335
+	602.734550495632 647.3115646252409
+	603.3245469998801 648.1488864752464
+	603.8990226578899 648.9698324422352
+	604.5249132338213 649.8574548042379
+	605.0766726313159 650.6459212023765
+	605.6204597330652 651.4190459721722
+	606.2101361536188 652.2509768288583
+	606.7332310635829 652.9918905203231
+	607.3059258203721 653.791356800124
+	607.814829956973 654.502995450981
+	608.3172930947039 655.1992238569073
+	608.8557590954006 655.9470927817747
+	609.3342342957621 656.6107653658837
+	609.804946234799 657.2601434653625
+	610.3143058542628 657.9607608439401
+	610.7704828925198 658.5862678168342
+	611.2621854961617 659.2605989258736
+	611.705636275583 659.8605867978185
+	612.152458387427 660.4492457387969
+	612.6464081730228 661.0821180925705
+	613.0978205529973 661.6462394185364
+	613.5501348243561 662.2002731594257
+	614.0550634650281 662.8007911820896
+	614.5185226527974 663.3344602677971
+	614.9923402982531 663.8575554597192
+	615.520605436177 664.4188501057215
+	616.0060602365993 664.9178213542327
+	616.4964788676007 665.4047072455287
+	617.0445065285312 665.9208954293281
+	617.550033882726 666.3794792620465
+	618.113928364939 666.8666010838933
+	618.6347831722815 667.2943725027144
+	619.1533012788277 667.7063253344968
+	619.7337244114606 668.1473928564228
+	620.2648424808867 668.5340051571839
+	620.801687848405 668.9124368526973
+	621.3878282266669 669.3150274851359
+	621.9273097835248 669.6688365102746
+	622.4719135612249 670.0095279724337
+	623.0736842049519 670.370415141806
+	623.6227161341812 670.6886320910417
+	624.2244714795379 671.0254893130623
+	624.7763935782714 671.3168171620928
+	625.3277251311811 671.5926505960524
+	625.9349820680218 671.8828545678407
+	626.4810140797636 672.1355111752637
+	627.0223014141666 672.3783015748486
+	627.6082045935327 672.62992915418
+	628.138164533535 672.8434848682955
+	628.6616100070532 673.0433162348345
+	629.2262213897193 673.2514103078283
+	629.7376906441059 673.4325189283118
+	630.2483752656262 673.6059751971625
+	630.8150054134894 673.7828510622494
+	631.3273986594286 673.9328046082519
+	631.8893531410722 674.0873643369414
+	632.3881590546807 674.2188444039784
+	632.8883931215387 674.3380414312705
+	633.4357345151948 674.4578905431554
+	633.9342951715225 674.5560224740766
+	634.4298986054491 674.6486860685982
+	634.9698833668372 674.7424035426229
+	635.4635317935608 674.8153733280487
+	636.0065071869176 674.8845030143857
+	636.5014638417633 674.936926621478
+	636.9886797667714 674.9817073279992
+	637.5278798001818 675.0184932127595
+	638.0129729686305 675.0365617843345
+	638.4981755639892 675.0399378496222
+	639.0297020957805 675.0334599381313
+	639.5107924734475 675.0186980618164
+	639.9933888557134 674.9940597293898
+	640.5251467267517 674.9532340201549
+	641.01262704283 674.9057605010457
+	641.5504327854142 674.8417330929078
+	642.0417252753396 674.7739378469996
+	642.5345639300067 674.6961826328188
+	643.0810137629742 674.5963752474636
+	643.5688373438315 674.488125808537
+	644.0542469356442 674.3764172582887
+	644.5777071452467 674.2435309430584
+	645.0524926101789 674.1171127436683
+	645.5260368270101 673.9848969914019
+	646.0476719054859 673.8340590167791
+	646.5264157636557 673.6941887950525
+	647.0550865802215 673.5288323331624
+	647.5451413948322 673.3695487603545
+	648.0424910273869 673.1983178202063
+	648.6030345390318 672.9971660412848
+	649.1172703040065 672.7980965217575
+	649.6439751037396 672.5901437550783
+	650.1832114181016 672.3700902131386
+	650.7897335332818 672.1122303362936
+	651.3519673757255 671.8643076103181
+	651.9794778906507 671.5786878857762
+	652.5700584530132 671.311511256732
+	653.1713534132577 671.0282485922799
+	653.8367513844278 670.6974041271023
+	654.4556844967883 670.3875047527254
+	655.076466929866 670.0603924286552
+	655.7660686603049 669.686739064753
+	656.395112394006 669.3279729420319
+	657.0278175526764 668.9479532754049
+	657.7264773005154 668.509936876595
+	658.3574030484306 668.0953212385066
+	659.0524593793089 667.6205554762855
+	659.6842366376659 667.1724808122963
+	660.3163319120649 666.7084869192913
+	661.0070296577178 666.1774180214852
+	661.6309366753558 665.6800636583939
+	662.2505605407059 665.1683727824129
+	662.9298190172995 664.584723545704
+	663.5504407656845 664.0419568903744
+	664.1710575827165 663.4890110190026
+	664.8520680003567 662.869502554182
+	665.4730073115788 662.299339406658
+	666.096058281837 661.7218623119406
+	666.7841546947602 661.0759540423751
+	667.4100688901963 660.4831129340455
+	668.0412237492856 659.8853070060723
+	668.7394662091974 659.2230869242921
+	669.3800447649555 658.6168025904335
+	670.0265501633985 658.0090315854177
+	670.741117784055 657.3388621271588
+	671.3977620555088 656.7261961884797
+	672.0609850918408 656.1118194642477
+	672.7970857846085 655.431924556382
+	673.4720139568672 654.8141807210632
+	674.1522842197446 654.198195903562
+	674.9052765391534 653.5199163258076
+	675.596908957581 652.9028036235832
+	676.368854064378 652.2305847085081
+	677.0788378751604 651.6218706350774
+	677.7886187956901 651.0105891907588
+	678.574222927331 650.3388935434632
+	679.2954400116578 649.7179570393637
+	680.0206005926011 649.0953456037678
+	680.8158556325361 648.4064399651252
+	681.5401585659711 647.7790211187676
+	682.2639207940083 647.1466351328418
+	683.0596221407177 646.4450876014307
+	683.7811910085147 645.8001505909488
+	684.5589799270965 645.0736895897426
+	685.2672504961956 644.4102237974294
+	685.9739605806535 643.7417958872393
+	686.7457605642267 642.9964901441708
+	687.4412299747346 642.3090454963967
+	688.1277273213491 641.6134511851706
+	688.8840005849488 640.8485560202971
+	689.5618400913663 640.1451001586393
+	690.2389316187473 639.436497382354
+	690.9779527854407 638.6531930533238
+	691.6469668126665 637.9349647890776
+	692.3132549423026 637.2098069563508
+	693.0399003991624 636.4047262421809
+	693.6977804902708 635.6745518730022
+	694.3504722715588 634.9449239023961
+	695.0662122316426 634.1407016646117
+	695.7160392532824 633.413391278591
+	696.429826821899 632.6106799296103
+	697.0758107000729 631.8806144958362
+	697.721051376895 631.1488039167598
+	698.4351511751302 630.3532731519081
+	699.0876793350326 629.6343555869535
+	699.741861296352 628.9194686757401
+	700.4664211105555 628.1383051886223
+	701.127834650455 627.4304868313484
+	701.7945417992305 626.73232405819
+	702.5330492703943 625.9675192344002
+	703.2101035233354 625.2803553594276
+	703.8904973788885 624.5940690948628
+	704.6422178824432 623.8443138697185
+	705.3262931669597 623.1651402218267
+	706.011146494071 622.4894287530333
+	706.7646175142145 621.7496465928853
+	707.4491692127194 621.0774223189801
+	708.2002367128152 620.3441440332681
+	708.8791305766208 619.6818728907965
+	709.5558963220101 619.0261114123277
+	710.2965529965004 618.3093938962556
+	710.968042484019 617.663620938547
+	711.6352546418784 617.0194161674008
+	712.3671463950304 616.3153125937097
+	713.0297303529223 615.6797204972245
+	713.6840083641 615.045252813492
+	714.3987641468411 614.3529014517553
+	715.0428681659978 613.7261800528504
+	715.7385564084398 613.0312565378845
+	716.3647644671146 612.4005386969075
+	716.9849285626551 611.7692662789486
+	717.6583204552298 611.0732558518648
+	718.2641624476528 610.4409475289285
+	718.8609938159352 609.8040986154228
+	719.5073876248207 609.1004443992861
+	720.0844557831297 608.4545243312605
+	720.6525070706848 607.8027689973824
+	721.27064356138 607.0836197813042
+	721.9380889291642 606.2932650488801
+	722.3789999349974 605.7623182795942
+	722.9819109621458 605.0264099086635
+	723.5239119094331 604.3509528143331
+	724.1112825257005 603.598937840201
+	724.637767470791 602.9082229249179
+	725.158289818326 602.2106920387596
+	725.7221298576333 601.4339827909134
+	726.2287873671157 600.7217857227661
+	726.7272130042547 600.0028911475092
+	727.2654585072305 599.2033748398535
+	727.7463343051495 598.4705218295567
+	728.2169776790543 597.7322248090059
+	728.7226625471376 596.9154899669811
+	729.1726688081399 596.1700512389652
+	729.6558661104646 595.3449371522292
+	730.0834835001733 594.5909081925638
+	730.5016584318364 593.8354478348047
+	730.9479837608524 593.0012580282055
+	731.3442058048677 592.240531695541
+	731.7303018415114 591.477347265929
+	732.1426673134556 590.6352008506656
+	732.5110719894292 589.8671748396009
+	732.8724840024952 589.0991939180531
+	733.2590164317517 588.2512388224714
+	733.6006913608871 587.477229421027
+	733.9341767180013 586.6996013056487
+	734.2916955574183 585.8401702153496
+	734.6080765345832 585.0545681202784
+	734.9467466949718 584.1865772535093
+	735.2438471007627 583.392562313471
+	735.5314828900155 582.5950318742543
+	735.8370191405993 581.7247408423573
+	736.1022208939539 580.951116560027
+	736.3565411210293 580.1801157863811
+	736.6269582815003 579.3127335472964
+	736.8546486978885 578.5313362386078
+	737.0768204857595 577.7395609780215
+	737.3060907616746 576.8644888154231
+	737.5038476366317 576.0572100533172
+	737.7108966371743 575.1731226830743
+	737.8913075863384 574.3721321444027
+	738.0590432788013 573.5721667450853
+	738.227670451859 572.695676214993
+	738.3657146671321 571.8986491924152
+	738.4894692678936 571.1039939681068
+	738.6123392264126 570.2290426436812
+	738.7089008023031 569.4375280793756
+	738.790238061687 568.6467288238928
+	738.8666724361246 567.7781978938729
+	738.9216727615567 566.9883337169886
+	738.9617063089972 566.1982465391047
+	738.989485883736 565.3309608986601
+	739.00336341199 564.5436632446945
+	739.00650048221 563.7575383470394
+	738.9969316403149 562.89140413329
+	738.9759991011815 562.1007766993716
+	738.9389050813625 561.2263474934734
+	738.8917937653605 560.4278627955355
+	738.8320255007129 559.6247154586017
+	738.7515276243212 558.7381484750658
+	738.6645525193308 557.9285271679983
+	738.5677804328734 557.1130602341145
+	738.4522069873055 556.214635822922
+	738.3361985301599 555.3888541287743
+	738.1946775667602 554.4722109660506
+	738.0482844684739 553.6392654101364
+	737.8914200307336 552.8014396931976
+	737.7203202022938 551.963775751181
+	737.5197856972227 551.0373411881737
+	737.3230258506956 550.193594859913
+	737.094907501596 549.2606240455061
+	736.8929085988784 548.4230048377067
+	736.6848044591025 547.5801418642513
+	736.4394563182723 546.6496863309294
+	736.196933726198 545.788804912474
+	735.9365949754138 544.9173123883083
+	735.638809032971 543.9606022508815
+	735.3638823046349 543.0801063934341
+	735.0602330657421 542.1068010018207
+	734.7862041230546 541.2095041279681
+	734.5108424340142 540.3134870301001
+	734.2320064810337 539.4167028963566
+	733.9242765197996 538.4181042397395
+	733.6395757576684 537.5104277492501
+	733.3536586094415 536.6006959169172
+	733.0324322732631 535.6049630725756
+	732.7468318332685 534.6880527576432
+	732.4562537838938 533.7685571741313
+	732.1363017912954 532.7435989961959
+	731.8396782304626 531.8134444262832
+	731.5460277965758 530.8816918716766
+	731.2296122262487 529.8451282815076
+	730.9455946187954 528.9075327832252
+	730.6445857040817 527.8796304883435
+	730.3704391008941 526.9514827914536
+	730.1004113709787 526.012771142181
+	729.8038821137743 524.9804292074405
+	729.5392157398164 524.0331698595546
+	729.274002932827 523.0865078512579
+	728.9887584843673 522.0396670680493
+	728.7329072962748 521.0835086232983
+	728.4842946856515 520.1229850938544
+	728.2191556235775 519.0550476317294
+	727.9839800280752 518.0817814110778
+	727.7580471122637 517.1017981637269
+	727.5139262212906 516.026040695142
+	727.2975629143184 515.0447544688359
+	727.0912662328919 514.0638459417969
+	726.8820779208327 512.9793472257443
+	726.7055754878093 511.99061803426594
+	726.5403135389788 511.0029306160286
+	726.3751986350399 509.9144580280408
+	726.2418698443798 508.9213756080717
+	726.1292248507962 507.9251655638218
+	726.0236395074753 506.8260288615711
+	725.9458031785907 505.82488194620237
+	725.8677412013058 504.7256700694561
+	725.8066856401274 503.7238094639033
+	725.7619418188697 502.72237309487537
+	725.7322951409733 501.7286315620877
+	725.7154198650969 500.6404569223523
+	725.7109488135902 499.65143702412024
+	725.7208306230605 498.56185303162783
+	725.7450990538346 497.5789070818573
+	725.7842538472032 496.60320161655545
+	725.8400106781628 495.5486390129663
+	725.9045370186213 494.60211957944557
+	725.985652969568 493.66863519512117
+	726.0932083404623 492.6515119941905
+	726.2127471124986 491.7312454083003
+	726.3463138616644 490.8232621648349
+	726.5101891104132 489.837408546824
+	726.6831449951278 488.9464555461891
+	726.8769117549527 488.063258999493
+	727.1212028721347 487.10387307126075
+	727.3578919826541 486.2413918492384
+	727.6152862451272 485.38902624556795
+	727.9168707871577 484.4631349532865
+	728.215138966334 483.63028885796666
+	728.5364574730629 482.8061851281673
+Road.Link.0.LaneSection.0.ID = 1182
+Road.Link.0.LaneSection.0.Start = 0
+Road.Link.0.LaneSection.0.LaneL.0.ID = 1183
+Road.Link.0.LaneSection.0.LaneL.0 = 0 3.5 3.5 0 0 0 0
+Road.Link.0.LaneSection.0.LaneL.0.ARP = 1186 1187 1188 1189 1190 1191
+Road.Link.0.LaneSection.0.LaneL.1.ID = 1194
+Road.Link.0.LaneSection.0.LaneL.1 = 0 0.75 0.75 4 0 0 0
+Road.Link.0.LaneSection.0.LaneL.1.ARP = 1197 1198 1199 1200 1201 1202
+Road.Link.0.LaneSection.0.LaneL.2.ID = 1205
+Road.Link.0.LaneSection.0.LaneL.2 = 0 1.5 1.5 4 0 0 0
+Road.Link.0.LaneSection.0.LaneL.2.ARP = 1208 1209 1210 1211 1212 1213
+Road.Link.0.LaneSection.0.LaneL.3.ID = 1215
+Road.Link.0.LaneSection.0.LaneL.3 = 0 1.5 1.5 4 0 0 0
+Road.Link.0.LaneSection.0.LaneL.3.ARP = 1218 1219 1220 1221 1222 1232
+Road.Link.0.LaneSection.0.LaneL.4.ID = 1225
+Road.Link.0.LaneSection.0.LaneL.4 = 0 0.75 0.75 4 0 0 0
+Road.Link.0.LaneSection.0.LaneL.4.ARP = 1228 1229 1230 1231 1232 1233
+Road.Link.0.LaneSection.0.LaneL.5.ID = 1236
+Road.Link.0.LaneSection.0.LaneL.5 = 0 3.5 3.5 0 0 0 0
+Road.Link.0.LaneSection.0.LaneL.5.ARP = 1239 1240 1241 1242 1243 1244
+Road.Link.0.LaneSection.0.LaneL.6.ID = 1247
+Road.Link.0.LaneSection.0.LaneL.6 = 0 3.5 3.5 0 0 0 0
+Road.Link.0.LaneSection.0.LaneL.6.ARP = 1250 1251 1252 1253 1254 1255
+Road.Link.0.LaneSection.0.LaneL.7.ID = 1258
+Road.Link.0.LaneSection.0.LaneL.7 = 0 3.5 3.5 0 0 0 0
+Road.Link.0.LaneSection.0.LaneL.7.ARP = 1261 1262 1263 1264 1265 1266
+Road.Link.0.LaneSection.0.LaneL.8.ID = 1269
+Road.Link.0.LaneSection.0.LaneL.8 = 0 1 1 4 0 0 0
+Road.Link.0.LaneSection.0.LaneL.8.ARP = 1272 1273 1274 1275 1276 1277
+Road.Link.0.LaneSection.0.LaneL.9.ID = 1279
+Road.Link.0.LaneSection.0.LaneL.9 = 0 2.5 2.5 5 0 0 0
+Road.Link.0.LaneSection.0.LaneR.0.ID = 1282
+Road.Link.0.LaneSection.0.LaneR.0 = 0 3.5 3.5 0 0 0 0
+Road.Link.0.LaneSection.0.LaneR.0.ARP = 1285 1286 1287 1288 1289 1290
+Road.Link.0.LaneSection.0.LaneR.1.ID = 1293
+Road.Link.0.LaneSection.0.LaneR.1 = 0 3.5 3.5 0 0 0 0
+Road.Link.0.LaneSection.0.LaneR.1.ARP = 1296 1297 1298 1299 1300 1301
+Road.Link.0.LaneSection.0.LaneR.2.ID = 1304
+Road.Link.0.LaneSection.0.LaneR.2 = 0 1 1 4 0 0 0
+Road.Link.0.LaneSection.0.LaneR.2.ARP = 1307 1308 1309 1310 1311 1312
+Road.Link.0.LaneSection.0.LaneR.3.ID = 1314
+Road.Link.0.LaneSection.0.LaneR.3 = 0 2.5 2.5 5 0 0 0
+Road.LanePath.0 = 1192 1183 2 10 0.1 0.1
+Road.LanePath.1 = 1203 1194 0.25 10 0.1 0.1
+Road.LanePath.2 = 1214 1205 0.25 10 0.1 0.1
+Road.LanePath.3 = 1224 1215 0.25 10 0.1 0.1
+Road.LanePath.4 = 1234 1225 0.25 10 0.1 0.1
+Road.LanePath.5 = 1245 1236 2 10 0.1 0.1
+Road.LanePath.6 = 1256 1247 2 10 0.1 0.1
+Road.LanePath.7 = 1267 1258 2 10 0.1 0.1
+Road.LanePath.8 = 1278 1269 0.25 10 0.1 0.1
+Road.LanePath.9 = 1291 1282 2 10 0.1 0.1
+Road.LanePath.10 = 1302 1293 2 10 0.1 0.1
+Road.LanePath.11 = 1313 1304 0.25 10 0.1 0.1
+Route.0.ID = 1318
+Route.0.Name = Route_0
+Route.0.DrvPath.ID = 1319
+Route.0.DrvPath:
+	1291
+Road.RL.1.RoadMarking.0.ID = 1317 1182
+Road.RL.1.RoadMarking.0 = 0 0 0 1 0 0 0.15 0 2 0 0 2 4 1 1 0 ""
+Road.RL.1.RoadMarking.0.Material.0 = 1.00,0.00,0.00 0 0 0 0 0 0 0 0 0 0 0
+Road.RL.1.RoadMarking.1.ID = 1303 1293
+Road.RL.1.RoadMarking.1 = 0 0 0 1 0 -1 0.15 0 1 0 0 2 4 1 1 0 ""
+Road.RL.1.RoadMarking.1.Material.0 = 1.0,1.0,1.0 0 0 0 0 0 0 0 0 0 0 0
+Road.RL.1.RoadMarking.2.ID = 1292 1282
+Road.RL.1.RoadMarking.2 = 0 0 0 1 0 -1 0.15 0 2 0 0 2 4 1 1 0 ""
+Road.RL.1.RoadMarking.2.Material.0 = 1.0,1.0,1.0 0 0 0 0 0 0 0 0 0 0 0
+Road.RL.1.RoadMarking.3.ID = 1268 1258
+Road.RL.1.RoadMarking.3 = 0 0 0 1 0 1 0.15 0 1 0 0 2 4 1 1 0 ""
+Road.RL.1.RoadMarking.3.Material.0 = 1.0,1.0,1.0 0 0 0 0 0 0 0 0 0 0 0
+Road.RL.1.RoadMarking.4.ID = 1257 1247
+Road.RL.1.RoadMarking.4 = 0 0 0 1 0 1 0.15 0 2 0 0 2 4 1 1 0 ""
+Road.RL.1.RoadMarking.4.Material.0 = 1.0,1.0,1.0 0 0 0 0 0 0 0 0 0 0 0
+Road.RL.1.RoadMarking.5.ID = 1246 1236
+Road.RL.1.RoadMarking.5 = 0 0 0 1 0 1 0.15 0 2 0 0 2 4 1 1 0 ""
+Road.RL.1.RoadMarking.5.Material.0 = 1.0,1.0,1.0 0 0 0 0 0 0 0 0 0 0 0
+Road.RL.1.RoadMarking.6.ID = 1235 1225
+Road.RL.1.RoadMarking.6 = 0 0 0 1 0 1 0.15 0 1 0 0 2 4 1 1 0 ""
+Road.RL.1.RoadMarking.6.Material.0 = 1.0,1.0,1.0 0 0 0 0 0 0 0 0 0 0 0
+Road.RL.1.RoadMarking.7.ID = 1204 1194
+Road.RL.1.RoadMarking.7 = 0 0 0 1 0 1 0.15 0 1 0 0 2 4 1 1 0 ""
+Road.RL.1.RoadMarking.7.Material.0 = 1.0,1.0,1.0 0 0 0 0 0 0 0 0 0 0 0
+Road.RL.1.RoadMarking.8.ID = 1193 1183
+Road.RL.1.RoadMarking.8 = 0 0 0 1 0 1 0.15 0 1 0 0 2 4 1 1 0 ""
+Road.RL.1.RoadMarking.8.Material.0 = 1.0,1.0,1.0 0 0 0 0 0 0 0 0 0 0 0
+Road.MaxUsedObjId = 1331
+Road.VhclStartPos = 0 0 0
+Road.VhclRoute = Route_0
+Road.RouteId = 0
+Env.StartTime.Year = 2019
+Env.StartTime.Month = 1
+Env.StartTime.Day = 1
+Env.StartTime.Hour = 12
+Env.StartTime.Min = 0
+Env.StartTime.Sec = 0
+Env.StartTime.DeltaUTC = 0.0
+Env.GNav.Active = 0
+Env.Temperature = 20.0
+Env.AirDensity = 1.205
+Env.AirPressure = 1.013
+Env.AirHumidity = 60
+Env.SolarRadiation = 400.0
+Env.RainRate = 0.0
+Env.VisRangeInFog = 1000.0
+Env.Wind.Kind = none
+Env.Wind.Velocity = 0.0
+Env.Wind.Angle = 0.0
+Env.Sun.Position = geographicDefinition
+Env.Sun.Azimuth = 180.0
+Env.Sun.Elevation = 45.0
+Env.Kind = Generic
+Env.Temp.Offset_Elev = -0.0065
+Env.Temp.Offset_sRoad.Amplify = 1.0
+Env.Temp.Offset_sRoad.On = 0
+Env.Temp.Offset_Time.Amplify = 1.0
+Env.Temp.Offset_Time.On = 1
+Env.Temp.Offset_Time:
+	0.0 -2.0
+	3.0 -2.5
+	6.0 -2.7
+	7.5 -2.7
+	9.0 -2.5
+	10.0 -2.3
+	11.0 -1.6
+	12.0 0.0
+	13.0 1.4
+	14.0 2.1
+	15.5 2.5
+	17.0 2.2
+	18.0 1.7
+	19.0 1.1
+	20.0 0.2
+	21.0 -0.6
+	22.0 -1.1
+	23.0 -1.6
+	24.0 -2.0
+Driver.ParamIdent = IPGDriver 5
+Driver.Mode = std
+Driver.Long.DrivMaxSpeed = 0
+Driver.Long.CruisingSpeed = 150
+Driver.CornerCutCoef = 0.5
+Driver.ConsiderTraffic = 1
+Driver.Traffic.TimeGapMin = 1.8
+Driver.Traffic.TimeGapMax = 5.0
+Driver.Traffic.DistMin = 6
+Driver.Traffic.DistMax = 250
+Driver.Traffic.EcoCoef = 0.75
+Driver.Traffic.Overtake = 0
+Driver.Traffic.Overtake_Rate = 1
+Driver.Traffic.Overtake_dSpeedMin = 10
+Driver.Long.dtAccBrake = 0.5
+Driver.Long.axMax = 3.0
+Driver.Long.axMin = -4.0
+Driver.Long.ayMax = 4.0
+Driver.Long.GGExp:
+	50 1.0 1.0
+Driver.Long.DevMax = 0.0
+Driver.Long.tReact = 0.0
+Driver.Long.TractionControl = 1
+Driver.DecShift.UseBrakePark = 0
+Driver.DecShift.tSwitchGear = 1.0
+Driver.DecShift.nEngine.Limits:
+	1500 4000
+Driver.DecShift.nEngine.Shift:
+	2000 3000
+Driver.Lat.DevMax = 0.0
+Driver.Lat.tReact = 0.0
+Driver.Knowl.Long.tActionMin = 4
+Driver.Knowl.Lat.StWhlAngleMax = 630
+Driver.Knowl.Lat.StWhlAngleVelMax = 500
+Driver.Knowl.Lat.StWhlAngleAccMax = 3000
+Driver.Learn.VehicleLimits.TestRun =
+Driver.Learn.VehicleLimits.Date = 0
+Driver.Learn.ControllerDyn.TestRun =
+Driver.Learn.ControllerDyn.Date = 0
+Driver.Learn.MaxSpeed.TestRun =
+Driver.Learn.MaxSpeed.Date = 0
+Driver.Learn.Remember = 0
+Driver.Learn.Friction = 1.0
+Driver.Knowl.Long.tPreviewBra = 0.6
+Driver.Knowl.Long.tPreviewAcc = 1.5
+Driver.Knowl.Lat.tPreview = 0.8
+Driver.Learn.NEng_S = 1
