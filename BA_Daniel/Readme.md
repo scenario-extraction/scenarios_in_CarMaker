@@ -1,10 +1,10 @@
 # Dataset-to-Simulation
 
-TODO:
+## TODO:
  - EGO-Movement-Converter
 
-Setup Anaconda environment:
-You need two separate environments for Kitti and Lyft Tracking.
+## Setup Anaconda environment:
+### You need two separate environments for Kitti and Lyft Tracking.
 - Kitti-Environment
   -  Install using kitti-environment.yml
   -  Add kitti detector path to environment using: conda develop /your/path/to/Kitti-Detector/second.pytorch
@@ -12,17 +12,23 @@ You need two separate environments for Kitti and Lyft Tracking.
   -  Install using lyft-environment.yml
   -  Add lyft detector path to environment using: conda develop /your/path/to/Lyft-Detector/second.pytorch
 
-System-Design:
+## System-Design:
  - Lyft-Data ---> Lyft-Detector ----->
                                     ---> Tracker
  - Kitti-Data ---> Kitti-Detector --->
 
 
-Lyft Dataset File Structure:
-- lyft_dataset_root/
+## Prepare Dataset
+### Lyft Dataset File Structure:
+```Plain
+└── lyft_dataset_root/
+    ├── calib/
+        └── calib.txt
+    ├── oxts/
+        └── oxts.txt
+```
 
-
-Kitti Dataset File Structure:
+### Kitti Dataset File Structure:
 - kitti_dataset_root/
   - image_02/
     -   0000.png
@@ -40,7 +46,7 @@ Kitti Dataset File Structure:
     -   oxts.txt
 
 Based on:
-- Detector is based on Secondv1.5.1 and spconv at commit 7342772 
+- Kitti-Detector is based on Secondv1.5.1 and spconv at commit 7342772 
 - Tracker is based on mmMOT
 
 Requirements:
