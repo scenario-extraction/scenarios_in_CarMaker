@@ -95,5 +95,4 @@ dependencies:
     - spconv==1.0
     - tensorboardx==2.0
     - termcolor==1.1.0
-prefix: /home/itiv/anaconda3/envs/secondv1.5
 
