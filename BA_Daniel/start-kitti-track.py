@@ -49,11 +49,11 @@ def kitti_track(dataset_root,export_video=False):
     subprocess.Popen(cmd).wait()
 
 
-    edit_tracker_config(dataset_root,temp_data_dir,'./Tracker/mmMOT/experiments/pp_pv_40e_dualadd_subabs_C/config.yaml')
+    edit_tracker_config(dataset_root,temp_data_dir,'./Kitti-Tracker/mmMOT/experiments/pp_pv_40e_dualadd_subabs_C/config.yaml')
     create_dataset_tracker_info_file(dataset_root,temp_data_dir)
 
 
-    cmd = ['python', './Tracker/mmMOT/track.py','start','--config_path=./Tracker/mmMOT/experiments/pp_pv_40e_dualadd_subabs_C/config.yaml','--load_path=./Tracker/mmMOT/model/pp_pv_40e_dualadd_subabs_C.pth','--result_path='+dataset_root,'--dataset_root='+dataset_root,'--result_sha=result']
+    cmd = ['python', './Kitti-Tracker/mmMOT/track.py','start','--config_path=./Kitti-Tracker/mmMOT/experiments/pp_pv_40e_dualadd_subabs_C/config.yaml','--load_path=./Kitti-Tracker/mmMOT/model/pp_pv_40e_dualadd_subabs_C.pth','--result_path='+dataset_root,'--dataset_root='+dataset_root,'--result_sha=result']
     subprocess.Popen(cmd).wait()
 
 
