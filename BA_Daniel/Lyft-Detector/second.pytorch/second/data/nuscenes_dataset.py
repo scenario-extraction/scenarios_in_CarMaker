@@ -622,7 +622,7 @@ class NuScenesDatasetD2Velo(NuScenesDatasetD2):
 
 
 def _second_det_to_nusc_box(detection):
-    from nuscenes.utils.data_classes import Box
+    from nuscenes.nuscenes.utils.data_classes import Box
     import pyquaternion
     box3d = detection["box3d_lidar"].detach().cpu().numpy()
     scores = detection["scores"].detach().cpu().numpy()

@@ -657,10 +657,11 @@ def track_nuscenes(data_split, covariance_id, match_distance, match_threshold, m
   '''
   save_dir = os.path.join(save_root, data_split); mkdir_if_missing(save_dir)
   if 'train' in data_split:
-    detection_file = '/juno/u/hkchiu/dataset/nuscenes_new/megvii_train.json'
-    data_root = '/juno/u/hkchiu/dataset/nuscenes/trainval'
+    detection_file = '/home/itiv/Desktop/lyft-dataset/detections-large.json'
+    data_root = '/home/itiv/Desktop/lyft-dataset/'
     version='v1.0-trainval'
-    output_path = os.path.join(save_dir, 'results_train_probabilistic_tracking.json')
+    save_dir = '/home/itiv/Desktop/lyft-dataset/'
+    output_path = os.path.join(save_dir, '/home/itiv/Desktop/lyft-dataset/tracking_results.json')
   elif 'val' in data_split:
     detection_file = '/juno/u/hkchiu/dataset/nuscenes_new/megvii_val.json'
     data_root = '/juno/u/hkchiu/dataset/nuscenes/trainval'
@@ -685,8 +686,8 @@ def track_nuscenes(data_split, covariance_id, match_distance, match_threshold, m
     'See https://www.nuscenes.org/object-detection for more information.'
 
   all_results = EvalBoxes.deserialize(data['results'], DetectionBox)
-  meta = data['meta']
-  print('meta: ', meta)
+  #meta = data['meta']
+  #print('meta: ', meta)
   print("Loaded results from {}. Found detections for {} samples."
     .format(detection_file, len(all_results.sample_tokens)))
 
@@ -746,7 +747,8 @@ def track_nuscenes(data_split, covariance_id, match_distance, match_threshold, m
     processed_scene_tokens.add(scene_token)
 
   # finished tracking all scenes, write output data
-  output_data = {'meta': meta, 'results': results}
+  #output_data = {'meta': meta, 'results': results}
+  output_data = {'results': results}
   with open(output_path, 'w') as outfile:
     json.dump(output_data, outfile)
 

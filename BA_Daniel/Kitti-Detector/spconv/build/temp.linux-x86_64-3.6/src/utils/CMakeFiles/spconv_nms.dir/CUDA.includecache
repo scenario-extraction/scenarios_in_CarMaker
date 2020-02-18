@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../include/spconv/nms_gpu.h
+
+/home/itiv/Desktop/repo/scenarios_in_CarMaker/BA_Daniel/Kitti-Detector/spconv/src/utils/nms.cu
+vector
+-
+iostream
+-
+cuda_runtime.h
+-
+spconv/nms_gpu.h
+-
+
