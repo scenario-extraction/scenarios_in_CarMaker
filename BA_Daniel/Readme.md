@@ -21,11 +21,18 @@
 ## Prepare Dataset
 ### Lyft Dataset File Structure:
 ```Plain
-└── lyft_dataset_root/
-    ├── calib/
-        └── calib.txt
-    ├── oxts/
-        └── oxts.txt
+└── lyft_train_dataset_root/
+    ├── images/
+    ├── lidar/
+    ├── maps/
+    ├── v1.0*-train/
+    └── v1.0-trainval/  <- softlink to v1.0*-train
+└── lyft_test_dataset_root/
+    ├── images/
+    ├── lidar/
+    ├── maps/
+    ├── v1.0*-test/
+    └── v1.0-test/  <- softlink to v1.0*-test
 ```
 
 ### Kitti Dataset File Structure:
@@ -45,16 +52,19 @@
   - oxts/
     -   oxts.txt
 
-Based on:
-- Kitti-Detector is based on Secondv1.5.1 and spconv at commit 7342772 
-- Tracker is based on mmMOT
+### Based on:
+- Kitti-Detector is based on [Secondv1.5.1](https://github.com/traveller59/second.pytorch/tree/v1.5.1) and [Spconv](https://github.com/traveller59/spconv) at commit 7342772 (recent might work as well)
+- Kitti-Tracker is based on [mmMOT](https://github.com/ZwwWayne/mmMOT)
+- Lyft-Detector is based on [SECOND for Lyft](https://github.com/pyaf/second.pytorch) and recent [Spconv](https://github.com/traveller59/spconv)
+-Lyft-Tracker is based on [Probabilistic 3D Multi-Object Tracking for Autonomous Driving](https://github.com/eddyhkchiu/mahalanobis_3d_multi_object_tracking)
 
-Requirements:
- - CUDA >= 9.0
+
+### Requirements:
+ - CUDA >= 10.0
  - Ubuntu >= 16.04
 
 
-Installation:
- - Setup conda environment using environment.yml 
- - Install spconv as deescribed in
- - Copy pretrained model "pp_pv_40e_dualadd_subabs_C.pth" to Tracker/mmMOT/model/
+### Installation:
+#### Kitti-Tracking
+ - Install spconv as described in the project directory
+ - Copy pretrained model "pp_pv_40e_dualadd_subabs_C.pth" to Kitt-Tracker/mmMOT/model/
