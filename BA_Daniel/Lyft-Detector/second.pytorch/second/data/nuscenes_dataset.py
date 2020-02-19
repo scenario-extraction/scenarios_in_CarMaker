@@ -622,7 +622,7 @@ class NuScenesDatasetD2Velo(NuScenesDatasetD2):
 
 
 def _second_det_to_nusc_box(detection):
-    from nuscenes.nuscenes.utils.data_classes import Box
+    from nuscenes.utils.data_classes import Box
     import pyquaternion
     box3d = detection["box3d_lidar"].detach().cpu().numpy()
     scores = detection["scores"].detach().cpu().numpy()
@@ -830,13 +830,17 @@ def _fill_trainval_infos(nusc,
     return train_nusc_infos, val_nusc_infos
 
 
-def create_nuscenes_infos(root_path, version="v1.0-trainval", max_sweeps=10):
+def create_nuscenes_infos(root_path, version="v1.0-trainval",scene_token='', max_sweeps=10):
     from nuscenes.nuscenes import NuScenes
     nusc = NuScenes(version=version, dataroot=root_path, verbose=True)
     from nuscenes.utils import splits
-    available_vers = ["v1.0-trainval", "v1.0-test", "v1.0-mini"]
+    available_vers = ["v1.0-trainval", "v1.0-test", "v1.0-mini"]#available_vers = ["v1.0-trainval", "v1.0-test", "v1.0-mini"]
     assert version in available_vers
-    if version == "v1.0-trainval":
+    if scene_token is not '':
+        scene = nusc.get('scene', scene_token)
+        train_scenes = [scene['name']]
+        val_scenes = []
+    elif version == "v1.0-trainval":
         train_scenes = splits.train
         val_scenes = splits.val
 
@@ -859,6 +863,7 @@ def create_nuscenes_infos(root_path, version="v1.0-trainval", max_sweeps=10):
     elif version == "v1.0-mini":
         train_scenes = splits.mini_train
         val_scenes = splits.mini_val
+   
     else:
         raise ValueError("unknown")
     test = "test" in version
@@ -877,7 +882,7 @@ def create_nuscenes_infos(root_path, version="v1.0-trainval", max_sweeps=10):
         available_scenes[available_scene_names.index(s)]["token"]
         for s in val_scenes
     ])
-    if test:
+    if test or scene_token is not '':
         print(f"test scene: {len(train_scenes)}")
     else:
         print(
@@ -887,7 +892,19 @@ def create_nuscenes_infos(root_path, version="v1.0-trainval", max_sweeps=10):
     metadata = {
         "version": version,
     }
-    if test:
+
+    if scene_token is not '':
+        print(f"custom scene sample: {len(train_nusc_infos)}")
+        data = {
+            "infos": train_nusc_infos,
+            "metadata": metadata,
+        }
+        path = "infos_"+scene_token+".pkl"
+        with open(root_path / path, 'wb') as f:
+            pickle.dump(data, f)
+
+        print(f"saved to: {path}")
+    elif test:
         print(f"test sample: {len(train_nusc_infos)}")
         data = {
             "infos": train_nusc_infos,

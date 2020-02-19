@@ -15,6 +15,7 @@ from nuscenes.eval.tracking.data_classes import TrackingBox
 from nuscenes.eval.detection.data_classes import DetectionBox 
 from pyquaternion import Quaternion
 from tqdm import tqdm
+import fire
 
 @jit    
 def poly_area(x,y):
@@ -508,6 +509,7 @@ class AB3DMOT(object):
     self.tracking_nuscenes = tracking_nuscenes
 
   def update(self,dets_all, match_distance, match_threshold, match_algorithm, seq_name):
+    use_angular_velocity = False
     """
     Params:
       dets_all: dict
@@ -639,7 +641,7 @@ def format_sample_result(sample_token, tracking_name, tracker):
 
   return sample_result
 
-def track_nuscenes(data_split, covariance_id, match_distance, match_threshold, match_algorithm, save_root, use_angular_velocity):
+def track_nuscenes(data_split, covariance_id, match_distance, match_threshold, match_algorithm, save_root, use_angular_velocity,detection_file,version,data_root):
   '''
   submission {
     "meta": {
@@ -655,23 +657,24 @@ def track_nuscenes(data_split, covariance_id, match_distance, match_threshold, m
   }
   
   '''
-  save_dir = os.path.join(save_root, data_split); mkdir_if_missing(save_dir)
-  if 'train' in data_split:
-    detection_file = '/home/itiv/Desktop/lyft-dataset/detections-large.json'
-    data_root = '/home/itiv/Desktop/lyft-dataset/'
-    version='v1.0-trainval'
-    save_dir = '/home/itiv/Desktop/lyft-dataset/'
-    output_path = os.path.join(save_dir, '/home/itiv/Desktop/lyft-dataset/tracking_results.json')
-  elif 'val' in data_split:
-    detection_file = '/juno/u/hkchiu/dataset/nuscenes_new/megvii_val.json'
-    data_root = '/juno/u/hkchiu/dataset/nuscenes/trainval'
-    version='v1.0-trainval'
-    output_path = os.path.join(save_dir, 'results_val_probabilistic_tracking.json')
-  elif 'test' in data_split:
-    detection_file = '/juno/u/hkchiu/dataset/nuscenes_new/megvii_test.json'
-    data_root = '/juno/u/hkchiu/dataset/nuscenes/test'
-    version='v1.0-test'
-    output_path = os.path.join(save_dir, 'results_test_probabilistic_tracking.json')
+  #save_dir = os.path.join(save_root, '/'); mkdir_if_missing(save_dir)
+
+  #if 'train' in data_split:
+  #  detection_file = '/home/itiv/Desktop/lyft-dataset/detections-large.json'
+  #  data_root = '/home/itiv/Desktop/lyft-dataset/'
+  #  version='v1.0-trainval'
+  #  save_dir = '/home/itiv/Desktop/lyft-dataset/'
+  #  output_path = os.path.join(save_dir, '/home/itiv/Desktop/lyft-dataset/tracking_results.json')
+  #elif 'val' in data_split:
+  #  detection_file = '/juno/u/hkchiu/dataset/nuscenes_new/megvii_val.json'
+  #  data_root = '/juno/u/hkchiu/dataset/nuscenes/trainval'
+  #  version='v1.0-trainval'
+  #  output_path = os.path.join(save_dir, 'results_val_probabilistic_tracking.json')
+  #elif 'test' in data_split:
+  #  detection_file = '/juno/u/hkchiu/dataset/nuscenes_new/megvii_test.json'
+  #  data_root = '/juno/u/hkchiu/dataset/nuscenes/test'
+  #  version='v1.0-test'
+  #  output_path = os.path.join(save_dir, 'results_test_probabilistic_tracking.json')
 
   nusc = NuScenes(version=version, dataroot=data_root, verbose=True)
 
@@ -749,29 +752,35 @@ def track_nuscenes(data_split, covariance_id, match_distance, match_threshold, m
   # finished tracking all scenes, write output data
   #output_data = {'meta': meta, 'results': results}
   output_data = {'results': results}
+
+  output_path = os.path.join(save_root, 'tracking_results_'+scene_token+'.json')
   with open(output_path, 'w') as outfile:
     json.dump(output_data, outfile)
 
   print("Total Tracking took: %.3f for %d frames or %.1f FPS"%(total_time,total_frames,total_frames/total_time))
 
 
-if __name__ == '__main__':
-  if len(sys.argv)!=9:
-    print("Usage: python main.py data_split(train, val, test) covariance_id(0, 1, 2) match_distance(iou or m) match_threshold match_algorithm(greedy or h) use_angular_velocity(true or false) dataset save_root")
-    sys.exit(1)
+def detect (save_root,version,detection_file,data_root):
+ # if len(sys.argv)!=9:
+  #  print("Usage: python main.py data_split(train, val, test) covariance_id(0, 1, 2) match_distance(iou or m) match_threshold match_algorithm(greedy or h) use_angular_velocity(true or false) dataset save_root")
+   # sys.exit(1)
 
-  data_split = sys.argv[1]
-  covariance_id = int(sys.argv[2])
-  match_distance = sys.argv[3]
-  match_threshold = float(sys.argv[4])
-  match_algorithm = sys.argv[5]
-  use_angular_velocity = sys.argv[6] == 'True' or sys.argv[6] == 'true'
-  dataset = sys.argv[7]
-  save_root = os.path.join('./' + sys.argv[8])
+  data_split = 'val'#sys.argv[1]
+  covariance_id = 2#int(sys.argv[2])
+  match_distance = 'm'#sys.argv[3]
+  match_threshold = 11 #float(sys.argv[4])
+  match_algorithm = 'greedy' #sys.argv[5]
+  use_angular_velocity = False #sys.argv[6] == 'True' or sys.argv[6] == 'true'
+  dataset = 'nuscenes' #sys.argv[7]
+  #save_root = save_root#os.path.join('./' + save_root)
 
   if dataset == 'kitti':
     print('track kitti not supported')
   elif dataset == 'nuscenes':
     print('track nuscenes')
-    track_nuscenes(data_split, covariance_id, match_distance, match_threshold, match_algorithm, save_root, use_angular_velocity)
+    track_nuscenes(data_split, covariance_id, match_distance, match_threshold, match_algorithm, save_root, use_angular_velocity,detection_file,version,data_root)
+
+if __name__ == '__main__':
+  fire.Fire()
+
 
