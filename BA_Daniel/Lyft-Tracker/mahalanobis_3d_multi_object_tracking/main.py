@@ -760,7 +760,7 @@ def track_nuscenes(data_split, covariance_id, match_distance, match_threshold, m
   print("Total Tracking took: %.3f for %d frames or %.1f FPS"%(total_time,total_frames,total_frames/total_time))
 
 
-def detect (save_root,version,detection_file,data_root):
+def track (save_root,version,detection_file,data_root):
  # if len(sys.argv)!=9:
   #  print("Usage: python main.py data_split(train, val, test) covariance_id(0, 1, 2) match_distance(iou or m) match_threshold match_algorithm(greedy or h) use_angular_velocity(true or false) dataset save_root")
    # sys.exit(1)

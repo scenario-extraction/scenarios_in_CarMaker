@@ -117,7 +117,7 @@ def detect(scene_token,config_path,ckpt_path,info_path,root_path,result_path):
 #print(dict_detections)
 
     #path_to_result = f'/home/itiv/Desktop/lyft-dataset/detections-largev2.json'
-    with open(result_path+'/tracks_'+scene_token+'.json', 'w') as fp:
+    with open(result_path+'/detections_'+scene_token+'.json', 'w') as fp:
         json.dump(dict_detections, fp)
 
 
