@@ -65,6 +65,17 @@
 
 
 ### Installation:
-#### Kitti-Tracking
- - Install spconv as described in the project directory
- - Copy pretrained model "pp_pv_40e_dualadd_subabs_C.pth" to Kitt-Tracker/mmMOT/model/
+#### Kitti-Tracker:
+ - Install spconv for kitti-env as described in the project directory ./Kitti-Detector/spconv
+ - Copy pretrained car_fhd model to ./Kitti-Detector/second.pytorch/pretrained_models_v1.5/car_fhd/
+ - Copy pretrained model "pp_pv_40e_dualadd_subabs_C.pth" to Kitt-Tracker/mmMOT/model/ as described on mmMOT Page
+#### Lyft-Tracker:
+ - Install spconv for lyft-env as described in the project directory ./Lyft-Detector/spconv
+
+### Usage
+#### Kitti-Tracking:
+ - Copy your scene to the data structure as described above
+ - activate the conda kitti-env and exec: 'python start-kitti-track.py kitti-track --dataset_root=your/path/to/dataset --export_video=True'
+ -> all necessary commands will be executed and the result is saved to the dataset_root folder
+#### Lyft-Tracking
+ - all commands for Training and Detection generation are summarized in the Lyft-Tracking-System.ipynb Notebook
