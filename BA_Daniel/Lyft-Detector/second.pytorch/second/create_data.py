@@ -19,7 +19,7 @@ def nuscenes_data_prep(root_path, version, dataset_name, scene_token='', max_swe
     if version == "v1.0-test":
         name = "infos_test.pkl"
     return
-    #create_groundtruth_database(dataset_name, root_path, Path(root_path) / name)#not used??
+    create_groundtruth_database(dataset_name, root_path, Path(root_path) / name)#not used??
 
 if __name__ == '__main__':
     import os
