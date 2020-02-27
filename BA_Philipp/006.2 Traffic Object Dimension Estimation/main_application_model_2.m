@@ -1,9 +1,5 @@
 %{
 TODO:
-- Herausfinden, warum mit den neuen c schlechtere Werte herauskommen
-    - in create_training... ist in Z.133 ein auskommentierter Block, der
-    die Verschiebung um die Kameraposition aufhebt. Wenn dieser aktiv ist,
-    kommen die alten c heraus...
 - Detektierbarkeit genau so definieren, wie in Amines Implementierung (incl. seiner check_detectable-Funktion)
     - Wie berechnet sich das DetectLevel?
 %}

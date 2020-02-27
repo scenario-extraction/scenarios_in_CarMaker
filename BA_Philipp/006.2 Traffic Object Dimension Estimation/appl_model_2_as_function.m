@@ -1,13 +1,14 @@
-function [metrics] = main_appl_model_2_as_fct(tol, limit_front, limit_rear, bboxes_front, bboxes_rear)
+function [metrics] = appl_model_2_as_function(tol, limit_front, limit_rear, bboxes_front, bboxes_rear)
 
+%{
+This function is to be called from script 'run_appl_fct' in this folder and
+is equivalent to 'main_application_model_2'
+%}
 
 %{
 TODO:
-- Herausfinden, warum mit den neuen c schlechtere Werte herauskommen
-    - in create_training... ist in Z.133 ein auskommentierter Block, der
-    die Verschiebung um die Kameraposition aufhebt. Wenn dieser aktiv ist,
-    kommen die alten c heraus...
-- Detektierbarkeit genau so definieren, wie in Amines Implementierung (incl. seiner check_detectable-Funktion)
+- Detektierbarkeit genau so definieren, wie in Amines Implementierung 
+(incl. seiner check_detectable-Funktion)
     - Wie berechnet sich das DetectLevel?
 %}
 
