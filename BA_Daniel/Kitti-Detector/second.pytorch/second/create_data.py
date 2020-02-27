@@ -5,6 +5,7 @@ import pickle
 import fire
 import numpy as np
 from skimage import io as imgio
+import os
 
 from second.core import box_np_ops
 #from second.core.point_cloud.point_cloud_ops import bound_points_jit
@@ -58,10 +59,12 @@ def create_kitti_info_file(data_path,
                            save_path=None,
                            create_trainval=False,
                            relative_path=True):
-    train_img_ids = _read_imageset_file("./data/ImageSets/train.txt")
-    val_img_ids = _read_imageset_file("./data/ImageSets/val.txt")
-    trainval_img_ids = _read_imageset_file("./data/ImageSets/trainval.txt")
-    test_img_ids = _read_imageset_file("./data/ImageSets/test.txt")
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+
+    train_img_ids = _read_imageset_file(dir_path+"/data/ImageSets/train.txt")
+    val_img_ids = _read_imageset_file(dir_path+"/data/ImageSets/val.txt")
+    trainval_img_ids = _read_imageset_file(dir_path+"/data/ImageSets/trainval.txt")
+    test_img_ids = _read_imageset_file(dir_path+"/data/ImageSets/test.txt")
 
     print("Generate info. this may take several minutes.")
     if save_path is None:

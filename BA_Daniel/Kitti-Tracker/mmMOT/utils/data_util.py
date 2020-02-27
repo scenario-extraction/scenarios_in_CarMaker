@@ -207,7 +207,6 @@ def generate_seq_dets(root_dir,
                       fix_threshold=2,
                       allow_empty=False,
                       test=False):
-    print(type(det_file))
     assert os.path.exists(det_file)
     if 'RRC' in det_file:
         return generate_seq_dets_rrc(

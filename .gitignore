@@ -1,1 +1,3 @@
 BA_Daniel/Lyft-Detector/second.pytorch/second/model/*
+BA_Daniel/Kitti-Detector/second.pytorch/second/model/*
+BA_Daniel/Kitti-Tracker/mmMOT/model/*
