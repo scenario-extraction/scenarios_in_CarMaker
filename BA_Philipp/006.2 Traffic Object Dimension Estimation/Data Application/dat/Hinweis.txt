@@ -1,4 +1,0 @@
-Dieser Testrun wurde mit CarMaker 8.0 erstellt. Neuere CM-Versionen führen ihn nicht richtig aus.
-Zur Simulation des Testruns um .erg-File und Fotosequenzen zu erstellen also CM 8.0 verwenden!
-
-Sobald die Daten erstellt sind könne diese mit Matlab 2019b und CM 8.1.1 weiterverarbeitet werden.
