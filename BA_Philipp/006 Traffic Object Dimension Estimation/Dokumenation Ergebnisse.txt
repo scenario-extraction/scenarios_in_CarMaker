@@ -73,3 +73,11 @@ Modell 2 wie eins weiter oben, aber mit 2 fps
  Mean absolute deviation from ground truth height and width: 
  height: 0.068259 m 
  width: 0.13071 m 
+
+=====
+
+Modell 3 (Modell 2, aber nur ein c)
+
+ Mean absolute deviation from ground truth height and width: 
+ height: 0.13586 m 
+ width: 0.11519 m 
