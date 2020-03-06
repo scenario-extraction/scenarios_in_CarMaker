@@ -1,0 +1,2 @@
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+middle	0.11311854136981753	0.14016352697166562	0.09482228793413347	0.45243810517771205	0.6687807470131473	2132	207	874	1051	19323	47219	564	2632	0.22182408534817655	0.18435697175999283
