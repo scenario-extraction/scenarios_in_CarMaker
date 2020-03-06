@@ -1,13 +1,10 @@
 # Carmaker Files to run the Simulation File
-TODO:
- - Improve Tracking-Result-To-Simu.ipynb (Road Points)
- 
-#Setup
+
+# Setup
  - Download maneuver_simu
  - In CarMaker select maneuver_simu as Project-Folder
  - Set CarMaker.win64.exe as executable
    -  CarMaker GUI -> Application -> Configuration/Status -> select executable -> Start and Connect
    -  If not possible recompile (ProgrammersGuide Compile C-Model using MSYS)
- - Created Scenes using system
- - copy output of Result-To-CarMaker to corresponding Folders
+ - copy TestRun and Siminput files to maneuver_simu project
  - Run
