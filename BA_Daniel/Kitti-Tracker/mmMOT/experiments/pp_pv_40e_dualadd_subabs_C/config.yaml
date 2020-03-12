@@ -43,10 +43,10 @@ common:
   momentum: 0.9
   print_freq: 100
   sample_max_len: 2
-  test_det: /home/itiv/Desktop/dataset_x/testing//temp_data/result.pkl
-  test_link: /home/itiv/Desktop/dataset_x/testing//temp_data/tracker_id.txt
-  test_root: /home/itiv/Desktop/dataset_x/testing/
-  test_source: /home/itiv/Desktop/dataset_x/testing/
+  test_det: /home/itiv/Desktop/KITTI_TRACKING_DATA/KITTI_DATASET_ROOT/training/scene//temp_data/result.pkl
+  test_link: /home/itiv/Desktop/KITTI_TRACKING_DATA/KITTI_DATASET_ROOT/training/scene//temp_data/tracker_id.txt
+  test_root: /home/itiv/Desktop/KITTI_TRACKING_DATA/KITTI_DATASET_ROOT/training/scene/
+  test_source: /home/itiv/Desktop/KITTI_TRACKING_DATA/KITTI_DATASET_ROOT/training/scene/
   tracker_type: 3D
   train_det: ./data/pp_train_dets.pkl
   train_fix_count: 0

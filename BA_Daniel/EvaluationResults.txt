@@ -1,0 +1,14 @@
+#### 03/10/2020, 15:09:14 
+###Net: /model_middle_range/voxelnet-374148.tckpt
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+middle	0.1318614499258026	0.15612732913931124	0.11412389735364875	0.6056660986367282	0.8285822034043574	1962	464	772	726	10000	31471	728	1490	0.4712434843624699	0.22036729676216213
+
+ #### 03/10/2020, 17:09:56 ### 
+Net: /model_middle_range/voxelnet-550000.tckpt 
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+middle	0.11548670844198809	0.15245493967979942	0.0929480753809142	0.5413742983159583	0.8879708983291201	1962	319	793	850	5451	36602	487	868	0.4669707297514034	0.19588426252619093
+
+ #### 03/11/2020, 11:49:57 ### 
+Net: /model_middle_range/voxelnet-890670.tckpt 
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+middle	0.14118729108467806	0.15610533505350233	0.12887179230152365	0.7175972333600642	0.8692418608180922	1962	724	701	537	8615	22538	743	1296	0.6003408179631115	0.18714673320534406
