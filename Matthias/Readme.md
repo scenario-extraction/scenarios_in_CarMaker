@@ -33,6 +33,6 @@ Stick closely to the advice given in **main.py**.\
 The evaluation of the DTW results is not a unified, self-contained process and should be adapt to the users needs.\
 The results of the DTW are stored in 4 lists for each scenario. Each containing 20 dataframes with the DTW costs of each signal. \
 These cost can latter be individually accumulated (simple sum, weighted sum, linear model) to achieve the final DTW cost series.
-The results are broken down to every single signal so that no information is lost due to cumulation of DTW results. \
+The results are broken down to every single signal so that no information is lost due to cumulation of DTW results. 
 
 Please do not change the order of the repository!
