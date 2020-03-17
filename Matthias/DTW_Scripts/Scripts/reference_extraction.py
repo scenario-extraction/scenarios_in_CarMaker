@@ -5,8 +5,9 @@ Created on Mon Mar 16 16:01:36 2020
 
 @author: matthiasboeker
 Extract the Reference Signals
-he reference signal was visually extracted, the longest lane change 
-for each scenario was chosen as reference
+The reference signal was visually extracted, the longest lane change, for each scenario was chosen as reference
+The in the dataframes 4, 24, 44, 64 describe same parameters for the four different scenarios. 
+The exact time of the lane change was extracted from the signal 'time' and 'T00_Act_laneID'
 """
 
 #Extracting the signals for the four scenarios 
