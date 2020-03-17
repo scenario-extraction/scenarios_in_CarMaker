@@ -1,0 +1,4 @@
+
+ #### 03/17/2020, 14:03:06 ### 
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+Kitti	0.2055288882660033	0.31469957081545064	0.1525935175068935	0.3595286405493991	0.7414699570815451	707	150	214	343	4819	24621	244	381	0.22782373445710424	0.21339063836753042

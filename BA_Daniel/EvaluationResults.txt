@@ -12,3 +12,22 @@ middle	0.11548670844198809	0.15245493967979942	0.0929480753809142	0.541374298315
 Net: /model_middle_range/voxelnet-890670.tckpt 
 	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
 middle	0.14118729108467806	0.15610533505350233	0.12887179230152365	0.7175972333600642	0.8692418608180922	1962	724	701	537	8615	22538	743	1296	0.6003408179631115	0.18714673320534406
+
+ #### 03/12/2020, 12:38:55 ### 
+Net: /model_middle_range/voxelnet-93425.tckpt 
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+middle	0.12823629601053957	0.15298980531096407	0.11037740577385725	0.583876303127506	0.8092881085117838	1962	412	812	738	10981	33210	749	1378	0.43689855653568566	0.2149079508805816
+
+##
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+Kitti	0.2055288882660033	0.31469957081545064	0.1525935175068935	0.3595286405493991	0.7414699570815451	707	150	214	343	4819	24621	244	381	0.22782373445710424	0.21339063836753042
+
+ #### 03/17/2020, 15:41:20 ### 
+Net: /model_middle_range/voxelnet-354483.tckpt 
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+middle	0.14183054013386603	0.14634472789570896	0.13758651063294325	0.6731848496287908	0.7160371550178012	1954	613	754	587	21216	25972	712	1479	0.3972568264753995	0.22147109130876255
+
+ #### 03/17/2020, 16:40:46 ### 
+Net: /model_large_range/voxelnet-126792.tckpt 
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+large	0.1394954948223148	0.14991434230954548	0.13043073232646693	0.6430709037344109	0.7391321805235826	2124	553	843	728	19491	30652	760	1546	0.4072568906692129	0.22238940820479386
