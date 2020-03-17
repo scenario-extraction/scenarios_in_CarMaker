@@ -36,3 +36,10 @@ These cost can latter be individually accumulated (simple sum, weighted sum, lin
 The results are broken down to every single signal so that no information is lost due to cumulation of DTW results. 
 
 Please do not change the order of the repository!
+
+## Data 
+The data used and provided are .dat files. These are CarMaker's default output files.\
+The signals were recorded with 20 Hz. \
+The function, which reads in the data, does only read in .dat files. 
+
+
