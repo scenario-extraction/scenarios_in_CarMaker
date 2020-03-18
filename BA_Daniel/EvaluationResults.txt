@@ -41,3 +41,88 @@ middle	0.14183054013386603	0.14634472789570896	0.13758651063294325	0.67318484962
 Net: /model_middle_range/voxelnet-890670.tckpt 
 	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
 middle	0.14183054013386603	0.14634472789570896	0.13758651063294325	0.6731848496287908	0.7160371550178012	1954	613	754	587	21216	25972	712	1479	0.3972568264753995	0.22147109130876255
+
+ #### 03/18/2020, 12:20:51 ### 
+Net: /model_large_range/voxelnet-250000.tckpt 
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+large	0.15178053562269614	0.12936542955663413	0.18359134922015424	0.6794341044819389	0.4787550456766518	2132	645	861	626	63791	27644	900	2141	-0.07073693975763895	0.2413093557513275
+
+ #### 03/18/2020, 13:19:39 ### 
+Net: /model_large_range/voxelnet-500000.tckpt 
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+large	0.11647094248720265	0.16599077352215427	0.08970835507624514	0.37824549196961793	0.6998819869112756	2132	111	819	1202	13987	53617	678	1167	0.20818693106047426	0.2130764673897849
+
+ #### 03/18/2020, 16:07:15 ### 
+Net: /model_large_range/voxelnet-250000.tckpt 
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+large	0.15213233567090562	0.12966352360564118	0.18402040934655303	0.6791094103322317	0.478510613959113	2132	644	862	626	63823	27672	897	2147	-0.07139792427668579	0.24135713743358558
+
+ #### 03/18/2020, 17:05:05 ### 
+Net: /model_large_range/voxelnet-500000.tckpt 
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+large	0.11708029416856731	0.16683828892607372	0.09018380008117353	0.3782686844088827	0.6997897627322264	2132	111	820	1201	13994	53615	680	1168	0.2081057575230475	0.21312747332723897
+
+ #### 03/18/2020, 17:48:01 ### 
+Net: /model_large_range/voxelnet-890670.tckpt 
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+large	0.09248684357854664	0.17975760010713807	0.06226010320635473	0.30184959703136777	0.871501272264631	2132	82	635	1415	3838	60205	486	728	0.25170754334087087	0.19172663860370817
+
+ #### 03/18/2020, 20:43:48 ### single scene analysis 
+Net: /model_small_range/voxelnet-259585.tckpt 
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+small	0.768967484312607	0.7234347048300537	0.8206168831168831	0.8599837662337663	0.7581395348837209	81	52	22	7	676	345	9	27	0.5819805194805194	0.14287565603723293
+
+ #### 03/18/2020, 20:53:39 ### single scene analysis 
+Net: /model_small_range/voxelnet-259585.tckpt 
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+smallv2	0.0006138735420503376	0.0012594458438287153	0.00040584415584415587	0.0008116883116883117	0.0025188916876574307	81	0	0	81	792	2462	0	0	-0.3206168831168832	0.34367699255256523
+
+ #### 03/18/2020, 20:54:52 ### single scene analysis 
+Net: /model_small_range/voxelnet-259585.tckpt 
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+middlev2	0.0	0.0	0.0	0.0	0.0	81	0	0	81	1174	2464	0	0	-0.47646103896103886	
+
+ #### 03/18/2020, 20:56:10 ### single scene analysis 
+Net: /model_small_range/voxelnet-259585.tckpt 
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+largev2	0.0	0.0	0.0	0.0	0.0	81	0	0	81	1361	2464	0	0	-0.5523538961038961	
+
+ #### 03/18/2020, 21:02:58 ### single scene analysis 
+Net: /model_smallv2_range/voxelnet-100.tckpt 
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+smallv2	0.0	0.0	0.0	0.0	0.0	81	0	0	81	235	2464	0	0	-0.09537337662337664	
+
+ #### 03/18/2020, 21:03:58 ### single scene analysis 
+Net: /model_middlev2_range/voxelnet-100.tckpt 
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+middlev2	0.0	0.0	0.0	0.0	0.0	81	0	0	81	235	2464	0	0	-0.09537337662337664	
+
+ #### 03/18/2020, 21:04:58 ### single scene analysis 
+Net: /model_largev2_range/voxelnet-100.tckpt 
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+largev2	0.0	0.0	0.0	0.0	0.0	81	0	0	81	235	2464	0	0	-0.09537337662337664	
+
+ #### 03/18/2020, 21:11:18 ### single scene analysis 
+Net: /model_smallv2_range/voxelnet-100.tckpt 
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+smallv2	0.0	0.0	0.0	0.0	0.0	81	0	0	81	235	2464	0	0	-0.09537337662337664	
+
+ #### 03/18/2020, 21:12:19 ### single scene analysis 
+Net: /model_middlev2_range/voxelnet-100.tckpt 
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+middlev2	0.0	0.0	0.0	0.0	0.0	81	0	0	81	235	2464	0	0	-0.09537337662337664	
+
+ #### 03/18/2020, 21:13:19 ### single scene analysis 
+Net: /model_largev2_range/voxelnet-100.tckpt 
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+largev2	0.0	0.0	0.0	0.0	0.0	81	0	0	81	235	2464	0	0	-0.09537337662337664	
+
+ #### 03/18/2020, 21:17:47 ### single scene analysis 
+Net: /model_smallv2_range/voxelnet-300.tckpt 
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+smallv2	0.0	0.0	0.0	0.0	0.0	81	0	0	81	141	2464	0	0	-0.05722402597402598	
+
+ #### 03/18/2020, 21:39:46 ### single scene analysis 
+Net: /model_smallv2_range/voxelnet-2000.tckpt 
+	idf1	idp	idr	recall	precision	num_unique_objects	mostly_tracked	partially_tracked	mostly_lost	num_false_positives	num_misses	num_switches	num_fragmentations	mota	motp
+smallv2	0.20033860045146726	0.3287037037037037	0.14407467532467533	0.15016233766233766	0.3425925925925926	81	2	22	57	710	2094	9	39	-0.14163961038961048	0.3081926341223485
