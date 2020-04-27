@@ -2,7 +2,7 @@ Version: March 1, 2020
 
 Detailed documentation in the respective scripts and functions
 
-Paths in scripts have to be adjusted before running
+Paths in scripts may have to be adjusted before running
 
 For creating and running this code I had the following installed:
 MATLAB                                                Version 9.7         (R2019b)

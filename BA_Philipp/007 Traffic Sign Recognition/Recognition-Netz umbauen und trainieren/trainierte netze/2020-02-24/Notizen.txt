@@ -1,5 +1,0 @@
-Etwas random trainiert. Glaube: 3 mal je 2 Epochen, dann nochmal 4 Epochen. Erst mit leichter Translation, die letzten 4 dann ohne.
-Vermutung zunaechst, dass es etwas overfittet ist.
-Test-Set-accuracy jedoch 0.9444
-Klassen in lexikographischer Reihenfolge (0, 1, 11, 12, ...)
-Sollte ich nochmal mit 00, 01, 02, 03, ... machen, dann ist es besser zu interpretieren
