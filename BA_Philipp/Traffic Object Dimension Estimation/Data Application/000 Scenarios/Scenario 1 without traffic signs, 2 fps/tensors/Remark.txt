@@ -1,0 +1,1 @@
+This is the tensor that results from running Amine's implementation on this scenario.

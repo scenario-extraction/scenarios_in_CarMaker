@@ -1,0 +1,10 @@
+%% Traffic object width
+width = 1.7;
+
+
+%% Traffic object height
+height = 1.15;
+
+
+%% Traffic object description in CarMaker
+description = "Audi_S3_2015";

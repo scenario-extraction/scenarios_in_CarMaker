@@ -1,0 +1,10 @@
+%% Traffic object width
+width = 2.01;
+
+
+%% Traffic object height
+height = 1.53;
+
+
+%% Traffic object description in CarMaker
+description = "Chevrolet_Silverado1500_2013";

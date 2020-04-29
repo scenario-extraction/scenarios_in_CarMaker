@@ -1,0 +1,7 @@
+This Testrun has been created in CarMaker 8.0. 
+Newer CM versions don't execute it properly.
+For simulation of this Testrun (in order to get .erg file and create foto sequences) use CM 8.0!
+
+For extracting data from .erg file use older Matlab (I used R2017b) because newer Matlab versions are not compatible with CM 8.0
+
+When the data is created and extracted, it can be processed further with Matlab R2019b and CM 8.1.1

@@ -1,0 +1,904 @@
+#INFOFILE1.1 - Do not remove this line!
+
+File.Format = erg
+File.ByteOrder = LittleEndian
+File.DateInSeconds = 1587399493
+
+File.At.1.Name = Time
+File.At.1.Type = Double
+Quantity.Time.Unit = s
+
+File.At.2.Name = Car.Fr1.ay
+File.At.2.Type = Float
+Quantity.Car.Fr1.ay.Unit = m/s^2
+
+File.At.3.Name = Car.Fr1.vx
+File.At.3.Type = Float
+Quantity.Car.Fr1.vx.Unit = m/s
+
+File.At.4.Name = Car.Road.Lane.Act.Width
+File.At.4.Type = Float
+Quantity.Car.Road.Lane.Act.Width.Unit = m
+
+File.At.5.Name = Car.Road.Lane.OnLeft.Width
+File.At.5.Type = Float
+Quantity.Car.Road.Lane.OnLeft.Width.Unit = m
+
+File.At.6.Name = Car.Road.Lane.OnRight.Width
+File.At.6.Type = Float
+Quantity.Car.Road.Lane.OnRight.Width.Unit = m
+
+File.At.7.Name = Car.Road.Path.DevDist
+File.At.7.Type = Float
+Quantity.Car.Road.Path.DevDist.Unit = m
+
+File.At.8.Name = Car.Road.sRoad
+File.At.8.Type = Float
+Quantity.Car.Road.sRoad.Unit = m
+
+File.At.9.Name = Car.ax
+File.At.9.Type = Float
+Quantity.Car.ax.Unit = m/s^2
+
+File.At.10.Name = Car.v
+File.At.10.Type = Float
+Quantity.Car.v.Unit = m/s
+
+File.At.11.Name = Car.vx
+File.At.11.Type = Float
+Quantity.Car.vx.Unit = m/s
+
+File.At.12.Name = Sensor.Object.OB01.DrvLaneCurv
+File.At.12.Type = Float
+Quantity.Sensor.Object.OB01.DrvLaneCurv.Unit = 1/m
+
+File.At.13.Name = Sensor.Object.OB01.Obj.T00.NearPnt.alpha
+File.At.13.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T00.NearPnt.alpha.Unit = rad
+
+File.At.14.Name = Sensor.Object.OB01.Obj.T00.NearPnt.ds.x
+File.At.14.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T00.NearPnt.ds.x.Unit = m
+
+File.At.15.Name = Sensor.Object.OB01.Obj.T00.NearPnt.ds.y
+File.At.15.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T00.NearPnt.ds.y.Unit = m
+
+File.At.16.Name = Sensor.Object.OB01.Obj.T00.NearPnt.ds.z
+File.At.16.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T00.NearPnt.ds.z.Unit = m
+
+File.At.17.Name = Sensor.Object.OB01.Obj.T00.NearPnt.ds_p
+File.At.17.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T00.NearPnt.ds_p.Unit = m
+
+File.At.18.Name = Sensor.Object.OB01.Obj.T00.NearPnt.dv.x
+File.At.18.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T00.NearPnt.dv.x.Unit = m/s
+
+File.At.19.Name = Sensor.Object.OB01.Obj.T00.NearPnt.dv.y
+File.At.19.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T00.NearPnt.dv.y.Unit = m/s
+
+File.At.20.Name = Sensor.Object.OB01.Obj.T00.NearPnt.dv.z
+File.At.20.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T00.NearPnt.dv.z.Unit = m/s
+
+File.At.21.Name = Sensor.Object.OB01.Obj.T00.NearPnt.dv_p
+File.At.21.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T00.NearPnt.dv_p.Unit = m/s
+
+File.At.22.Name = Sensor.Object.OB01.Obj.T00.NearPnt.theta
+File.At.22.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T00.NearPnt.theta.Unit = rad
+
+File.At.23.Name = Sensor.Object.OB01.Obj.T00.RefPnt.alpha
+File.At.23.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T00.RefPnt.alpha.Unit = rad
+
+File.At.24.Name = Sensor.Object.OB01.Obj.T00.RefPnt.ds.x
+File.At.24.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T00.RefPnt.ds.x.Unit = m
+
+File.At.25.Name = Sensor.Object.OB01.Obj.T00.RefPnt.ds.y
+File.At.25.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T00.RefPnt.ds.y.Unit = m
+
+File.At.26.Name = Sensor.Object.OB01.Obj.T00.RefPnt.ds.z
+File.At.26.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T00.RefPnt.ds.z.Unit = m
+
+File.At.27.Name = Sensor.Object.OB01.Obj.T00.RefPnt.ds_p
+File.At.27.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T00.RefPnt.ds_p.Unit = m
+
+File.At.28.Name = Sensor.Object.OB01.Obj.T00.RefPnt.dv.x
+File.At.28.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T00.RefPnt.dv.x.Unit = m/s
+
+File.At.29.Name = Sensor.Object.OB01.Obj.T00.RefPnt.dv.y
+File.At.29.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T00.RefPnt.dv.y.Unit = m/s
+
+File.At.30.Name = Sensor.Object.OB01.Obj.T00.RefPnt.dv.z
+File.At.30.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T00.RefPnt.dv.z.Unit = m/s
+
+File.At.31.Name = Sensor.Object.OB01.Obj.T00.RefPnt.dv_p
+File.At.31.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T00.RefPnt.dv_p.Unit = m/s
+
+File.At.32.Name = Sensor.Object.OB01.Obj.T00.RefPnt.r_zyx.x
+File.At.32.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T00.RefPnt.r_zyx.x.Unit = rad
+
+File.At.33.Name = Sensor.Object.OB01.Obj.T00.RefPnt.r_zyx.y
+File.At.33.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T00.RefPnt.r_zyx.y.Unit = rad
+
+File.At.34.Name = Sensor.Object.OB01.Obj.T00.RefPnt.r_zyx.z
+File.At.34.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T00.RefPnt.r_zyx.z.Unit = rad
+
+File.At.35.Name = Sensor.Object.OB01.Obj.T00.RefPnt.theta
+File.At.35.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T00.RefPnt.theta.Unit = rad
+
+File.At.36.Name = Sensor.Object.OB01.Obj.T01.NearPnt.alpha
+File.At.36.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T01.NearPnt.alpha.Unit = rad
+
+File.At.37.Name = Sensor.Object.OB01.Obj.T01.NearPnt.ds.x
+File.At.37.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T01.NearPnt.ds.x.Unit = m
+
+File.At.38.Name = Sensor.Object.OB01.Obj.T01.NearPnt.ds.y
+File.At.38.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T01.NearPnt.ds.y.Unit = m
+
+File.At.39.Name = Sensor.Object.OB01.Obj.T01.NearPnt.ds.z
+File.At.39.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T01.NearPnt.ds.z.Unit = m
+
+File.At.40.Name = Sensor.Object.OB01.Obj.T01.NearPnt.ds_p
+File.At.40.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T01.NearPnt.ds_p.Unit = m
+
+File.At.41.Name = Sensor.Object.OB01.Obj.T01.NearPnt.dv.x
+File.At.41.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T01.NearPnt.dv.x.Unit = m/s
+
+File.At.42.Name = Sensor.Object.OB01.Obj.T01.NearPnt.dv.y
+File.At.42.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T01.NearPnt.dv.y.Unit = m/s
+
+File.At.43.Name = Sensor.Object.OB01.Obj.T01.NearPnt.dv.z
+File.At.43.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T01.NearPnt.dv.z.Unit = m/s
+
+File.At.44.Name = Sensor.Object.OB01.Obj.T01.NearPnt.dv_p
+File.At.44.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T01.NearPnt.dv_p.Unit = m/s
+
+File.At.45.Name = Sensor.Object.OB01.Obj.T01.NearPnt.theta
+File.At.45.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T01.NearPnt.theta.Unit = rad
+
+File.At.46.Name = Sensor.Object.OB01.Obj.T01.RefPnt.alpha
+File.At.46.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T01.RefPnt.alpha.Unit = rad
+
+File.At.47.Name = Sensor.Object.OB01.Obj.T01.RefPnt.ds.x
+File.At.47.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T01.RefPnt.ds.x.Unit = m
+
+File.At.48.Name = Sensor.Object.OB01.Obj.T01.RefPnt.ds.y
+File.At.48.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T01.RefPnt.ds.y.Unit = m
+
+File.At.49.Name = Sensor.Object.OB01.Obj.T01.RefPnt.ds.z
+File.At.49.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T01.RefPnt.ds.z.Unit = m
+
+File.At.50.Name = Sensor.Object.OB01.Obj.T01.RefPnt.ds_p
+File.At.50.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T01.RefPnt.ds_p.Unit = m
+
+File.At.51.Name = Sensor.Object.OB01.Obj.T01.RefPnt.dv.x
+File.At.51.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T01.RefPnt.dv.x.Unit = m/s
+
+File.At.52.Name = Sensor.Object.OB01.Obj.T01.RefPnt.dv.y
+File.At.52.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T01.RefPnt.dv.y.Unit = m/s
+
+File.At.53.Name = Sensor.Object.OB01.Obj.T01.RefPnt.dv.z
+File.At.53.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T01.RefPnt.dv.z.Unit = m/s
+
+File.At.54.Name = Sensor.Object.OB01.Obj.T01.RefPnt.dv_p
+File.At.54.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T01.RefPnt.dv_p.Unit = m/s
+
+File.At.55.Name = Sensor.Object.OB01.Obj.T01.RefPnt.r_zyx.x
+File.At.55.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T01.RefPnt.r_zyx.x.Unit = rad
+
+File.At.56.Name = Sensor.Object.OB01.Obj.T01.RefPnt.r_zyx.y
+File.At.56.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T01.RefPnt.r_zyx.y.Unit = rad
+
+File.At.57.Name = Sensor.Object.OB01.Obj.T01.RefPnt.r_zyx.z
+File.At.57.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T01.RefPnt.r_zyx.z.Unit = rad
+
+File.At.58.Name = Sensor.Object.OB01.Obj.T01.RefPnt.theta
+File.At.58.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T01.RefPnt.theta.Unit = rad
+
+File.At.59.Name = Sensor.Object.OB01.Obj.T02.NearPnt.alpha
+File.At.59.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T02.NearPnt.alpha.Unit = rad
+
+File.At.60.Name = Sensor.Object.OB01.Obj.T02.NearPnt.ds.x
+File.At.60.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T02.NearPnt.ds.x.Unit = m
+
+File.At.61.Name = Sensor.Object.OB01.Obj.T02.NearPnt.ds.y
+File.At.61.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T02.NearPnt.ds.y.Unit = m
+
+File.At.62.Name = Sensor.Object.OB01.Obj.T02.NearPnt.ds.z
+File.At.62.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T02.NearPnt.ds.z.Unit = m
+
+File.At.63.Name = Sensor.Object.OB01.Obj.T02.NearPnt.ds_p
+File.At.63.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T02.NearPnt.ds_p.Unit = m
+
+File.At.64.Name = Sensor.Object.OB01.Obj.T02.NearPnt.dv.x
+File.At.64.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T02.NearPnt.dv.x.Unit = m/s
+
+File.At.65.Name = Sensor.Object.OB01.Obj.T02.NearPnt.dv.y
+File.At.65.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T02.NearPnt.dv.y.Unit = m/s
+
+File.At.66.Name = Sensor.Object.OB01.Obj.T02.NearPnt.dv.z
+File.At.66.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T02.NearPnt.dv.z.Unit = m/s
+
+File.At.67.Name = Sensor.Object.OB01.Obj.T02.NearPnt.dv_p
+File.At.67.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T02.NearPnt.dv_p.Unit = m/s
+
+File.At.68.Name = Sensor.Object.OB01.Obj.T02.NearPnt.theta
+File.At.68.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T02.NearPnt.theta.Unit = rad
+
+File.At.69.Name = Sensor.Object.OB01.Obj.T02.RefPnt.alpha
+File.At.69.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T02.RefPnt.alpha.Unit = rad
+
+File.At.70.Name = Sensor.Object.OB01.Obj.T02.RefPnt.ds.x
+File.At.70.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T02.RefPnt.ds.x.Unit = m
+
+File.At.71.Name = Sensor.Object.OB01.Obj.T02.RefPnt.ds.y
+File.At.71.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T02.RefPnt.ds.y.Unit = m
+
+File.At.72.Name = Sensor.Object.OB01.Obj.T02.RefPnt.ds.z
+File.At.72.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T02.RefPnt.ds.z.Unit = m
+
+File.At.73.Name = Sensor.Object.OB01.Obj.T02.RefPnt.ds_p
+File.At.73.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T02.RefPnt.ds_p.Unit = m
+
+File.At.74.Name = Sensor.Object.OB01.Obj.T02.RefPnt.dv.x
+File.At.74.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T02.RefPnt.dv.x.Unit = m/s
+
+File.At.75.Name = Sensor.Object.OB01.Obj.T02.RefPnt.dv.y
+File.At.75.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T02.RefPnt.dv.y.Unit = m/s
+
+File.At.76.Name = Sensor.Object.OB01.Obj.T02.RefPnt.dv.z
+File.At.76.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T02.RefPnt.dv.z.Unit = m/s
+
+File.At.77.Name = Sensor.Object.OB01.Obj.T02.RefPnt.dv_p
+File.At.77.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T02.RefPnt.dv_p.Unit = m/s
+
+File.At.78.Name = Sensor.Object.OB01.Obj.T02.RefPnt.r_zyx.x
+File.At.78.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T02.RefPnt.r_zyx.x.Unit = rad
+
+File.At.79.Name = Sensor.Object.OB01.Obj.T02.RefPnt.r_zyx.y
+File.At.79.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T02.RefPnt.r_zyx.y.Unit = rad
+
+File.At.80.Name = Sensor.Object.OB01.Obj.T02.RefPnt.r_zyx.z
+File.At.80.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T02.RefPnt.r_zyx.z.Unit = rad
+
+File.At.81.Name = Sensor.Object.OB01.Obj.T02.RefPnt.theta
+File.At.81.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T02.RefPnt.theta.Unit = rad
+
+File.At.82.Name = Sensor.Object.OB01.Obj.T03.NearPnt.alpha
+File.At.82.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T03.NearPnt.alpha.Unit = rad
+
+File.At.83.Name = Sensor.Object.OB01.Obj.T03.NearPnt.ds.x
+File.At.83.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T03.NearPnt.ds.x.Unit = m
+
+File.At.84.Name = Sensor.Object.OB01.Obj.T03.NearPnt.ds.y
+File.At.84.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T03.NearPnt.ds.y.Unit = m
+
+File.At.85.Name = Sensor.Object.OB01.Obj.T03.NearPnt.ds.z
+File.At.85.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T03.NearPnt.ds.z.Unit = m
+
+File.At.86.Name = Sensor.Object.OB01.Obj.T03.NearPnt.ds_p
+File.At.86.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T03.NearPnt.ds_p.Unit = m
+
+File.At.87.Name = Sensor.Object.OB01.Obj.T03.NearPnt.dv.x
+File.At.87.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T03.NearPnt.dv.x.Unit = m/s
+
+File.At.88.Name = Sensor.Object.OB01.Obj.T03.NearPnt.dv.y
+File.At.88.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T03.NearPnt.dv.y.Unit = m/s
+
+File.At.89.Name = Sensor.Object.OB01.Obj.T03.NearPnt.dv.z
+File.At.89.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T03.NearPnt.dv.z.Unit = m/s
+
+File.At.90.Name = Sensor.Object.OB01.Obj.T03.NearPnt.dv_p
+File.At.90.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T03.NearPnt.dv_p.Unit = m/s
+
+File.At.91.Name = Sensor.Object.OB01.Obj.T03.NearPnt.theta
+File.At.91.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T03.NearPnt.theta.Unit = rad
+
+File.At.92.Name = Sensor.Object.OB01.Obj.T03.RefPnt.alpha
+File.At.92.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T03.RefPnt.alpha.Unit = rad
+
+File.At.93.Name = Sensor.Object.OB01.Obj.T03.RefPnt.ds.x
+File.At.93.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T03.RefPnt.ds.x.Unit = m
+
+File.At.94.Name = Sensor.Object.OB01.Obj.T03.RefPnt.ds.y
+File.At.94.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T03.RefPnt.ds.y.Unit = m
+
+File.At.95.Name = Sensor.Object.OB01.Obj.T03.RefPnt.ds.z
+File.At.95.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T03.RefPnt.ds.z.Unit = m
+
+File.At.96.Name = Sensor.Object.OB01.Obj.T03.RefPnt.ds_p
+File.At.96.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T03.RefPnt.ds_p.Unit = m
+
+File.At.97.Name = Sensor.Object.OB01.Obj.T03.RefPnt.dv.x
+File.At.97.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T03.RefPnt.dv.x.Unit = m/s
+
+File.At.98.Name = Sensor.Object.OB01.Obj.T03.RefPnt.dv.y
+File.At.98.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T03.RefPnt.dv.y.Unit = m/s
+
+File.At.99.Name = Sensor.Object.OB01.Obj.T03.RefPnt.dv.z
+File.At.99.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T03.RefPnt.dv.z.Unit = m/s
+
+File.At.100.Name = Sensor.Object.OB01.Obj.T03.RefPnt.dv_p
+File.At.100.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T03.RefPnt.dv_p.Unit = m/s
+
+File.At.101.Name = Sensor.Object.OB01.Obj.T03.RefPnt.r_zyx.x
+File.At.101.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T03.RefPnt.r_zyx.x.Unit = rad
+
+File.At.102.Name = Sensor.Object.OB01.Obj.T03.RefPnt.r_zyx.y
+File.At.102.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T03.RefPnt.r_zyx.y.Unit = rad
+
+File.At.103.Name = Sensor.Object.OB01.Obj.T03.RefPnt.r_zyx.z
+File.At.103.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T03.RefPnt.r_zyx.z.Unit = rad
+
+File.At.104.Name = Sensor.Object.OB01.Obj.T03.RefPnt.theta
+File.At.104.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T03.RefPnt.theta.Unit = rad
+
+File.At.105.Name = Sensor.Object.OB01.Obj.T04.NearPnt.ds.x
+File.At.105.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T04.NearPnt.ds.x.Unit = m
+
+File.At.106.Name = Sensor.Object.OB01.Obj.T04.NearPnt.ds.y
+File.At.106.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T04.NearPnt.ds.y.Unit = m
+
+File.At.107.Name = Sensor.Object.OB01.Obj.T05.NearPnt.ds.x
+File.At.107.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T05.NearPnt.ds.x.Unit = m
+
+File.At.108.Name = Sensor.Object.OB01.Obj.T05.NearPnt.ds.y
+File.At.108.Type = Float
+Quantity.Sensor.Object.OB01.Obj.T05.NearPnt.ds.y.Unit = m
+
+File.At.109.Name = Sensor.Object.OB01.TimeStamp
+File.At.109.Type = Float
+Quantity.Sensor.Object.OB01.TimeStamp.Unit = s
+
+File.At.110.Name = Sensor.Object.OB01.relvTgt.NearPnt.alpha
+File.At.110.Type = Float
+Quantity.Sensor.Object.OB01.relvTgt.NearPnt.alpha.Unit = rad
+
+File.At.111.Name = Sensor.Object.OB01.relvTgt.NearPnt.ds.x
+File.At.111.Type = Float
+Quantity.Sensor.Object.OB01.relvTgt.NearPnt.ds.x.Unit = m
+
+File.At.112.Name = Sensor.Object.OB01.relvTgt.NearPnt.ds.y
+File.At.112.Type = Float
+Quantity.Sensor.Object.OB01.relvTgt.NearPnt.ds.y.Unit = m
+
+File.At.113.Name = Sensor.Object.OB01.relvTgt.NearPnt.ds.z
+File.At.113.Type = Float
+Quantity.Sensor.Object.OB01.relvTgt.NearPnt.ds.z.Unit = m
+
+File.At.114.Name = Sensor.Object.OB01.relvTgt.NearPnt.ds_p
+File.At.114.Type = Float
+Quantity.Sensor.Object.OB01.relvTgt.NearPnt.ds_p.Unit = m
+
+File.At.115.Name = Sensor.Object.OB01.relvTgt.NearPnt.dv.x
+File.At.115.Type = Float
+Quantity.Sensor.Object.OB01.relvTgt.NearPnt.dv.x.Unit = m/s
+
+File.At.116.Name = Sensor.Object.OB01.relvTgt.NearPnt.dv.y
+File.At.116.Type = Float
+Quantity.Sensor.Object.OB01.relvTgt.NearPnt.dv.y.Unit = m/s
+
+File.At.117.Name = Sensor.Object.OB01.relvTgt.NearPnt.dv.z
+File.At.117.Type = Float
+Quantity.Sensor.Object.OB01.relvTgt.NearPnt.dv.z.Unit = m/s
+
+File.At.118.Name = Sensor.Object.OB01.relvTgt.NearPnt.dv_p
+File.At.118.Type = Float
+Quantity.Sensor.Object.OB01.relvTgt.NearPnt.dv_p.Unit = m/s
+
+File.At.119.Name = Sensor.Object.OB01.relvTgt.NearPnt.theta
+File.At.119.Type = Float
+Quantity.Sensor.Object.OB01.relvTgt.NearPnt.theta.Unit = rad
+
+File.At.120.Name = Sensor.Object.OB01.relvTgt.RefPnt.alpha
+File.At.120.Type = Float
+Quantity.Sensor.Object.OB01.relvTgt.RefPnt.alpha.Unit = rad
+
+File.At.121.Name = Sensor.Object.OB01.relvTgt.RefPnt.ds.x
+File.At.121.Type = Float
+Quantity.Sensor.Object.OB01.relvTgt.RefPnt.ds.x.Unit = m
+
+File.At.122.Name = Sensor.Object.OB01.relvTgt.RefPnt.ds.y
+File.At.122.Type = Float
+Quantity.Sensor.Object.OB01.relvTgt.RefPnt.ds.y.Unit = m
+
+File.At.123.Name = Sensor.Object.OB01.relvTgt.RefPnt.ds.z
+File.At.123.Type = Float
+Quantity.Sensor.Object.OB01.relvTgt.RefPnt.ds.z.Unit = m
+
+File.At.124.Name = Sensor.Object.OB01.relvTgt.RefPnt.ds_p
+File.At.124.Type = Float
+Quantity.Sensor.Object.OB01.relvTgt.RefPnt.ds_p.Unit = m
+
+File.At.125.Name = Sensor.Object.OB01.relvTgt.RefPnt.dv.x
+File.At.125.Type = Float
+Quantity.Sensor.Object.OB01.relvTgt.RefPnt.dv.x.Unit = m/s
+
+File.At.126.Name = Sensor.Object.OB01.relvTgt.RefPnt.dv.y
+File.At.126.Type = Float
+Quantity.Sensor.Object.OB01.relvTgt.RefPnt.dv.y.Unit = m/s
+
+File.At.127.Name = Sensor.Object.OB01.relvTgt.RefPnt.dv.z
+File.At.127.Type = Float
+Quantity.Sensor.Object.OB01.relvTgt.RefPnt.dv.z.Unit = m/s
+
+File.At.128.Name = Sensor.Object.OB01.relvTgt.RefPnt.dv_p
+File.At.128.Type = Float
+Quantity.Sensor.Object.OB01.relvTgt.RefPnt.dv_p.Unit = m/s
+
+File.At.129.Name = Sensor.Object.OB01.relvTgt.RefPnt.r_zyx.x
+File.At.129.Type = Float
+Quantity.Sensor.Object.OB01.relvTgt.RefPnt.r_zyx.x.Unit = rad
+
+File.At.130.Name = Sensor.Object.OB01.relvTgt.RefPnt.r_zyx.y
+File.At.130.Type = Float
+Quantity.Sensor.Object.OB01.relvTgt.RefPnt.r_zyx.y.Unit = rad
+
+File.At.131.Name = Sensor.Object.OB01.relvTgt.RefPnt.r_zyx.z
+File.At.131.Type = Float
+Quantity.Sensor.Object.OB01.relvTgt.RefPnt.r_zyx.z.Unit = rad
+
+File.At.132.Name = Sensor.Object.OB01.relvTgt.RefPnt.theta
+File.At.132.Type = Float
+Quantity.Sensor.Object.OB01.relvTgt.RefPnt.theta.Unit = rad
+
+File.At.133.Name = Traffic.T00.LongVel
+File.At.133.Type = Float
+Quantity.Traffic.T00.LongVel.Unit = m/s
+
+File.At.134.Name = Traffic.T00.a_1.x
+File.At.134.Type = Float
+Quantity.Traffic.T00.a_1.x.Unit = m/s^2
+
+File.At.135.Name = Traffic.T00.a_1.y
+File.At.135.Type = Float
+Quantity.Traffic.T00.a_1.y.Unit = m/s^2
+
+File.At.136.Name = Traffic.T00.a_1.z
+File.At.136.Type = Float
+Quantity.Traffic.T00.a_1.z.Unit = m/s^2
+
+File.At.137.Name = Traffic.T00.sRoad
+File.At.137.Type = Float
+Quantity.Traffic.T00.sRoad.Unit = m
+
+File.At.138.Name = Traffic.T00.t2Ref
+File.At.138.Type = Float
+Quantity.Traffic.T00.t2Ref.Unit = m
+
+File.At.139.Name = Traffic.T00.tRoad
+File.At.139.Type = Float
+Quantity.Traffic.T00.tRoad.Unit = m
+
+File.At.140.Name = Traffic.T01.LongVel
+File.At.140.Type = Float
+Quantity.Traffic.T01.LongVel.Unit = m/s
+
+File.At.141.Name = Traffic.T01.a_1.x
+File.At.141.Type = Float
+Quantity.Traffic.T01.a_1.x.Unit = m/s^2
+
+File.At.142.Name = Traffic.T01.a_1.y
+File.At.142.Type = Float
+Quantity.Traffic.T01.a_1.y.Unit = m/s^2
+
+File.At.143.Name = Traffic.T01.a_1.z
+File.At.143.Type = Float
+Quantity.Traffic.T01.a_1.z.Unit = m/s^2
+
+File.At.144.Name = Traffic.T01.sRoad
+File.At.144.Type = Float
+Quantity.Traffic.T01.sRoad.Unit = m
+
+File.At.145.Name = Traffic.T01.t2Ref
+File.At.145.Type = Float
+Quantity.Traffic.T01.t2Ref.Unit = m
+
+File.At.146.Name = Traffic.T01.tRoad
+File.At.146.Type = Float
+Quantity.Traffic.T01.tRoad.Unit = m
+
+File.At.147.Name = Traffic.T02.LongVel
+File.At.147.Type = Float
+Quantity.Traffic.T02.LongVel.Unit = m/s
+
+File.At.148.Name = Traffic.T02.a_1.x
+File.At.148.Type = Float
+Quantity.Traffic.T02.a_1.x.Unit = m/s^2
+
+File.At.149.Name = Traffic.T02.a_1.y
+File.At.149.Type = Float
+Quantity.Traffic.T02.a_1.y.Unit = m/s^2
+
+File.At.150.Name = Traffic.T02.a_1.z
+File.At.150.Type = Float
+Quantity.Traffic.T02.a_1.z.Unit = m/s^2
+
+File.At.151.Name = Traffic.T02.sRoad
+File.At.151.Type = Float
+Quantity.Traffic.T02.sRoad.Unit = m
+
+File.At.152.Name = Traffic.T02.t2Ref
+File.At.152.Type = Float
+Quantity.Traffic.T02.t2Ref.Unit = m
+
+File.At.153.Name = Traffic.T02.tRoad
+File.At.153.Type = Float
+Quantity.Traffic.T02.tRoad.Unit = m
+
+File.At.154.Name = Traffic.T03.LongVel
+File.At.154.Type = Float
+Quantity.Traffic.T03.LongVel.Unit = m/s
+
+File.At.155.Name = Traffic.T03.a_1.x
+File.At.155.Type = Float
+Quantity.Traffic.T03.a_1.x.Unit = m/s^2
+
+File.At.156.Name = Traffic.T03.a_1.y
+File.At.156.Type = Float
+Quantity.Traffic.T03.a_1.y.Unit = m/s^2
+
+File.At.157.Name = Traffic.T03.a_1.z
+File.At.157.Type = Float
+Quantity.Traffic.T03.a_1.z.Unit = m/s^2
+
+File.At.158.Name = Traffic.T03.sRoad
+File.At.158.Type = Float
+Quantity.Traffic.T03.sRoad.Unit = m
+
+File.At.159.Name = Traffic.T03.t2Ref
+File.At.159.Type = Float
+Quantity.Traffic.T03.t2Ref.Unit = m
+
+File.At.160.Name = Traffic.T03.tRoad
+File.At.160.Type = Float
+Quantity.Traffic.T03.tRoad.Unit = m
+
+File.At.161.Name = Traffic.T04.LongVel
+File.At.161.Type = Float
+Quantity.Traffic.T04.LongVel.Unit = m/s
+
+File.At.162.Name = Traffic.T04.a_1.x
+File.At.162.Type = Float
+Quantity.Traffic.T04.a_1.x.Unit = m/s^2
+
+File.At.163.Name = Traffic.T04.a_1.y
+File.At.163.Type = Float
+Quantity.Traffic.T04.a_1.y.Unit = m/s^2
+
+File.At.164.Name = Traffic.T04.a_1.z
+File.At.164.Type = Float
+Quantity.Traffic.T04.a_1.z.Unit = m/s^2
+
+File.At.165.Name = Traffic.T04.sRoad
+File.At.165.Type = Float
+Quantity.Traffic.T04.sRoad.Unit = m
+
+File.At.166.Name = Traffic.T04.t2Ref
+File.At.166.Type = Float
+Quantity.Traffic.T04.t2Ref.Unit = m
+
+File.At.167.Name = Traffic.T04.tRoad
+File.At.167.Type = Float
+Quantity.Traffic.T04.tRoad.Unit = m
+
+File.At.168.Name = Traffic.T05.LongVel
+File.At.168.Type = Float
+Quantity.Traffic.T05.LongVel.Unit = m/s
+
+File.At.169.Name = Traffic.T05.a_1.x
+File.At.169.Type = Float
+Quantity.Traffic.T05.a_1.x.Unit = m/s^2
+
+File.At.170.Name = Traffic.T05.a_1.y
+File.At.170.Type = Float
+Quantity.Traffic.T05.a_1.y.Unit = m/s^2
+
+File.At.171.Name = Traffic.T05.a_1.z
+File.At.171.Type = Float
+Quantity.Traffic.T05.a_1.z.Unit = m/s^2
+
+File.At.172.Name = Traffic.T05.sRoad
+File.At.172.Type = Float
+Quantity.Traffic.T05.sRoad.Unit = m
+
+File.At.173.Name = Traffic.T05.t2Ref
+File.At.173.Type = Float
+Quantity.Traffic.T05.t2Ref.Unit = m
+
+File.At.174.Name = Traffic.T05.tRoad
+File.At.174.Type = Float
+Quantity.Traffic.T05.tRoad.Unit = m
+
+File.At.175.Name = Car.Road.Lane.Act.LaneId
+File.At.175.Type = Int
+
+File.At.176.Name = Car.Road.Lane.Act.isRight
+File.At.176.Type = Int
+
+File.At.177.Name = Sensor.Object.OB01.Obj.T00.InLane
+File.At.177.Type = Int
+Quantity.Sensor.Object.OB01.Obj.T00.InLane.nStates = 2
+
+File.At.178.Name = Sensor.Object.OB01.Obj.T00.dtct
+File.At.178.Type = Int
+Quantity.Sensor.Object.OB01.Obj.T00.dtct.nStates = 2
+
+File.At.179.Name = Sensor.Object.OB01.Obj.T00.obsv
+File.At.179.Type = Int
+Quantity.Sensor.Object.OB01.Obj.T00.obsv.nStates = 2
+
+File.At.180.Name = Sensor.Object.OB01.Obj.T01.InLane
+File.At.180.Type = Int
+Quantity.Sensor.Object.OB01.Obj.T01.InLane.nStates = 2
+
+File.At.181.Name = Sensor.Object.OB01.Obj.T01.dtct
+File.At.181.Type = Int
+Quantity.Sensor.Object.OB01.Obj.T01.dtct.nStates = 2
+
+File.At.182.Name = Sensor.Object.OB01.Obj.T01.obsv
+File.At.182.Type = Int
+Quantity.Sensor.Object.OB01.Obj.T01.obsv.nStates = 2
+
+File.At.183.Name = Sensor.Object.OB01.Obj.T02.InLane
+File.At.183.Type = Int
+Quantity.Sensor.Object.OB01.Obj.T02.InLane.nStates = 2
+
+File.At.184.Name = Sensor.Object.OB01.Obj.T02.dtct
+File.At.184.Type = Int
+Quantity.Sensor.Object.OB01.Obj.T02.dtct.nStates = 2
+
+File.At.185.Name = Sensor.Object.OB01.Obj.T02.obsv
+File.At.185.Type = Int
+Quantity.Sensor.Object.OB01.Obj.T02.obsv.nStates = 2
+
+File.At.186.Name = Sensor.Object.OB01.Obj.T03.InLane
+File.At.186.Type = Int
+Quantity.Sensor.Object.OB01.Obj.T03.InLane.nStates = 2
+
+File.At.187.Name = Sensor.Object.OB01.Obj.T03.dtct
+File.At.187.Type = Int
+Quantity.Sensor.Object.OB01.Obj.T03.dtct.nStates = 2
+
+File.At.188.Name = Sensor.Object.OB01.Obj.T03.obsv
+File.At.188.Type = Int
+Quantity.Sensor.Object.OB01.Obj.T03.obsv.nStates = 2
+
+File.At.189.Name = Sensor.Object.OB01.relvTgt.ObjId
+File.At.189.Type = Int
+
+File.At.190.Name = Sensor.Object.OB01.relvTgt.dtct
+File.At.190.Type = Int
+Quantity.Sensor.Object.OB01.relvTgt.dtct.nStates = 2
+
+File.At.191.Name = Sensor.Object.nSensors
+File.At.191.Type = Int
+
+File.At.192.Name = Traffic.T00.DetectLevel
+File.At.192.Type = Int
+Quantity.Traffic.T00.DetectLevel.nStates = 3
+
+File.At.193.Name = Traffic.T00.Lane.Act.LaneId
+File.At.193.Type = Int
+
+File.At.194.Name = Traffic.T01.DetectLevel
+File.At.194.Type = Int
+Quantity.Traffic.T01.DetectLevel.nStates = 3
+
+File.At.195.Name = Traffic.T01.Lane.Act.LaneId
+File.At.195.Type = Int
+
+File.At.196.Name = Traffic.T02.DetectLevel
+File.At.196.Type = Int
+Quantity.Traffic.T02.DetectLevel.nStates = 3
+
+File.At.197.Name = Traffic.T02.Lane.Act.LaneId
+File.At.197.Type = Int
+
+File.At.198.Name = Traffic.T03.DetectLevel
+File.At.198.Type = Int
+Quantity.Traffic.T03.DetectLevel.nStates = 3
+
+File.At.199.Name = Traffic.T03.Lane.Act.LaneId
+File.At.199.Type = Int
+
+File.At.200.Name = Traffic.T04.DetectLevel
+File.At.200.Type = Int
+Quantity.Traffic.T04.DetectLevel.nStates = 3
+
+File.At.201.Name = Traffic.T04.Lane.Act.LaneId
+File.At.201.Type = Int
+
+File.At.202.Name = Traffic.T05.DetectLevel
+File.At.202.Type = Int
+Quantity.Traffic.T05.DetectLevel.nStates = 3
+
+File.At.203.Name = Traffic.T05.Lane.Act.LaneId
+File.At.203.Type = Int
+
+Anim.Msg.0.Time = 0
+Anim.Msg.0.Class = Anim
+Anim.Msg.0.Id = 21
+Anim.Msg.0.Data:
+	bJk0cbLVZ1+dLfRUA5cMfWz2PXFsmTTtAAAAaAAAAGgAAAAAABUAAAAAAAAAAAAA
+	AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+	AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAK
+
+Anim.VehicleClass = Car
+Anim.Vehicle.MovieSkin = 3D/Vehicles/VW_Beetle_2012.mobj
+
+Anim.Msg.1.Time = 0
+Anim.Msg.1.Class = Anim
+Anim.Msg.1.Id = 11
+Anim.Msg.1.Data:
+	4Hbxyg/vtTliuKJ0i/5b+rf3jlvgdvD6AAAA2AAAANgAAAAAAAsEAAACAAAAAAAA
+	P2ZmZj5MzM1AiPXDv2ZmZj++uFIAAAAAAAAAAAAAAABAG4UfAAAAAD8ZmZpEoqAA
+	RLuAAL3MzM0AAAAAPszMzUBZmZo/SfvnPpR64UBZmZq/SfvnPpR64T9c7ZE/RaHL
+	PpR64T9c7ZG/RaHLPpR64QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+	AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+	vczMzQAAAAA+zMzN
+
+Anim.Msg.2.Time = 0
+Anim.Msg.2.Class = Anim
+Anim.Msg.2.Id = 15
+Anim.Msg.2.Data:
+	07oSTzumEJAyjj7poPMjPU0cFIjTuhKHAAAAiAAAAIgAAAAAAA8EAAAAAAAAAQAA
+	PqLQ5T5D1woAAAAAPkeuFIAAAAAAAAAARhxAAAH/AAA+otDlPkPXCoAAAAA+R64U
+	AAAAAAAAAABGHEAAAgEAAD6i0OU+Q9cKAAAAAD5HrhSAAAAAAAAAAEYcQAAD/wAA
+	PqLQ5T5D1wqAAAAAPkeuFAAAAAAAAAAARhxAAAoK
+
+Anim.Msg.3.Time = 0
+Anim.Msg.3.Class = Anim
+Anim.Msg.3.Id = 23
+Anim.Msg.3.Data:
+	RpnPSwsvG/ECyGJiHzI1Qv/ClspGmc+TAAAAlAAAAJQAAAAAABcAAAAAAAAAAAAA
+	AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+	AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+	AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoK
+
+Anim.Msg.4.Time = 0
+Anim.Msg.4.Class = Instr
+Anim.Msg.4.Id = 0
+Anim.Msg.4.Data:
+	OtzvDJxsnEbc4SREzaUA8wsZRGU63O8gAAAAFAAAABQAAAAAAAAAAQAFAAFF9gcN
+	Q4AqswAAAAEK
+
+Anim.Msg.5.Time = 0
+Anim.Msg.5.Class = Anim
+Anim.Msg.5.Id = 22
+Anim.Msg.5.Data:
+	rbysAL7nqJ2hw9jikLXm57xLlRGtvKwsAAAAFAAAABQAAAAAABYAAQAFAAFF9gcN
+	Q4AqswAAAAEK
+
+Anim.Msg.6.Time = 0
+Anim.Msg.6.Class = Anim
+Anim.Msg.6.Id = 24
+Anim.Msg.6.Data:
+	of/MYbxysjDnRyZ/djTrOyeFG6Sh/8y5AAAAlAAAAJQAAAAAABgEJFQwMAAAAAAA
+	AAAAAcTmoADBQgAAP0uFHwAAAACAAAAAJLgQ4lQwMQAAAAAAAAAAAcT6AADAlAAA
+	P1XCjwAAAACAAAAAJLv90FQwMgAAAAAAAAAAAcTtgADAlAAAP1R64QAAAACAAAAA
+	JLr3W1QwMwAAAAAAAAAAAcUDQADAlAAAP0PXCgAAAACAAAAAJLeTvwoK
+
+Anim.Msg.7.Time = 0
+Anim.Msg.7.Class = Anim
+Anim.Msg.7.Id = 17
+Anim.Msg.7.Data:
+	FN+J3dTQlMm7HEIb+MfBkgut4vwU34nFAAAABAAAAAQAAAAAABEAAAoK
+
+Anim.Msg.8.Time = 0
+Anim.Msg.8.Class = Anim
+Anim.Msg.8.Id = 20
+Anim.Msg.8.Data:
+	CCKqeslv3ZFWmHbUbX10tpzhjDUIIqpSAAAAEQAAABEAAAAAABQAAQEAAAAAAAAA
+	UkQwMAAK
+
+Testrun = scenario_test_dimension_estimation.dat
+
+SimParam.DeltaT = 0.001
+
+NamedValues.Count = 0
+
+KeyValues.Count = 0
+
+Comment:
+	For more details see session logfile
+
+CarMaker.NumVersion = 80000
+CarMaker.Version = 8.0
+CarMaker.Version.MatSupp = 8.0
+CarMaker.Version.Apo = 1.33.6
+CarMaker.Version.Info = 1.21
+CarMaker.Version.Driver = 8.0
+CarMaker.Version.Road = 8.0
+CarMaker.Version.Tire = 7.1
+

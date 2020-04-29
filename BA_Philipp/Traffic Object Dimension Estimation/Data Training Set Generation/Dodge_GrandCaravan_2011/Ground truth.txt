@@ -1,0 +1,10 @@
+%% Traffic object width
+width = 2;
+
+
+%% Traffic object height
+height = 1.42;
+
+
+%% Traffic object description in CarMaker
+description = "Dodge_GrandCaravan_2011";

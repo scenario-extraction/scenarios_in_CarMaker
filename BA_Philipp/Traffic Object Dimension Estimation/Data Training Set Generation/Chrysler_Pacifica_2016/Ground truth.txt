@@ -1,0 +1,10 @@
+%% Traffic object width
+width = 1.94;
+
+
+%% Traffic object height
+height = 1.56;
+
+
+%% Traffic object description in CarMaker
+description = "Chrysler_Pacifica_2016";

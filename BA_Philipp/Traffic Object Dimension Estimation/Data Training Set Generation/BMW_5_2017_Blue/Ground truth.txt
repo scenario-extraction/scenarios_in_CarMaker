@@ -1,0 +1,10 @@
+%% Traffic object width
+width = 1.85;
+
+
+%% Traffic object height
+height = 1.27;
+
+
+%% Traffic object description in CarMaker
+description = "BMW_5_2017_Blue";
