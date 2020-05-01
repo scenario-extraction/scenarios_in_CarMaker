@@ -1,0 +1,3 @@
+TestRun: Ground_Truth_Highway_road_signs_no_traffic.dat
+Road file: Simple_Highway_circle_road_signs_no_traffic.rd5
+Vehicle file: DemoCar_withGroundTruthSensor_traffic_sign_sensor

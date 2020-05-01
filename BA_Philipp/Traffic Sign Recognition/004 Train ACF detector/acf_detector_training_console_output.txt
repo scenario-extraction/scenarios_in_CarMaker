@@ -1,0 +1,35 @@
+>> ts_detection_train_acf_detector
+ACF Object Detector Training
+The training will take 4 stages. The model size is 16x16.
+Sample positive examples(~100% Completed)
+Compute approximation coefficients...Completed.
+Compute aggregated channel features...Completed.
+--------------------------------------------
+Stage 1:
+Sample negative examples(~100% Completed)
+Compute aggregated channel features...Completed.
+Train classifier with 1213 positive examples and 6065 negative examples...Completed.
+The trained classifier has 256 weak learners.
+--------------------------------------------
+Stage 2:
+Sample negative examples(~100% Completed)
+Found 5415 new negative examples for training.
+Compute aggregated channel features...Completed.
+Train classifier with 1213 positive examples and 6065 negative examples...Completed.
+The trained classifier has 512 weak learners.
+--------------------------------------------
+Stage 3:
+Sample negative examples(~100% Completed)
+Found 6065 new negative examples for training.
+Compute aggregated channel features...Completed.
+Train classifier with 1213 positive examples and 6065 negative examples...Completed.
+The trained classifier has 1024 weak learners.
+--------------------------------------------
+Stage 4:
+Sample negative examples(~100% Completed)
+Found 923 new negative examples for training.
+Compute aggregated channel features...Completed.
+Train classifier with 1213 positive examples and 6065 negative examples...Completed.
+The trained classifier has 2048 weak learners.
+--------------------------------------------
+ACF object detector training is completed. Elapsed time is 590.9289 seconds.
