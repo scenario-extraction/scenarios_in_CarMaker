@@ -1,0 +1,1 @@
+This is the tensor that results from running the code for traffic object dimension estimation.
