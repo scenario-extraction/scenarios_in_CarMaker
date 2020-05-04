@@ -1,8 +1,19 @@
 Version: April 29, 2020
 
-Detailed documentation in the respective scripts and functions
+Dear user,
 
-Paths in scripts may have to be adjusted before running
+instead of creating one large "Readme" file I decided to use a decentralised approach where I document each folder's, script's or function's purpose at their own
+location.
+For this purpose I created multiple text files called "Readme" or "Remark" which explain how to use the respective elements. 
+Furthermore I added detailed documentations and comments in the respective Matlab scripts and functions.
+
+If questions arrise, please feel free to contact me via email: Philippmetzger2@gmail.com
+
+I used as little absolute paths as possible and used relative paths instead, so most scripts and functions will run properly, if this folder structure is kept intact.
+Yet, some paths in some scripts or functions may have to be adjusted before running.
+
+"Traffic Object Dimension Estimation" and "Traffic Sign Recognition" can be regarded as independent packages. They do not reference to each other in any way and can
+be moved to different locations independently.
 
 For creating and running this code I had the following installed:
 MATLAB                                                Version 9.7         (R2019b)
