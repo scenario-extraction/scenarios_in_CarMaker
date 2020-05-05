@@ -1,4 +1,6 @@
 Scripts "main_application_model_3_4" and "main_application_model_2" are for running traffic object dimension estimation using respective model.
+Model 3 and 4 are equivalent and refer to the model with one parameter f (called "c" in the script). 
+Model 2 refers to the model with two parameters f_width and f_height (called "c_width" and "c_height" in the script).
 All data needed for running these two scripts is located in "Data Application".
 Dimension estimation results are stored in "Resuslts Application".
 
