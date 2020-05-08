@@ -1,4 +1,4 @@
-Version: April 29, 2020
+Version: 8th May 2020
 
 Dear user,
 
@@ -9,7 +9,8 @@ Furthermore I added detailed documentations and comments in the respective Matla
 
 If questions arrise, please feel free to contact me via email: Philippmetzger2@gmail.com
 
-I used as little absolute paths as possible and used relative paths instead, so most scripts and functions will run properly, if this folder structure is kept intact.
+I used as little absolute paths as possible and used relative paths instead, so most scripts and functions will still run properly, if this folder structure is kept 
+intact, even when it is moved to a new location.
 Yet, some paths in some scripts or functions may have to be adjusted before running.
 
 "Traffic Object Dimension Estimation" and "Traffic Sign Recognition" can be regarded as independent packages. They do not reference to each other in any way and can
