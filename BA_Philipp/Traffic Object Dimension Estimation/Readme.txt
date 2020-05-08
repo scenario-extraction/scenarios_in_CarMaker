@@ -1,6 +1,9 @@
+General remark:
+In the scripts and functions of this implementation, the parameters that I call f, f_width and f_height in my thesis are called "c", "c_width" and "c_height".
+
 Scripts "main_application_model_3_4" and "main_application_model_2" are for running traffic object dimension estimation using respective model.
-Model 3 and 4 are equivalent and refer to the model with one parameter f (called "c" in the script). 
-Model 2 refers to the model with two parameters f_width and f_height (called "c_width" and "c_height" in the script).
+Model 3 and 4 are equivalent and refer to the model with one parameter f (f is called "c" in the script!). 
+Model 2 refers to the model with two parameters f_width and f_height (f_width and f_height are called "c_width" and "c_height" in the script!).
 All data needed for running these two scripts is located in "Data Application".
 Dimension estimation results are stored in "Resuslts Application".
 
