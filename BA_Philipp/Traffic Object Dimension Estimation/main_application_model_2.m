@@ -48,7 +48,7 @@ testing = 1;
 
 %% Do you want to detect bounding boxes from images provided or are they already loaded into the workspace?
 % Detect: 1, Already loaded: 0
-detect_bboxes = 0;
+detect_bboxes = 1;
 % Detecting bounding boxes takes a lot of time. Already detected Bounding 
 % Boxes for Ground_Truth_Highway_two_lane_traffic are located in 
 % ...\Data Application\bboxes
@@ -56,7 +56,7 @@ detect_bboxes = 0;
 
 %% Do you want to save (and potentially overwrite) tensors on hard drive after running this script?
 % Save: 1, Don't save: 0
-saveTensor = 0;
+saveTensor = 1;
 
 
 %% Select distance in which traffic objects are ignored 
