@@ -1,0 +1,13 @@
+URL:
+
+http://benchmark.ini.rub.de/?section=gtsdb&subsection=dataset
+
+
+BibTeX-Citation:
+
+@inproceedings{German_Traffic_Sign_Detection_Benchmark,
+author = {Sebastian Houben and Johannes Stallkamp and Jan Salmen and Marc Schlipsing and Christian Igel},
+booktitle = {International Joint Conference on Neural Networks (submitted)},
+title = {Detection of Traffic Signs in Real-World Images: The {G}erman {T}raffic {S}ign {D}etection {B}enchmark},
+year = {2013},
+}

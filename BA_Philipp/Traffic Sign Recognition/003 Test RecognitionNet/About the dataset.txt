@@ -1,0 +1,14 @@
+URL:
+
+http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset
+
+
+BibTeX-Citation:
+
+@inproceedings{German_Traffic_Sign_Recognition_Benchmark,
+    author = {Johannes Stallkamp and Marc Schlipsing and Jan Salmen and Christian Igel},
+    booktitle = {IEEE International Joint Conference on Neural Networks},
+    title = {The {G}erman {T}raffic {S}ign {R}ecognition {B}enchmark: A multi-class classification competition},
+    year = {2011},
+    pages = {1453--1460}
+}
