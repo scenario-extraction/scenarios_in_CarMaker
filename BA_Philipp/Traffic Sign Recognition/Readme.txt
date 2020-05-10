@@ -48,7 +48,7 @@ Information specific to "Traffic Sign Recognition":
 
 For running traffic sign detection and recognition, run "main_ts_detection_and_recognition"
 
-"001 Data" contains all data needed for running any script or function in this project
+"001 Data" contains all data needed for running "main_ts_detection_and_recognition".
 
 When running "main_ts_detection_and_recognition" four files with intermediate results will be created and saved here. 
 Their names begin with "tsdr_..."

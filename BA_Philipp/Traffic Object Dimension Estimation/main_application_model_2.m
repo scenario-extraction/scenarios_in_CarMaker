@@ -1082,6 +1082,7 @@ if testing == 1
     
     
     % Print to command window where to find these numbers
+    disp(' ');
     disp('Quality assessment has been carried out. The resulting numbers are stored in variable "metrics".');
 end
 
