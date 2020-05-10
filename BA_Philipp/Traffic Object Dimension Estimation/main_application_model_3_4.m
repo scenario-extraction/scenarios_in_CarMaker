@@ -12,8 +12,8 @@
 %
 % Please note: CarMaker seems to not realise when traffic objects are
 % deleted in simulation environment. When deleted a traffic object in
-% CarMaker, make sure to untick resprective output quantities in Output
-% Quantities Selection. Otherwise they will be exportet as tables of zeros
+% CarMaker, make sure to untick respective output quantities in Output
+% Quantities Selection. Otherwise they will be exported as tables of zeros
 % and cause problems.
 %
 % The setup that is used is defined as follows:
