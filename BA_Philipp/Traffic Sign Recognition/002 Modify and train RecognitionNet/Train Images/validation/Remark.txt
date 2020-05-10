@@ -1,0 +1,1 @@
+In order to run the training process, validation images have to be placed here.
