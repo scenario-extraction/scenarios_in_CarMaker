@@ -1,8 +1,5 @@
 # Dataset-to-Simulation
 
-## TODO:
- - EGO-Movement-Converter
-
 ## Setup Anaconda environment:
 ### You need two separate environments for Kitti and Lyft Tracking.
 - Kitti-Environment
@@ -13,10 +10,11 @@
   -  Add lyft detector path to environment using: conda develop /your/path/to/Lyft-Detector/second.pytorch
 
 ## System-Design:
- - Lyft-Data ---> Lyft-Detector ----->
-                                    ---> Tracker
- - Kitti-Data ---> Kitti-Detector --->
-
+```Plain
+ - Lyft-Data ──> SECOND-Detector ──> Kalman-Filter ──> Nachbearbeitung ──> Konverter ──> Simulation
+                                    
+ - Kitti-Data ──> Kitti-Detector ──> mmMOT-Tracker ──> Nachbearbeitung ──> Konverter ──> Simulation
+```
 
 ## Prepare Dataset
 ### Lyft Dataset File Structure:
