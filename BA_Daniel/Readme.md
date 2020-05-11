@@ -75,7 +75,7 @@
 ### Usage
 #### Kitti-Tracking:
  - Copy your scene to the data structure as described above
- - activate the conda kitti-env and exec: 'python start-kitti-track.py kitti-track --dataset_root=your/path/to/dataset --export_video=True'
- -> all necessary commands will be executed and the result is saved to the dataset_root folder
+ - activate the conda kitti-env
+ - all commands for Training and Detection generation are summarized in the Kitti-Tracking-System.ipynb Notebook
 #### Lyft-Tracking
  - all commands for Training and Detection generation are summarized in the Lyft-Tracking-System.ipynb Notebook
